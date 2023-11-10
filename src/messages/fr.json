@@ -1,0 +1,21 @@
+{
+	"Home": {
+		"Hello, I am": "Hello, je suis",
+		"Web designer": "Web designer",
+		"Full stack dev": "Full stack dev",
+		"Content creator": "Content creator",
+		"Portfolio designer": "Portfolio designer",
+		"Antoine Hakim": "Antoine Hakim"
+	},
+	"Career": {
+		"GoTo": {
+			"summary": ""
+		},
+		"Desjardins": {
+			"summary": ""
+		},
+		"Bell": {
+			"summary": ""
+		}
+	}
+}

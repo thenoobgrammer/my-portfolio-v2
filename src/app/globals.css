@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		margin: 0;
+		font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Futura', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+			'Droid Sans', 'Helvetica Neue', sans-serif;
+	}
+
+	h1 {
+		@apply text-[76px] tracking-[10%];
+	}
+	h2 {
+		@apply text-[61px] tracking-[10%];
+	}
+	h3 {
+		@apply text-[49px] tracking-[10%];
+	}
+	h4 {
+		@apply text-[39px] tracking-[10%];
+	}
+	h5 {
+		@apply text-[31px] tracking-[10%];
+	}
+	h6 {
+		@apply text-[25px] tracking-[10%];
+	}
+}
+
+@layer components {
+	.section-full {
+		@apply w-screen h-screen;
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"About": {
+		"title": "Little about me",
+		"summary": "I started my web development journey {{year}} years ago. It turned out I had a passion for creating content and clean code. "
+	},
+
+	"Home": {
+		"Hello, I am": "Hello, I am",
+		"Web designer": "Web designer",
+		"Full stack dev": "Full stack dev",
+		"Content creator": "Content creator",
+		"Portfolio designer": "Portfolio designer",
+		"Antoine Hakim": "Antoine Hakim"
+	},
+	"Career": {
+		"dialogtitle": "What's my role at {company}",
+		"GoTo": {
+			"summary": "I contribute to the development of a top-notch SaaS business communication tool, focusing on customer-facing features. My work ensures the platform remains high quality and robust, delivering a seamless experience for users.",
+			"a": "Developed a high-end business communication settings tool using ReactJS, Redux-Thunk, React-Router, Javascript, Typescript, HTML5, CSS3, and MUI5",
+			"b": "Built and managed custom components for internal libraries, including custom Formik input/select/radio fields",
+			"c": "Exclusively used React-Hooks to handle application life-cycle processes",
+			"d": "Collaborated with the UI/UX team to establish specifications and system designs",
+			"e": "Worked in Agile Methodologies for iterative development to consistently deliver a better application",
+			"f": "Possesses strong expertise in Github (formerly used Bitbucket) as the main version control service",
+			"g": "Created features/sections/subsections for the new web app (coded in React) using a micro frontend approach",
+			"h": "Developed features that facilitated a smooth transition for 90% of clients using the legacy platform web app to the more modern web app, resulting in a significantly improved user experience"
+		},
+		"Desjardins": {
+			"summary": "",
+			"a": "Led the development and introduced rigorous coding standards for our frontend application in Typescript using StencilJS",
+			"b": "Developed a frontend service from scratch using AngularJS, StencilJS, Typescript, HTML5, and CSS/SCSS",
+			"c": "Helped develop a RESTful service from scratch, using a microservices approach for better performance with the help of SpringBoot and libraries such as PKCE for secure authentication",
+			"d": "Configured Concourse/CI automated pipelines that would fetch a project, build, run unit tests, run smoke tests, and deploy to multiple environments (dev, stage and production)",
+			"e": "Developed unit tests using JUnit5 and JaCoCo for Spring Boot, and Jest for Stencil",
+			"f": "Connected our repositories to our dedicated SonarQube server, and added an 80% coverage test with 5% duplication thresholds for success (on both backend and frontend)"
+		},
+		"Bell": {
+			"summary": "",
+			"a": "Built a fully functional JIRA-like dashboard for internal teams to use at standups from scratch using EmberJS, and the Ember Octane framework, along with HTML, JavaScript, and CSS",
+			"b": "Introduced a solid structured code design that creates reusable modular components across the app",
+			"c": "Mentored interns on the use of EmberJS",
+			"d": "Worked with the backend team to develop endpoints for specific use cases required by the clients using C# with some well-known design patterns such as OOP and Polymorphism",
+			"e": "Followed agile development practices and used Bitbucket/JIRA for bug tracking"
+		}
+	},
+	"LocaleSwitcher": {
+		"switchLocale": "Switch to {locale}",
+		"summary": "I started my web development journey {{year}} years ago. It turned out I had a passion for creating content and clean code. "
+	}
+}
