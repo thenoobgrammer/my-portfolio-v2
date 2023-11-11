@@ -114,6 +114,7 @@ export const WorkExperiences = [
 		end: 'May 2018',
 		logoClassname: 'bg-ubisoft',
 		title: 'Interne Frontend developer',
+		company: 'Ubisoft',
 		descriptions: ['Ubisoft.a', 'Ubisoft.b', 'Ubisoft.c', 'Ubisoft.d', 'Ubisoft.e'],
 		summary: 'Ubisoft.summary',
 		descriptionsHighlighted: [

@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-	body {
-		margin: 0;
+	html {
 		font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Futura', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
 			'Droid Sans', 'Helvetica Neue', sans-serif;
+	}
+
+	body {
+		margin: 0;
 	}
 
 	h1 {

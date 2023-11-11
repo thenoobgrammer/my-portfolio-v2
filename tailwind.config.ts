@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -8,6 +10,11 @@ const config: Config = {
 			primary: ['sans-serif'],
 			secondary: '"Roboto Slab"',
 			tertiary: 'Aldrich',
+			sans: ['Calibre', 'Inter', 'San Francisco', 'SF Pro Text', '-apple-system,system-ui', 'sans-serif'],
+		},
+		fill: {
+			primary: '#2D4263',
+			accent: '#C84B31',
 		},
 		fontSize: {
 			xs: ['10px', { lineHeight: '1.5' }],
@@ -24,16 +31,21 @@ const config: Config = {
 				'bell-color': "url('/Bell-colored.png')",
 			},
 			colors: {
-				primary: '#071330',
-				secondary: '#7895CB',
-				tertiary: '#A0BFE0',
-				background: '#F8F9F7',
-				foreground: '#2E4F4F',
-				accent: '#CBE4DE',
-				sucess: '#46D339',
-				error: '#D50000',
-				dark: '#0C1615',
-				light: '#F8F8F8',
+				primary: '#2D4263',
+				accent: {
+					50: '#f7e9e9',
+					100: '#f8ccc2',
+					200: '#f4ab9b',
+					300: '#f28c74',
+					400: '#f07357',
+					500: '#f05c3e',
+					600: '#e55639',
+					700: '#d75035',
+					800: '#C84B31', //accent
+					900: '#ad402b',
+				},
+				light: '#ECDBBA',
+				dark: '#191919',
 			},
 		},
 		screens: {

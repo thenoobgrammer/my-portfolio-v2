@@ -1,5 +1,5 @@
 {
-	"About": {
+	"Career": {
 		"title": "Little about me",
 		"summary": "I started my web development journey {{year}} years ago. It turned out I had a passion for creating content and clean code. "
 	},
@@ -12,7 +12,7 @@
 		"Portfolio designer": "Portfolio designer",
 		"Antoine Hakim": "Antoine Hakim"
 	},
-	"Career": {
+	"About": {
 		"dialogtitle": "What's my role at {company}",
 		"GoTo": {
 			"summary": "I contribute to the development of a top-notch SaaS business communication tool, focusing on customer-facing features. My work ensures the platform remains high quality and robust, delivering a seamless experience for users.",

@@ -25,7 +25,7 @@ export default async function RootLayout({ children, params: { locale } }: { chi
 
 	return (
 		<html lang="en">
-			<body className={clsx(inter.className, 'bg-light dark:bg-slate-900')}>
+			<body className={clsx(inter.className)}>
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					<ThemeProvider>
 						<Navbar />
