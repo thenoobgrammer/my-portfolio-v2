@@ -36,4 +36,32 @@
 	.section-full {
 		@apply w-screen h-screen;
 	}
+
+	.tab {
+		@apply text-light/70;
+	}
+
+	.tab.active {
+		@apply text-accent-50;
+	}
+
+	.glider {
+		@apply transition-all py-1 px-2;
+	}
+
+	.tab[tabIndex='0'].active + .glider {
+		@apply translate-x-[0];
+	}
+
+	.tab[tabIndex='1'].active ~ .glider {
+		@apply translate-x-[100%];
+	}
+
+	.tab[tabIndex='2'].active ~ .glider {
+		@apply translate-x-[200%];
+	}
+
+	.tab[tabIndex='3'].active ~ .glider {
+		@apply translate-x-[300%];
+	}
 }

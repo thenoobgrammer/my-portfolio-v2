@@ -1,5 +1,6 @@
 import '../globals.css'
 
+import { DialogProvider } from 'src/context/DialogContext'
 import { Inter } from 'next/font/google'
 import type { Metadata } from 'next'
 import Navbar from 'src/components/Navbar'
@@ -29,7 +30,7 @@ export default async function RootLayout({ children, params: { locale } }: { chi
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					<ThemeProvider>
 						<Navbar />
-						{children}
+						<DialogProvider>{children}</DialogProvider>
 					</ThemeProvider>
 				</NextIntlClientProvider>
 			</body>

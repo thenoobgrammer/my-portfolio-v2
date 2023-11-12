@@ -1,13 +1,39 @@
+import { FaEnvelope, FaGithub, FaGlobe, FaLinkedin, FaMap, FaPhone } from 'react-icons/fa'
+
 import BellLogo from 'public/Bell-white.png'
+import { CgWebsite } from 'react-icons/cg'
 import DesjardinsLogo from 'public/Desjardins-white.png'
 import GoToLogo from 'public/Goto-white.png'
 
+export const PersonalInfo = [
+	{ icon: FaMap, text: 'Montreal, QC' },
+	{ icon: FaPhone, text: '+1 514-966-8481' },
+	{ icon: FaEnvelope, text: 'ant.hakim.stud@gmail.com' },
+	{ icon: FaGlobe, text: ['English', 'French'] },
+	{ icon: CgWebsite, url: 'https://thenoobgrammer.com', text: 'My Website' },
+	{ icon: FaLinkedin, url: 'https://www.linkedin.com/in/antoine-hakim-359669105/', text: 'My LinkedIn' },
+	{ icon: FaGithub, url: 'https://github.com/thenoobgrammer', text: 'My Github' },
+]
 export const Links = [
 	{ name: 'home', hash: '#home' },
 	{ name: 'about', hash: '#about' },
 	{ name: 'career', hash: '#career' },
 	{ name: 'timeline', hash: '#timeline' },
 	{ name: 'services', hash: '#services' },
+]
+
+export const Languages = [
+	'ReactJS',
+	'NodeJS',
+	'Javascript/HTML/CSS',
+	'AWS',
+	'StencilJS',
+	'SpringBoot',
+	'Python',
+	'C#',
+	'EmberJS',
+	'PolymerJS',
+	'Angular',
 ]
 
 export const Education = [
@@ -18,8 +44,10 @@ export const Education = [
 
 export const WorkExperiences = [
 	{
+		id: 'goto',
 		start: 'Jan 2022',
 		logoClassname: 'bg-goto-color',
+		link: 'https://goto.com',
 		end: 'Present',
 		company: 'GoTo',
 		title: 'Senior Frontend Engineer',
@@ -50,9 +78,11 @@ export const WorkExperiences = [
 		],
 	},
 	{
+		id: 'desjardins',
 		start: 'Dec 2020',
 		end: 'Jan 2022',
 		logoClassname: 'bg-desjardin-color',
+		link: 'https://desjardins.com',
 		company: 'Desjardins',
 		title: 'Fullstack engineer',
 		summary: 'Desjardins.summary',
@@ -81,9 +111,11 @@ export const WorkExperiences = [
 		],
 	},
 	{
+		id: 'bell',
 		start: 'Jan 2019',
 		end: 'May 2019',
 		logoClassname: 'bg-bell-color',
+		link: 'https://bell.ca',
 		company: 'Bell Canada',
 		title: 'Fullstack engineer',
 		descriptions: ['Bell.a', 'Bell.b', 'Bell.c', 'Bell.d', 'Bell.e'],
@@ -110,9 +142,11 @@ export const WorkExperiences = [
 		],
 	},
 	{
+		id: 'ubisoft',
 		start: 'Jan 2018',
 		end: 'May 2018',
 		logoClassname: 'bg-ubisoft',
+		link: 'https://ubisoft.com',
 		title: 'Interne Frontend developer',
 		company: 'Ubisoft',
 		descriptions: ['Ubisoft.a', 'Ubisoft.b', 'Ubisoft.c', 'Ubisoft.d', 'Ubisoft.e'],
@@ -130,7 +164,8 @@ export const WorkExperiences = [
 			'MySQL',
 			'HTML/CSS',
 			'Bootstrap',
-			'Jira, Bamboo',
+			'Jira',
+			'Bamboo',
 			'Confluence',
 			'Bitbucket',
 			'Docker',
@@ -210,7 +245,7 @@ export const PersonalProjects = [
 			'PortfolioHighlighted.f',
 			'PortfolioHighlighted.g',
 		],
-		technologies: 'React 18, Tailwind CSS, AWS (Route 53, Certificate Manager, S3',
+		technologies: ['React 18', 'Tailwind CSS', 'Route 53', 'Certificate Manager', 'S3'],
 	},
 	{
 		name: 'Discord',
@@ -218,7 +253,7 @@ export const PersonalProjects = [
 		repoURL: ['Discord.repo'],
 		descriptions: ['Discord.a', 'Discord.b'],
 		descriptionsHighlighted: ['DiscordHighlighted.a', 'DiscordHighlighted.b'],
-		technologies: 'NodeJS, Express, GitHub, Typescript, AWS (EC2',
+		technologies: ['NodeJS', 'Express', 'GitHub', 'Typescript', 'AWS (EC2)'],
 	},
 	{
 		name: 'Sadbois',
@@ -226,6 +261,6 @@ export const PersonalProjects = [
 		repoURL: ['Sadboiss.repo'],
 		descriptions: ['Sadboiss.a', 'Sadboiss.b', 'Sadboiss.c'],
 		descriptionsHighlighted: ['SadboissHighlighted.a', 'SadboissHighlighted.b', 'SadboissHighlighted.c'],
-		technologies: 'ReactJS, GitHub, REST API, Typescript, Paypal API',
+		technologies: ['ReactJS', 'GitHub', 'REST API', 'Typescript', 'Paypal API'],
 	},
 ]

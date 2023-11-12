@@ -1,6 +1,5 @@
-import { ReactNode, cloneElement, createContext, useContext, useState } from 'react'
+import { createContext, memo, useContext, useMemo, useState } from 'react'
 
-import Link from 'next/link'
 import clsx from 'clsx'
 
 const TabContext = createContext<{ activeTab: any; setActiveTab: any }>({
@@ -8,27 +7,29 @@ const TabContext = createContext<{ activeTab: any; setActiveTab: any }>({
 	setActiveTab: () => {},
 })
 
-export function Tabs({ children, defaultTab = 0 }) {
+export function Tabs({ children, defaultTab = 0, ...props }) {
 	const [activeTab, setActiveTab] = useState(defaultTab)
 
 	return <TabContext.Provider value={{ activeTab, setActiveTab }}>{children}</TabContext.Provider>
 }
 
-export function Tab({ className, label, tabIndex }) {
+export const Tab = ({ id, label, tabIndex, ...props }) => {
 	const { activeTab, setActiveTab } = useContext(TabContext)
 	const active = activeTab === tabIndex
 
 	return (
-		<span
+		<div
+			id={id}
+			tabIndex={tabIndex}
 			className={clsx(
-				'w-fit py-1 px-2 cursor-pointer bg-red transition-all',
-				active ? 'text-accent-300 underline' : 'text-light/70',
-				className,
+				'tab relative flex items-center text-lg py-1 px-2 cursor-pointer transition-transform z-10 hover:text-accent-300/60',
+				active && 'active',
+				props.className,
 			)}
 			onClick={() => setActiveTab(tabIndex)}
 		>
 			{label}
-		</span>
+		</div>
 	)
 }
 
@@ -36,7 +37,7 @@ export function TabPane({ children, tabIndex }) {
 	const { activeTab } = useContext(TabContext)
 
 	if (activeTab === tabIndex) {
-		return <div className="">{children}</div>
+		return children
 	} else {
 		return null
 	}

@@ -1,19 +1,11 @@
 {
 	"Career": {
 		"title": "Little about me",
-		"summary": "I started my web development journey {{year}} years ago. It turned out I had a passion for creating content and clean code. "
+		"summary": "I started my web development journey {{year}} years ago. It turned out I had a passion for creating content and clean code."
 	},
-
-	"Home": {
-		"Hello, I am": "Hello, I am",
-		"Web designer": "Web designer",
-		"Full stack dev": "Full stack dev",
-		"Content creator": "Content creator",
-		"Portfolio designer": "Portfolio designer",
-		"Antoine Hakim": "Antoine Hakim"
-	},
-	"About": {
+	"JobHistory": {
 		"dialogtitle": "What's my role at {company}",
+		"curriculumDialogTitle": "Curriculum",
 		"GoTo": {
 			"summary": "I contribute to the development of a top-notch SaaS business communication tool, focusing on customer-facing features. My work ensures the platform remains high quality and robust, delivering a seamless experience for users.",
 			"a": "Developed a high-end business communication settings tool using ReactJS, Redux-Thunk, React-Router, Javascript, Typescript, HTML5, CSS3, and MUI5",
@@ -26,7 +18,7 @@
 			"h": "Developed features that facilitated a smooth transition for 90% of clients using the legacy platform web app to the more modern web app, resulting in a significantly improved user experience"
 		},
 		"Desjardins": {
-			"summary": "",
+			"summary": "Contributed to the development of a secured messaging platform for internal use with outside customer, where both parties can share documents, send and receive messages alongside other features. Working there also gave me hands-on experience with security management since it was a bank, and information is extremely sensitive. The backend worked as a microservice approach and I was responsible for one of them, therefore I learned to develop a REST backend with SpringBoot and a lot of experience with pipeline deployment.",
 			"a": "Led the development and introduced rigorous coding standards for our frontend application in Typescript using StencilJS",
 			"b": "Developed a frontend service from scratch using AngularJS, StencilJS, Typescript, HTML5, and CSS/SCSS",
 			"c": "Helped develop a RESTful service from scratch, using a microservices approach for better performance with the help of SpringBoot and libraries such as PKCE for secure authentication",
@@ -35,7 +27,15 @@
 			"f": "Connected our repositories to our dedicated SonarQube server, and added an 80% coverage test with 5% duplication thresholds for success (on both backend and frontend)"
 		},
 		"Bell": {
-			"summary": "",
+			"summary": "Led the development of a fully functional JIRA-like dashboard helping internal employees with their morning stand-ups. My work impacted their schedules and allowed them to be 70% more productive everyday. I took charge in setting up the code structure and using what I had at the time, very small knowledge of EmberJS. I also had the chance to work on the REST backend which was developed in C#.",
+			"a": "Built a fully functional JIRA-like dashboard for internal teams to use at standups from scratch using EmberJS, and the Ember Octane framework, along with HTML, JavaScript, and CSS",
+			"b": "Introduced a solid structured code design that creates reusable modular components across the app",
+			"c": "Mentored interns on the use of EmberJS",
+			"d": "Worked with the backend team to develop endpoints for specific use cases required by the clients using C# with some well-known design patterns such as OOP and Polymorphism",
+			"e": "Followed agile development practices and used Bitbucket/JIRA for bug tracking"
+		},
+		"Ubisoft": {
+			"summary": "Ubisoft is where I discovered my love for web development. During my internship, I was working for a team that was developing widgets for a User dashboard. I managed to develop a widget that was an IFrame, allowing a virtual external website to load into the dashboard, with an event management system. This allowed events to travel between the current page context and the web frame.",
 			"a": "Built a fully functional JIRA-like dashboard for internal teams to use at standups from scratch using EmberJS, and the Ember Octane framework, along with HTML, JavaScript, and CSS",
 			"b": "Introduced a solid structured code design that creates reusable modular components across the app",
 			"c": "Mentored interns on the use of EmberJS",
@@ -43,6 +43,21 @@
 			"e": "Followed agile development practices and used Bitbucket/JIRA for bug tracking"
 		}
 	},
+	"Home": {
+		"Hello, I am": "Hello, I am",
+		"Web designer": "Web designer",
+		"Full stack dev": "Full stack dev",
+		"Content creator": "Content creator",
+		"Portfolio designer": "Portfolio designer",
+		"Antoine Hakim": "Antoine Hakim"
+	},
+	"Navbar": {
+		"About": "About",
+		"Job history": "Job history",
+		"Projects": "Projects",
+		"Resume": "Resume"
+	},
+	"About": {},
 	"LocaleSwitcher": {
 		"switchLocale": "Switch to {locale}",
 		"summary": "I started my web development journey {{year}} years ago. It turned out I had a passion for creating content and clean code. "
