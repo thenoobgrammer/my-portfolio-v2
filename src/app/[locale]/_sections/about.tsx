@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 
-export default function About(props) {
+export default function About() {
 	const t = useTranslations('About')
 
 	return (

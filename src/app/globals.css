@@ -37,6 +37,10 @@
 		@apply w-screen h-screen;
 	}
 
+	.icon-btn {
+		@apply inline-flex items-center whitespace-nowrap cursor-pointer w-fit transition-all px-2 py-1 text-accent-200 rounded-md hover:bg-light/20 hover:text-accent-200 disabled:bg-gray-100/30 disabled:text-gray-400;
+	}
+
 	.tab {
 		@apply text-light/70;
 	}

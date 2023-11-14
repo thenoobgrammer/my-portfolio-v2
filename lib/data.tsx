@@ -1,9 +1,18 @@
-import { FaEnvelope, FaGithub, FaGlobe, FaLinkedin, FaMap, FaPhone } from 'react-icons/fa'
+import { FaEnvelope, FaFacebook, FaGithub, FaGlobe, FaLinkedinIn, FaMap, FaPhone } from 'react-icons/fa'
 
-import BellLogo from 'public/Bell-white.png'
 import { CgWebsite } from 'react-icons/cg'
-import DesjardinsLogo from 'public/Desjardins-white.png'
-import GoToLogo from 'public/Goto-white.png'
+import { TiSocialLinkedinCircular } from 'react-icons/ti'
+
+export const GITHUB_PROFILE_URL = 'https://github.com/thenoobgrammer'
+export const FACEBOOK_URL = 'https://www.facebook.com/antonio.hakim.39/'
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/antoine-hakim-359669105/'
+export const PORTOFLIO_URL = 'https://thenoobgrammer.com'
+
+export const EMAIL_DESTINATION = 'thenoobgrammer@gmail.com'
+export const EMAIL_SUBJECT = 'CLIENT INQUIRY'
+export const EMAIL_PUBLIC_KEY = 'gdUsqVZJvLcgL1JXC'
+export const EMAIL_SERVICE_ID = 'service_gbfzv1f'
+export const EMAIL_TEMPLATE_ID = 'template_k1dy7ba'
 
 export const PersonalInfo = [
 	{ icon: FaMap, text: 'Montreal, QC' },
@@ -11,9 +20,10 @@ export const PersonalInfo = [
 	{ icon: FaEnvelope, text: 'ant.hakim.stud@gmail.com' },
 	{ icon: FaGlobe, text: ['English', 'French'] },
 	{ icon: CgWebsite, url: 'https://thenoobgrammer.com', text: 'My Website' },
-	{ icon: FaLinkedin, url: 'https://www.linkedin.com/in/antoine-hakim-359669105/', text: 'My LinkedIn' },
+	{ icon: FaLinkedinIn, url: 'https://www.linkedin.com/in/antoine-hakim-359669105/', text: 'My LinkedIn' },
 	{ icon: FaGithub, url: 'https://github.com/thenoobgrammer', text: 'My Github' },
 ]
+
 export const Links = [
 	{ name: 'home', hash: '#home' },
 	{ name: 'about', hash: '#about' },

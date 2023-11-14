@@ -5,6 +5,7 @@ import Introduction from './_sections/introduction'
 import JobHistory from './_sections/job-history'
 import Projects from './_sections/projects'
 import Section from 'src/components/Section'
+import SocialMediaLinks from 'src/components/SocialMediaLinks'
 
 export default function Index({ params }) {
 	return (
@@ -21,6 +22,9 @@ export default function Index({ params }) {
 			<Section id="projects" className="w-full h-full bg-primary p-5">
 				<Projects />
 			</Section>
+			<footer>
+				<SocialMediaLinks />
+			</footer>
 		</main>
 	)
 }
