@@ -1,21 +1,16 @@
-'use client'
-
+import DownloadLink from './PDFResume'
 import Link from 'next/link'
-import Logo from './Logo'
-import { useMemo } from 'react'
+import Logo from 'src/components/Logo'
 import { useTranslations } from 'next-intl'
 
 export default function Navbar() {
 	const t = useTranslations('Navbar')
 
-	const Links = useMemo(
-		() => [
-			{ name: t('About'), hash: '#about' },
-			{ name: t('Job history'), hash: '#jobs' },
-			{ name: t('Projects'), hash: '#projects' },
-		],
-		[t],
-	)
+	const Links = [
+		{ name: t('About'), hash: '#about' },
+		{ name: t('Job history'), hash: '#jobs' },
+		{ name: t('Projects'), hash: '#projects' },
+	]
 
 	return (
 		<nav className="fixed z-50 top-0 left-1/2 -translate-x-1/2 w-full h-16 py-2 bg-primary shadow-lg">
@@ -29,9 +24,7 @@ export default function Navbar() {
 							{name}
 						</Link>
 					))}
-					<button className="ml-2 border-2 rounded-sm border-accent-300 p-2 text-accent-100 hover:bg-accent-300/30 hover:border-accent-300/50 hover:text-accent-50 transition-all">
-						{t('Resume')}
-					</button>
+					<DownloadLink />
 				</div>
 			</div>
 		</nav>

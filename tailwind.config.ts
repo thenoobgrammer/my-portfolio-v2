@@ -7,10 +7,8 @@ const config: Config = {
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
 		fontFamily: {
-			primary: ['sans-serif'],
-			secondary: '"Roboto Slab"',
-			tertiary: 'Aldrich',
-			sans: ['Calibre', 'Inter', 'San Francisco', 'SF Pro Text', '-apple-system,system-ui', 'sans-serif'],
+			sans: ['var(--font-inter)'],
+			mono: ['var(--font-roboto-mono)'],
 		},
 		fill: {
 			primary: '#2D4263',
@@ -27,8 +25,11 @@ const config: Config = {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 				'goto-color': "url('/Goto-colored.webp')",
+				'goto-white': "url('/Goto-white.png')",
 				'desjardins-color': "url('/Desjardins-colored.png')",
+				'desjardins-white': "url('/Desjardins-white.png')",
 				'bell-color': "url('/Bell-colored.png')",
+				'bell-white': "url('/Bell-white.png')",
 			},
 			colors: {
 				primary: '#2D4263',

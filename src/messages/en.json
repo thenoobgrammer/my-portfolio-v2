@@ -1,11 +1,75 @@
 {
+	"About": {
+		"title": "Little about me",
+		"p1": "Hello :) My name is Antoine and I take joy in creating content for myself as a hobby. I never worked for a client independantly but I am looking fourth to that day. Anyways, I'm 29 years old, based in Montreal, Canada (yes I speak french). I was very into sports when I was still in school. So much that I tried to become pro. However, it took me quite some time to understand that I wanted to dedicate my life to become more entrepeneurial.",
+		"p2": "I took an interest in web development during one of my internship and here I am today, still loving it. I currently work at",
+		"p3": "as a frontend developer. I am constantly challenged with new constraints weekly and I take pride and joy intothe work I'm doing.",
+		"p4": "My end goal is a mansion and soccer field in my backyard, and that day will comes with effort. But don't worry, I am very down to earth and enjoying the process to that mountain."
+	},
 	"Career": {
 		"title": "Little about me",
 		"summary": "I started my web development journey {{year}} years ago. It turned out I had a passion for creating content and clean code."
 	},
+	"Home": {
+		"Hello, I am": "Hello, I am",
+		"Web designer": "Web designer",
+		"Full stack dev": "Full stack dev",
+		"Content creator": "Content creator",
+		"Portfolio designer": "Portfolio designer",
+		"Antoine Hakim": "Antoine Hakim"
+	},
+	"Introduction": {
+		"hi": "Hi,",
+		"intro": "Hi, my name is",
+		"name": "Antoine Hakim.",
+		"jobTitle": "Web developer, based in Montreal",
+		"summary": "I'm a full-stack developer with a background experience in building full-fledged custom platform, tailed to customers needs. My past accomplishments holds in the companies I've worked for, but right now, I am looking and hoping to connect with people and work together to design amazing content. If you have a project and would love to bring it to reality, I am your man for the job."
+	},
 	"JobHistory": {
 		"dialogtitle": "What's my role at {company}",
 		"curriculumDialogTitle": "Curriculum",
+		"Montreal, QC": "Montreal, QC",
+		"English": "English",
+		"French": "French",
+		"My LinkedIn": "My LinkedIn",
+		"My Github": "My Github",
+		"Software Engineering": "Software Engineering",
+		"Computer Science (Certificate)": "Computer Science (Certificate)",
+		"Computer Science & technology": "Computer Science & technology",
+		"Vanier College": "Vanier College",
+		"Rest API application": "Rest API application",
+		"Web development": "Web development",
+		"My CV": "My CV",
+		"Personal information": "Personal information",
+		"Skillset": "Skillset",
+		"Education": "Education",
+		"Work experience": "Work experience",
+		"Technologies": "Technologies",
+		"Personal highlights": "Personal highlights",
+		"In progress": "In progress"
+	},
+	"LocaleSwitcher": {
+		"switchLocale": "Switch to {locale}",
+		"summary": "I started my web development journey {{year}} years ago. It turned out I had a passion for creating content and clean code. "
+	},
+	"Navbar": {
+		"About": "About",
+		"Job history": "Job history",
+		"Projects": "Projects"
+	},
+	"Resume": {
+		"Download": "Resume",
+		"Antoine Hakim": "Antoine Hakim",
+		"Role": "Experienced full-stack engineer focused on building accessible & custom experience",
+		"Relevant Experience": "Relevant Experience",
+		"Skills": "Skills",
+		"Selected Projects": "Selected Projects",
+		"Education": "Education",
+		"Interests": "Interests",
+		"Work experience": "Work experience",
+		"Senior Frontend Engineer": "Senior Frontend Engineer",
+		"Fullstack engineer": "Fullstack engineer",
+		"Intern Frontend developer": "Intern Frontend developer",
 		"GoTo": {
 			"summary": "I contribute to the development of a top-notch SaaS business communication tool, focusing on customer-facing features. My work ensures the platform remains high quality and robust, delivering a seamless experience for users.",
 			"a": "Developed a high-end business communication settings tool using ReactJS, Redux-Thunk, React-Router, Javascript, Typescript, HTML5, CSS3, and MUI5",
@@ -41,25 +105,59 @@
 			"c": "Mentored interns on the use of EmberJS",
 			"d": "Worked with the backend team to develop endpoints for specific use cases required by the clients using C# with some well-known design patterns such as OOP and Polymorphism",
 			"e": "Followed agile development practices and used Bitbucket/JIRA for bug tracking"
+		},
+		"Discord": {
+			"summary": "I developed a discord bot with a music queue functionality, for my friends and I.",
+			"a": "Developed a Discord Bot that plays music for my group of friends using NodeJS, incorporating a custom-made queue system with features like previous, pause, play, and next. This implementation utilized prebuilt libraries such as Discord.js 13 and ytdl for playing Youtube music",
+			"b": "Configured an EC2 server instance to host my Discord bot using a prebuilt library package called pm2, which effectively runs Node projects as processes, enabling the bot to operate 24/7",
+			"c": "Pursued Ansible and Terraform as hobbies to acquire automation skills, successfully automating the process of setting up an EC2 server with all the necessary packages to run the Discord bot",
+			"repo": "https://github.com/thenoobgrammer/bramble"
+		},
+		"Pickside": {
+			"summary": "Pickside is an app that is still in development. It aims to be a platform where people can plan sporting events on outdoor/indoor fields, find teams and groups to play with.",
+			"a": "Developed a sporting event manager web app that allows users to plan outdoor activities related to sports using ReactJS, Redux-Thunk, TailwindCSS, and HTML",
+			"b": "Created a RESTful service backend using NodeJS/ExpressJS and Mongoose, which connects to a MongoDB server for data storage",
+			"c": "Implemented an authentication system with the help of the JWT library, allowing users to connect to the backend with an accessToken (currently lasting 1 minute) and a refreshToken",
+			"d": "Integrated a Swagger server to host the same endpoint for documentation purposes",
+			"e": "Implemented a Google login authentication option, allowing users to connect with their Google accounts",
+			"f": "Created custom-made reusable components such as TextField, Accordion, Stepper, Toast, Calendar, and Timepicker",
+			"g": "Exclusively utilized React-Hooks to handle application life-cycle processes",
+			"h": "Developed custom middlewares to intercept dispatches and execute some logic",
+			"i": "Utilized Google's Places library to connect a map and search for locations",
+			"j": "Used HTML's native geolocating function to ask for the user's location, so the map centers and zooms in on their area upon loading",
+			"k": "Implemented a language switcher and a theme switcher",
+			"repo": "https://github.com/PickSide",
+			"website": "https://pickside.net"
+		},
+		"PortfolioV1": {
+			"summary": "Not much to say about this project. It's my first ever online portfolio.",
+			"a": "Developed a portfolio/profile website with no backend, utilizing React 18 and TailwindCSS",
+			"b": "Designed and implemented custom-made components such as Dialogs, Buttons, LanguageSwitchers, and Spinners",
+			"c": "Implemented a small contact form that allows visitors to reach out via Email using the EmailJS library",
+			"d": "Integrated a language switcher (FR, EN) using i18next for improved user experience",
+			"e": "Implemeted a PDF download option for my curriculum that supports both languages",
+			"f": "Set up an S3 bucket to statically host this project under a purchased domain, ensuring secure HTTPS protocol",
+			"g": "Gained a comprehensive understanding of using aws-cli commands",
+			"repo": "https://github.com/thenoobgrammer/my-portfolio"
+		},
+		"PortfolioV2": {
+			"summary": "This is a second version of my portfolio developed in NextJS. I did for the sole purpose of learning the framework.",
+			"a": "Developed a portfolio/profile website with no backend, utilizing React 18 and TailwindCSS",
+			"b": "Designed and implemented custom-made components such as Dialogs, Buttons, LanguageSwitchers, and Spinners",
+			"c": "Implemented a small contact form that allows visitors to reach out via Email using the EmailJS library",
+			"d": "Integrated a language switcher (FR, EN) using i18next for improved user experience",
+			"e": "Implemeted a PDF download option for my curriculum that supports both languages",
+			"f": "Set up an S3 bucket to statically host this project under a purchased domain, ensuring secure HTTPS protocol",
+			"g": "Gained a comprehensive understanding of using aws-cli commands",
+			"repo": "https://github.com/thenoobgrammer/my-portfolio"
+		},
+		"Sadbois": {
+			"summary": "This project is my first ever introduction to React. It was supposed to be an online store with for selling merchandise but the project never finished.",
+			"a": "Developed a very small E-Commerce website as a project for friends, although it was never completed. The development involved using React, Redux-Thunk, HTML, CSS, and SCSS",
+			"b": "Implemented a fully functional cart system, a basic login system, and a semi-functional PayPal integration for processing payments",
+			"c": "Created a backend REST service that seamlessly connects to a SQL database system",
+			"d": "Set up migration files to facilitate data initialization during fresh runs, specifically for development purposes",
+			"repo": "https://github.com/Sadboiss"
 		}
-	},
-	"Home": {
-		"Hello, I am": "Hello, I am",
-		"Web designer": "Web designer",
-		"Full stack dev": "Full stack dev",
-		"Content creator": "Content creator",
-		"Portfolio designer": "Portfolio designer",
-		"Antoine Hakim": "Antoine Hakim"
-	},
-	"Navbar": {
-		"About": "About",
-		"Job history": "Job history",
-		"Projects": "Projects",
-		"Resume": "Resume"
-	},
-	"About": {},
-	"LocaleSwitcher": {
-		"switchLocale": "Switch to {locale}",
-		"summary": "I started my web development journey {{year}} years ago. It turned out I had a passion for creating content and clean code. "
 	}
 }

@@ -4,12 +4,11 @@ import { BiArrowFromBottom, BiDownArrow, BiSolidDownArrow } from 'react-icons/bi
 import { useParams, usePathname, useRouter } from 'next/navigation'
 
 import Link from 'next/link'
-import { MdOutlineLanguage } from 'react-icons/md'
 import clsx from 'clsx'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitcher({ children, defaultValue, label }) {
 	const t = useTranslations('LocaleSwitcher')
 	const pathname = usePathname()
 	const params = useParams()
@@ -27,7 +26,7 @@ export default function LocaleSwitcher() {
 	return (
 		<div className="">
 			<button className="text-white font-medium block hover:text-indigo-200/70 hover:scale-90 transition-all">
-				<Link className='capitalize' href="/" locale={params.locale === 'en' ? 'fr' : 'en'}>
+				<Link className="capitalize" href="/" locale={params.locale === 'en' ? 'fr' : 'en'}>
 					{params.locale}
 				</Link>
 			</button>

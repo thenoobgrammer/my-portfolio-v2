@@ -3,33 +3,37 @@
 import { BiCloudDownload, BiFullscreen, BiLinkExternal } from 'react-icons/bi'
 import { Tab, TabPane, Tabs } from 'src/context/TabContext'
 
-import CV from 'src/components/CV'
 import Chip from 'src/components/Chip'
 import { DialogDispatchContext } from 'src/context/DialogContext'
 import IconButton from 'src/components/IconButton'
+import Resume from '../_components/Resume'
 import { WorkExperiences } from 'lib/data'
 import { useContext } from 'react'
 import { useTranslations } from 'next-intl'
 
-export default function JobHistory(props) {
+export default function JobHistory() {
 	const dispatch = useContext(DialogDispatchContext)
-	const t = useTranslations('JobHistory')
+	const t = useTranslations('Resume')
 
 	return (
 		<div className="relative flex items-center w-full h-[50vh] py-10 space-y-3">
 			<div className="max-w-screen-lg m-auto px-5">
-				<header className="relative flex items-center justify-between mb-5">
-					<h4 className="w-fit text-light/90 font-medium leading-tight tracking-tight capitalize">job history</h4>
-					<div className="w-64 border-t-2 border-accent-50/25 left-52" />
+				<header className="relative flex items-center justify-between mb-10">
+					<h4 className="w-fit text-light/90 font-medium leading-tight tracking-tight capitalize">
+						{t('Job History')}
+					</h4>
 					<div className="flex-grow-0 group/links space-x-3">
 						<IconButton
 							className="text-accent-500"
-							onClick={() => dispatch({ type: 'open', content: <CV />, title: t('curriculumDialogTitle') })}
+							onClick={() =>
+								dispatch({
+									type: 'open',
+									content: <Resume />,
+									title: t('curriculumDialogTitle'),
+								})
+							}
 						>
 							<BiFullscreen size={20} />
-						</IconButton>
-						<IconButton className="text-accent-500" onClick={() => {}}>
-							<BiCloudDownload size={20} />
 						</IconButton>
 					</div>
 				</header>

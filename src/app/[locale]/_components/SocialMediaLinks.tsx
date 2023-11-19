@@ -4,20 +4,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { FACEBOOK_URL, GITHUB_PROFILE_URL, LINKEDIN_URL } from 'lib/data'
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 
-import IconButton from './IconButton'
+import IconButton from 'src/components/IconButton'
 import { TbSocial } from 'react-icons/tb'
 import { useState } from 'react'
-
-function childVariant(translateX) {
-	return {
-		hidden: { y: 20, opacity: 0, translateX },
-		visible: {
-			y: -20,
-			x: 40,
-			opacity: 1,
-		},
-	}
-}
 
 export default function SocialMediaLinks() {
 	const [open, setOpen] = useState<boolean>(false)

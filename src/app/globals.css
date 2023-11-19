@@ -4,8 +4,7 @@
 
 @layer base {
 	html {
-		font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Futura', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-			'Droid Sans', 'Helvetica Neue', sans-serif;
+		font-family: var(--font-inter);
 	}
 
 	body {

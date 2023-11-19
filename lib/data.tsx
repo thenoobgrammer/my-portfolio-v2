@@ -1,7 +1,6 @@
-import { FaEnvelope, FaFacebook, FaGithub, FaGlobe, FaLinkedinIn, FaMap, FaPhone } from 'react-icons/fa'
+import { FaEnvelope, FaGithub, FaGlobe, FaLinkedinIn, FaMap, FaPhone } from 'react-icons/fa'
 
 import { CgWebsite } from 'react-icons/cg'
-import { TiSocialLinkedinCircular } from 'react-icons/ti'
 
 export const GITHUB_PROFILE_URL = 'https://github.com/thenoobgrammer'
 export const FACEBOOK_URL = 'https://www.facebook.com/antonio.hakim.39/'
@@ -14,15 +13,27 @@ export const EMAIL_PUBLIC_KEY = 'gdUsqVZJvLcgL1JXC'
 export const EMAIL_SERVICE_ID = 'service_gbfzv1f'
 export const EMAIL_TEMPLATE_ID = 'template_k1dy7ba'
 
-export const PersonalInfo = [
-	{ icon: FaMap, text: 'Montreal, QC' },
-	{ icon: FaPhone, text: '+1 514-966-8481' },
-	{ icon: FaEnvelope, text: 'ant.hakim.stud@gmail.com' },
-	{ icon: FaGlobe, text: ['English', 'French'] },
-	{ icon: CgWebsite, url: 'https://thenoobgrammer.com', text: 'My Website' },
-	{ icon: FaLinkedinIn, url: 'https://www.linkedin.com/in/antoine-hakim-359669105/', text: 'My LinkedIn' },
-	{ icon: FaGithub, url: 'https://github.com/thenoobgrammer', text: 'My Github' },
-]
+export const Address = { icon: FaMap, text: 'Montreal, QC' }
+export const Phone = { icon: FaPhone, text: '+1 514-966-8481' }
+export const Email = { icon: FaEnvelope, text: 'ant.hakim.stud@gmail.com' }
+export const SpokenLanguages = { icon: FaGlobe, text: ['English', 'French'] }
+export const Website = { icon: CgWebsite, url: 'https://thenoobgrammer.com', text: 'My Website' }
+
+const DISCORD_GIT_REPO = 'https://github.com/thenoobgrammer/bramble'
+const PICKSIDE_GIT_REPO = 'https://github.com/PickSide'
+const PORTFOLIO_V1_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio'
+const PORTFOLIO_V2_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio-v2'
+const SADBOIS_GIT_REPO = 'https://github.com/orgs/Sadboiss/repositories'
+const PICKSIDE_URL = 'https://pickside.net'
+const PORTFOLIO_V1_URL = 'https://thenoobgrammer.com'
+const PORTFOLIO_V2_URL = 'https://v2.thenoobgrammer.com'
+
+export const LinkedIn = {
+	icon: FaLinkedinIn,
+	url: 'https://www.linkedin.com/in/antoine-hakim-359669105/',
+	text: 'My LinkedIn',
+}
+export const Github = { icon: FaGithub, url: 'https://github.com/thenoobgrammer', text: 'My Github' }
 
 export const Links = [
 	{ name: 'home', hash: '#home' },
@@ -91,7 +102,7 @@ export const WorkExperiences = [
 		id: 'desjardins',
 		start: 'Dec 2020',
 		end: 'Jan 2022',
-		logoClassname: 'bg-desjardin-color',
+		logoClassname: 'bg-desjardins-white',
 		link: 'https://desjardins.com',
 		company: 'Desjardins',
 		title: 'Fullstack engineer',
@@ -124,7 +135,7 @@ export const WorkExperiences = [
 		id: 'bell',
 		start: 'Jan 2019',
 		end: 'May 2019',
-		logoClassname: 'bg-bell-color',
+		logoClassname: 'bg-bell-white',
 		link: 'https://bell.ca',
 		company: 'Bell Canada',
 		title: 'Fullstack engineer',
@@ -157,7 +168,7 @@ export const WorkExperiences = [
 		end: 'May 2018',
 		logoClassname: 'bg-ubisoft',
 		link: 'https://ubisoft.com',
-		title: 'Interne Frontend developer',
+		title: 'Intern Frontend developer',
 		company: 'Ubisoft',
 		descriptions: ['Ubisoft.a', 'Ubisoft.b', 'Ubisoft.c', 'Ubisoft.d', 'Ubisoft.e'],
 		summary: 'Ubisoft.summary',
@@ -189,11 +200,9 @@ export const PersonalProjects = [
 	{
 		name: 'Pickside',
 		title: 'Rest API application',
-		repoURL: ['Pickside.repo'],
-		websiteURL: {
-			ref: 'Pickside.website',
-			placeholder: 'Pickside.accessWebsite',
-		},
+		gitUrl: PICKSIDE_GIT_REPO,
+		url: PICKSIDE_URL,
+		summary: 'Pickside.summary',
 		descriptions: [
 			'Pickside.a',
 			'Pickside.b',
@@ -234,33 +243,62 @@ export const PersonalProjects = [
 		],
 	},
 	{
-		name: 'Portfolio',
+		name: 'Portfolio V1',
 		title: 'Web development',
-		repoURL: ['Portfolio.repo'],
+		gitUrl: PORTFOLIO_V1_GIT_REPO,
+		url: PORTFOLIO_V1_URL,
+		summary: 'PortfolioV1.summary',
 		descriptions: [
-			'Portfolio.a',
-			'Portfolio.b',
-			'Portfolio.c',
-			'Portfolio.d',
-			'Portfolio.e',
-			'Portfolio.f',
-			'Portfolio.g',
+			'PortfolioV1.a',
+			'PortfolioV1.b',
+			'PortfolioV1.c',
+			'PortfolioV1.d',
+			'PortfolioV1.e',
+			'PortfolioV1.f',
+			'PortfolioV1.g',
 		],
 		descriptionsHighlighted: [
-			'PortfolioHighlighted.a',
-			'PortfolioHighlighted.b',
-			'PortfolioHighlighted.c',
-			'PortfolioHighlighted.d',
-			'PortfolioHighlighted.e',
-			'PortfolioHighlighted.f',
-			'PortfolioHighlighted.g',
+			'PortfolioV1ighlighted.a',
+			'PortfolioV1ighlighted.b',
+			'PortfolioV1ighlighted.c',
+			'PortfolioV1ighlighted.d',
+			'PortfolioV1ighlighted.e',
+			'PortfolioV1ighlighted.f',
+			'PortfolioV1ighlighted.g',
+		],
+		technologies: ['React 18', 'Tailwind CSS', 'Route 53', 'Certificate Manager', 'S3'],
+	},
+	{
+		name: 'Portfolio V2',
+		title: 'Web development',
+		url: PORTFOLIO_V2_URL,
+		gitUrl: PORTFOLIO_V2_GIT_REPO,
+		summary: 'PortfolioV2.summary',
+		descriptions: [
+			'PortfolioV2.a',
+			'PortfolioV2.b',
+			'PortfolioV2.c',
+			'PortfolioV2.d',
+			'PortfolioV2.e',
+			'PortfolioV2.f',
+			'PortfolioV2.g',
+		],
+		descriptionsHighlighted: [
+			'PortfolioV2Highlighted.a',
+			'PortfolioV2Highlighted.b',
+			'PortfolioV2Highlighted.c',
+			'PortfolioV2Highlighted.d',
+			'PortfolioV2Highlighted.e',
+			'PortfolioV2Highlighted.f',
+			'PortfolioV2Highlighted.g',
 		],
 		technologies: ['React 18', 'Tailwind CSS', 'Route 53', 'Certificate Manager', 'S3'],
 	},
 	{
 		name: 'Discord',
 		title: 'Rest API application',
-		repoURL: ['Discord.repo'],
+		summary: 'Discord.summary',
+		gitUrl: DISCORD_GIT_REPO,
 		descriptions: ['Discord.a', 'Discord.b'],
 		descriptionsHighlighted: ['DiscordHighlighted.a', 'DiscordHighlighted.b'],
 		technologies: ['NodeJS', 'Express', 'GitHub', 'Typescript', 'AWS (EC2)'],
@@ -268,7 +306,8 @@ export const PersonalProjects = [
 	{
 		name: 'Sadbois',
 		title: 'Rest API application',
-		repoURL: ['Sadboiss.repo'],
+		summary: 'Sadbois.summary',
+		gitUrl: SADBOIS_GIT_REPO,
 		descriptions: ['Sadboiss.a', 'Sadboiss.b', 'Sadboiss.c'],
 		descriptionsHighlighted: ['SadboissHighlighted.a', 'SadboissHighlighted.b', 'SadboissHighlighted.c'],
 		technologies: ['ReactJS', 'GitHub', 'REST API', 'Typescript', 'Paypal API'],

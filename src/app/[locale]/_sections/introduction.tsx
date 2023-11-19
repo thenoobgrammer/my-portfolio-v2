@@ -1,9 +1,14 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 
 import { TypeAnimation } from 'react-type-animation'
 import anime from 'animejs/lib/anime.es.js'
+import { useTranslations } from 'next-intl'
 
-export default function Introduction(props) {
+export default function Introduction() {
+	const t = useTranslations('Introduction')
+
 	const [isFirstCompleted, setIsFirstCompleted] = useState(false)
 
 	useEffect(() => {
@@ -21,9 +26,9 @@ export default function Introduction(props) {
 	}, [])
 
 	return (
-		<div className="w-[960px] mx-auto space-y-3">
+		<div className="max-w-[960px] mx-auto space-y-3 whitespace-pre-wrap">
 			<TypeAnimation
-				sequence={['Hi,', 500, 'Hi, my name is', () => setIsFirstCompleted(true)]}
+				sequence={[t('hi'), 500, t('intro'), () => setIsFirstCompleted(true)]}
 				className="text-lg text-accent-300 font-medium"
 				wrapper="p"
 				speed={70}
@@ -33,7 +38,7 @@ export default function Introduction(props) {
 			{isFirstCompleted && (
 				<TypeAnimation
 					className="text-gray-300 font-medium"
-					sequence={[900, 'Antoine Hakim.']}
+					sequence={[900, t('name')]}
 					wrapper="h3"
 					speed={70}
 					omitDeletionAnimation={true}
@@ -41,13 +46,10 @@ export default function Introduction(props) {
 				/>
 			)}
 			<h4 id="title" className="text-light font-medium opacity-0">
-				Web developer, based in Montreal
+				{t('jobTitle')}
 			</h4>
 			<p id="desc" className="text-md text-light/70 font-medium opacity-0">
-				{`I'm a full-stack developer with a background experience in building full-fledged custom platform, tailed to
-					customers needs. My past accomplishments holds in the companies I've worked for, but right now, I am looking
-					and hoping to connect with people and work together to design amazing content. If you have a project and would
-					love to bring it to reality, I am your man for the job.`}
+				{t('summary')}
 			</p>
 		</div>
 	)
