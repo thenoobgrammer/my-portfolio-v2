@@ -22,7 +22,7 @@ export default function Resume() {
 	return (
 		<div
 			id="CV"
-			className="flex flex-col h-full font-medium text-light w-full gap-11 scroll-smooth md:flex-row md:max-h-[70vh] p-4"
+			className="flex flex-col h-full font-medium text-inherit w-full gap-11 scroll-smooth md:flex-row md:max-h-[70vh] p-4"
 		>
 			<div className="flex flex-col gap-y-7">
 				<h5 className="text-accent-300">{t('Work experience')}</h5>
@@ -54,8 +54,12 @@ export default function Resume() {
 										</li>
 									))}
 									<li className="my-1 flex flex-wrap items-center font-semibold">
-										{technologies.map((tech, idx) => (
-											<Chip key={idx}>{tech}</Chip>
+										{technologies.map(({ name, tag, url }) => (
+											<Chip className="group/chip hover:bg-accent-400/70" key={tag}>
+												<Link href={url} className="chip-link group-hover/chip:text-accent-200" target="_blank">
+													{name}
+												</Link>
+											</Chip>
 										))}
 									</li>
 								</ul>

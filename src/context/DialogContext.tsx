@@ -70,7 +70,7 @@ export const DialogProvider: FC<any> = ({ children }) => {
 										ease: [0.25, 0.25, 0.25, 0.4],
 									},
 								}}
-								className="w-[95%] fixed m-auto md:top-0 max-h-[85%] md:max-w-fit inset-0 overflow-hidden bg-primary shadow-lg rounded-md z-50 text-light/80"
+								className="w-[95%] fixed m-auto md:top-0 max-h-[85%] md:max-w-fit inset-0 overflow-hidden shadow-lg rounded-md z-50 bg-primary text-secondary"
 							>
 								<header className="flex items-center justify-between border-b-light/20 border-b-[1px] p-3">
 									<h6 className="ml-2">{state.title}</h6>

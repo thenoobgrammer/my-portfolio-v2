@@ -54,7 +54,7 @@ export default function SocialMediaLinks() {
 								className="relative active:bg-slate-100"
 							>
 								<IconButton>
-									<a href={GITHUB_PROFILE_URL} target="_blank" className="text-accent-200">
+									<a href={GITHUB_PROFILE_URL} target="_blank">
 										<FaGithub size={25} />
 									</a>
 								</IconButton>
@@ -74,7 +74,7 @@ export default function SocialMediaLinks() {
 								className="relative active:bg-slate-100"
 							>
 								<IconButton>
-									<a href={FACEBOOK_URL} target="_blank" className="text-accent-200">
+									<a href={FACEBOOK_URL} target="_blank">
 										<FaFacebook size={25} />
 									</a>
 								</IconButton>
@@ -94,7 +94,7 @@ export default function SocialMediaLinks() {
 								className="relative active:bg-slate-100"
 							>
 								<IconButton>
-									<a href={LINKEDIN_URL} target="_blank" className="text-accent-200">
+									<a href={LINKEDIN_URL} target="_blank">
 										<FaLinkedin size={25} />
 									</a>
 								</IconButton>

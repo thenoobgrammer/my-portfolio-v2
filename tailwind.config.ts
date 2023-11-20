@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
 
 const config: Config = {
 	darkMode: 'class',
@@ -11,8 +12,32 @@ const config: Config = {
 			mono: ['var(--font-roboto-mono)'],
 		},
 		fill: {
-			primary: '#2D4263',
-			accent: '#C84B31',
+			primary: '#232541',
+			secondary: '#c3bdb6',
+			accent: {
+				50: '#EDE7F6',
+				100: '#D1C4E9',
+				200: '#B39DDB',
+				300: '#9575CD',
+				400: '#7E57C2',
+				500: '#673AB7',
+				600: '#5E35B1',
+				700: '#512DA8',
+				800: '#4527A0',
+				DEFAULT: '#311B92',
+			},
+			// accent: {
+			// 	50: '#e1f4f1',
+			// 	100: '#b6e5da',
+			// 	200: '#87d4c3',
+			// 	300: '#57c3ab',
+			// 	400: '#34b499',
+			// 	500: '#1aa688',
+			// 	600: '#17987b',
+			// 	700: '#12886b',
+			// 	DEFAULT: '#74a3c9',
+			// 	900: '#005b41',
+			// },
 		},
 		fontSize: {
 			xs: ['10px', { lineHeight: '1.5' }],
@@ -32,21 +57,39 @@ const config: Config = {
 				'bell-white': "url('/Bell-white.png')",
 			},
 			colors: {
-				primary: '#2D4263',
+				primary: '#232541',
+				secondary: '#c3bdb6',
 				accent: {
-					50: '#f7e9e9',
-					100: '#f8ccc2',
-					200: '#f4ab9b',
-					300: '#f28c74',
-					400: '#f07357',
-					500: '#f05c3e',
-					600: '#e55639',
-					700: '#d75035',
-					800: '#C84B31', //accent
-					900: '#ad402b',
+					50: '#EDE7F6',
+					100: '#D1C4E9',
+					200: '#B39DDB',
+					300: '#9575CD',
+					400: '#7E57C2',
+					500: '#673AB7',
+					600: '#5E35B1',
+					700: '#512DA8',
+					800: '#4527A0',
+					DEFAULT: '#311B92',
 				},
-				light: '#ECDBBA',
-				dark: '#191919',
+				// accent: {
+				// 	50: '#e1f4f1',
+				// 	100: '#b6e5da',
+				// 	200: '#87d4c3',
+				// 	300: '#57c3ab',
+				// 	400: '#34b499',
+				// 	500: '#1aa688',
+				// 	600: '#17987b',
+				// 	700: '#12886b',
+				// 	DEFAULT: '#74a3c9',
+				// 	900: '#005b41',
+				// },
+				'accent-primary': '#78a6c3',
+				'accent-secondary': '#6882ac',
+				light: '#627ea6',
+				dark: '#005B41',
+			},
+			textShadow: {
+				DEFAULT: 'var(--tw-shadow-color) .5px .5px 10px',
 			},
 		},
 		screens: {
@@ -57,6 +100,17 @@ const config: Config = {
 			xl: '1200px',
 		},
 	},
-	plugins: [],
+	plugins: [
+		plugin(function ({ matchUtilities, theme }) {
+			matchUtilities(
+				{
+					'text-shadow': (value) => ({
+						textShadow: value,
+					}),
+				},
+				{ values: theme('textShadow') },
+			)
+		}),
+	],
 }
 export default config

@@ -22,7 +22,7 @@ export const Tab = ({ id, label, tabIndex, ...props }) => {
 			id={id}
 			tabIndex={tabIndex}
 			className={clsx(
-				'tab relative flex items-center text-lg py-1 px-2 cursor-pointer transition-transform z-10 hover:text-accent-300/60',
+				'tab relative flex items-center text-lg py-1 px-2 cursor-pointer transition-all z-10 hover:text-accent-300',
 				active && 'active',
 				props.className,
 			)}

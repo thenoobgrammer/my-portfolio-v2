@@ -1,6 +1,7 @@
 import { FaEnvelope, FaGithub, FaGlobe, FaLinkedinIn, FaMap, FaPhone } from 'react-icons/fa'
 
 import { CgWebsite } from 'react-icons/cg'
+import { uniq } from 'lodash'
 
 export const GITHUB_PROFILE_URL = 'https://github.com/thenoobgrammer'
 export const FACEBOOK_URL = 'https://www.facebook.com/antonio.hakim.39/'
@@ -44,7 +45,7 @@ export const Links = [
 ]
 
 export const Languages = [
-	'ReactJS',
+	'React',
 	'NodeJS',
 	'Javascript/HTML/CSS',
 	'AWS',
@@ -55,6 +56,85 @@ export const Languages = [
 	'EmberJS',
 	'PolymerJS',
 	'Angular',
+]
+
+export const FE_Frameworks = [
+	{ name: 'CSS', tag: 'css', url: 'https://www.w3schools.com/css/' },
+	{ name: 'Ember.js', tag: 'ember', url: 'https://emberjs.com/' },
+	{ name: 'HTML', tag: 'html', url: 'https://www.w3schools.com/html/' },
+	{ name: 'Javascript', tag: 'js', url: 'https://www.javascript.com/' },
+	{ name: 'React 18', tag: 'react', url: 'https://react.dev/blog/2022/03/29/react-v18' },
+	{ name: 'NextJS', tag: 'next', url: 'https://nextjs.org/' },
+	{ name: 'Typescript', tag: 'typescript', url: 'https://www.typescriptlang.org/' },
+	{ name: 'Redux Thunk', tag: 'redux', url: 'https://redux.js.org/usage/writing-logic-thunks' },
+	{ name: 'Tailwind', tag: 'tailwind', url: 'https://tailwindcss.com/' },
+	{
+		name: 'React Testing Library',
+		tag: 'react-test',
+		url: 'https://testing-library.com/docs/react-testing-library/intro/',
+	},
+	{ name: 'Jest', tag: 'jest-test', url: 'https://jestjs.io/' },
+	{ name: 'Stencil', tag: 'stencil', url: 'https://stenciljs.com/' },
+	{
+		name: 'Polymer Library',
+		tag: 'polymer',
+		url: 'https://polymer-library.polymer-project.org/3.0/docs/devguide/feature-overview',
+	},
+]
+
+export const BE_Frameworks = [
+	{ name: 'C#', tag: 'csharp', url: 'https://learn.microsoft.com/en-us/dotnet/csharp/' },
+	{ name: 'Node.js', tag: 'node', url: 'https://nodejs.org/en/' },
+	{ name: 'Python', tag: 'python', url: 'https://www.python.org/' },
+	{ name: 'Spring', tag: 'java', url: 'https://spring.io/projects/spring-boot' },
+]
+
+export const DB_Frameworks = [
+	{
+		name: 'MySQL',
+		tag: 'mysql',
+		url: 'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiL0qqEwtGCAxW9AzQIHecBCvcQFnoECAcQAQ&url=https%3A%2F%2Fwww.mysql.com%2F&usg=AOvVaw20c6IrMAtNC1A9NZPsDpWW&opi=89978449',
+	},
+	{ name: 'MongoDb', tag: 'mongodb', url: 'https://www.mongodb.com/' },
+]
+
+export const DeploymentTools = [
+	{ name: 'Ansible', tag: 'ansible', url: 'https://www.ansible.com/' },
+	{ name: 'Concourse CI', tag: 'concourse', url: 'https://concourse-ci.org/' },
+	{ name: 'Docker', tag: 'docker', url: 'https://www.docker.com/' },
+	{ name: 'EC2', tag: 'ec2', url: 'https://aws.amazon.com/ec2/' },
+	{ name: 'Github Actions', tag: 'git-actions', url: 'https://www.terraform.io/' },
+	{ name: 'Jenkins', tag: 'jenkins', url: 'https://www.jenkins.io/' },
+	{ name: 'S3', tag: 's3', url: 'https://aws.amazon.com/s3/' },
+	{ name: 'Certificate Manager', tag: 'acm', url: 'https://aws.amazon.com/certificate-manager/' },
+	{ name: 'Route 53', tag: 'route53', url: 'https://aws.amazon.com/route53/' },
+	{ name: 'Terraform', tag: 'terraform', url: 'https://www.terraform.io/' },
+	{ name: 'SonarQube', tag: 'sonar', url: 'https://www.sonarsource.com/products/sonarqube/' },
+	{ name: 'CloudFoundry', tag: 'cf', url: 'https://www.cloudfoundry.org/' },
+]
+
+export const ExternalSaas = [
+	{ name: 'Liferay', tag: 'liferay', url: 'https://www.liferay.com/' },
+	{ name: 'GoogleAPI', tag: 'google', url: 'https://developers.google.com/apis-explorer' },
+]
+
+export const ExternalPlanningTools = [
+	{ name: 'Jira', tag: 'jira', url: 'https://www.atlassian.com/software/jira' },
+	{ name: 'Confluence', tag: 'confluence', url: 'https://www.atlassian.com/software/confluence' },
+]
+
+export const VersionningTools = [
+	{ name: 'Bitbucket', tag: 'bitbucket', url: 'https://bitbucket.org/product' },
+	{ name: 'Github', tag: 'git', url: 'https://github.com/' },
+	{ name: 'Gitlab', tag: 'gitlab', url: 'https://about.gitlab.com/' },
+]
+
+export const Concepts = [
+	{ name: 'REST API', tag: 'rest', url: 'https://www.redhat.com/en/topics/api/what-is-a-rest-api' },
+	{ name: 'React HOC', tag: 'hoc', url: 'https://legacy.reactjs.org/docs/higher-order-components.html' },
+	{ name: 'Custom hooks', tag: 'hooks', url: 'https://react.dev/learn/reusing-logic-with-custom-hooks' },
+	{ name: 'Microservice architecture', tag: 'microservice', url: 'https://microservices.io/' },
+	{ name: 'TDD', tag: 'tdd', url: 'https://www.browserstack.com/guide/what-is-test-driven-development' },
 ]
 
 export const Education = [
@@ -84,19 +164,19 @@ export const WorkExperiences = [
 			'GoToHighlighted.g',
 			'GoToHighlighted.h',
 		],
-		technologies: [
-			'ReactJS 18',
-			'Redux-Thunk',
-			'React testing library',
-			'Jest',
-			'Jenkins',
-			'Git',
-			'GitHub',
-			'Confluence',
-			'Bitbucket',
-			'REST API',
-			'SonarQube',
-		],
+		technologies: extract([
+			'react',
+			'redux',
+			'typescript',
+			'react-test',
+			'jest-test',
+			'jenkins',
+			'git',
+			'confluence',
+			'bitbucket',
+			'rest',
+			'sonar',
+		]),
 	},
 	{
 		id: 'desjardins',
@@ -116,20 +196,20 @@ export const WorkExperiences = [
 			'DesjardinsHighlighted.e',
 			'DesjardinsHighlighted.f',
 		],
-		technologies: [
-			'Spring Boot',
-			'StencilJs',
-			'AngularJS',
-			'CloudFoundry',
-			'HTML/CSS',
-			'ConcourseCI',
-			'Jira',
-			'Confluence',
-			'Bitbucket',
-			'REST API',
-			'Liferay',
-			'SonarQube',
-		],
+		technologies: extract([
+			'java',
+			'stencil',
+			'html',
+			'css',
+			'cf',
+			'concourse',
+			'jira',
+			'confluence',
+			'bitbucket',
+			'rest',
+			'liferay',
+			'sonar',
+		]),
 	},
 	{
 		id: 'bell',
@@ -148,19 +228,18 @@ export const WorkExperiences = [
 			'BellHighlighted.d',
 			'BellHighlighted.e',
 		],
-		technologies: [
-			'C#',
-			'Ember',
-			'MySQL',
-			'HTML/CSS',
-			'Bootstrap',
-			'Jira, Bamboo',
-			'Confluence',
-			'Bitbucket',
-			'Docker',
-			'Kubernetes',
-			'REST API',
-		],
+		technologies: extract([
+			'csharp',
+			'ember',
+			'mysql',
+			'html',
+			'css',
+			'jira',
+			'confluence',
+			'bitbucket',
+			'docker',
+			'rest',
+		]),
 	},
 	{
 		id: 'ubisoft',
@@ -179,20 +258,18 @@ export const WorkExperiences = [
 			'BellHighlighted.d',
 			'BellHighlighted.e',
 		],
-		technologies: [
-			'C#',
-			'Ember',
-			'MySQL',
-			'HTML/CSS',
-			'Bootstrap',
-			'Jira',
-			'Bamboo',
-			'Confluence',
-			'Bitbucket',
-			'Docker',
-			'Kubernetes',
-			'REST API',
-		],
+		technologies: extract([
+			'csharp',
+			'ember',
+			'mysql',
+			'html',
+			'css',
+			'jira',
+			'confluence',
+			'bitbucket',
+			'docker',
+			'rest',
+		]),
 	},
 ]
 
@@ -229,18 +306,21 @@ export const PersonalProjects = [
 			'PicksideHighlighted.j',
 			'PicksideHighlighted.k',
 		],
-		technologies: [
-			'NodeJS/Express',
-			'React 18',
-			'Redux-Thunk',
-			'Google API',
-			'Typescript',
-			'MongoDB/NoSQL',
-			'Github',
-			'Docker',
-			'AWS (Route 53, Certificate Manager',
-			'EC2',
-		],
+		technologies: extract([
+			'react',
+			'node',
+			'redux',
+			'google-api',
+			'typescript',
+			'tailwind',
+			'github',
+			'mongodb',
+			'docker',
+			'ec2',
+			's3',
+			'route53',
+			'acm',
+		]),
 	},
 	{
 		name: 'Portfolio V1',
@@ -266,7 +346,7 @@ export const PersonalProjects = [
 			'PortfolioV1ighlighted.f',
 			'PortfolioV1ighlighted.g',
 		],
-		technologies: ['React 18', 'Tailwind CSS', 'Route 53', 'Certificate Manager', 'S3'],
+		technologies: extract(['react', 'tailwind', 'route53', 'acm', 's3']),
 	},
 	{
 		name: 'Portfolio V2',
@@ -292,7 +372,7 @@ export const PersonalProjects = [
 			'PortfolioV2Highlighted.f',
 			'PortfolioV2Highlighted.g',
 		],
-		technologies: ['React 18', 'Tailwind CSS', 'Route 53', 'Certificate Manager', 'S3'],
+		technologies: extract(['next', 'react', 'tailwind', 'route53', 'acm', 's3']),
 	},
 	{
 		name: 'Discord',
@@ -301,7 +381,7 @@ export const PersonalProjects = [
 		gitUrl: DISCORD_GIT_REPO,
 		descriptions: ['Discord.a', 'Discord.b'],
 		descriptionsHighlighted: ['DiscordHighlighted.a', 'DiscordHighlighted.b'],
-		technologies: ['NodeJS', 'Express', 'GitHub', 'Typescript', 'AWS (EC2)'],
+		technologies: extract(['node', 'git', 'typescript', 'ec2']),
 	},
 	{
 		name: 'Sadbois',
@@ -310,6 +390,22 @@ export const PersonalProjects = [
 		gitUrl: SADBOIS_GIT_REPO,
 		descriptions: ['Sadboiss.a', 'Sadboiss.b', 'Sadboiss.c'],
 		descriptionsHighlighted: ['SadboissHighlighted.a', 'SadboissHighlighted.b', 'SadboissHighlighted.c'],
-		technologies: ['ReactJS', 'GitHub', 'REST API', 'Typescript', 'Paypal API'],
+		technologies: extract(['react', 'github', 'rest', 'typescript']),
 	},
 ]
+
+export function extract(tags: string[]) {
+	return [].concat.apply(
+		[],
+		[
+			uniq(BE_Frameworks.filter((el) => tags.includes(el.tag))),
+			uniq(Concepts.filter((el) => tags.includes(el.tag))),
+			uniq(DB_Frameworks.filter((el) => tags.includes(el.tag))),
+			uniq(DeploymentTools.filter((el) => tags.includes(el.tag))),
+			uniq(ExternalPlanningTools.filter((el) => tags.includes(el.tag))),
+			uniq(ExternalSaas.filter((el) => tags.includes(el.tag))),
+			uniq(FE_Frameworks.filter((el) => tags.includes(el.tag))),
+			uniq(VersionningTools.filter((el) => tags.includes(el.tag))),
+		],
+	)
+}

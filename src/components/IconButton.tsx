@@ -1,12 +1,12 @@
 'use client'
 
-import clsx from 'clsx'
+import { cn } from 'src/utils/common'
 
 export default function IconButton(props) {
 	const { children, className, ...rest } = props
 
 	return (
-		<button className={clsx('icon-btn', className)} {...rest}>
+		<button className={cn('icon-btn', className)} {...rest}>
 			{children}
 		</button>
 	)

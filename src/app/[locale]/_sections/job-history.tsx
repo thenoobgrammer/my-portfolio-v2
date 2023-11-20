@@ -1,11 +1,12 @@
 'use client'
 
-import { BiCloudDownload, BiFullscreen, BiLinkExternal } from 'react-icons/bi'
+import { BiFullscreen, BiLinkExternal } from 'react-icons/bi'
 import { Tab, TabPane, Tabs } from 'src/context/TabContext'
 
 import Chip from 'src/components/Chip'
 import { DialogDispatchContext } from 'src/context/DialogContext'
 import IconButton from 'src/components/IconButton'
+import Link from 'next/link'
 import Resume from '../_components/Resume'
 import { WorkExperiences } from 'lib/data'
 import { useContext } from 'react'
@@ -42,27 +43,33 @@ export default function JobHistory() {
 						{WorkExperiences.map((props, idx) => (
 							<Tab id={props.id} className="w-36 h-10" key={idx} label={props.company} tabIndex={idx} />
 						))}
-						<p className="glider absolute w-36 h-10 bg-accent-200/50 rounded-md" />
+						<p className="glider absolute w-36 h-10 border-b-2 border-accent-400" />
 					</div>
 					{WorkExperiences.map((props, idx) => (
 						<TabPane key={idx} tabIndex={idx}>
-							<p className="text-sm text-light font-medium mt-2 mb-3">
-								{props.start}-{props.end}
-							</p>
-							<h6 className="inline-flex items-center text-light font-medium gap-x-2">
-								{props.company}{' '}
-								<IconButton className="text-accent-500">
-									<a href={props.link} target="_blank">
-										<BiLinkExternal size={20} />
-									</a>
-								</IconButton>
-							</h6>
-							<p className="text- text-light font-medium">{props.title}</p>
-							<p className="text-md text-light/70 font-medium">{t(props.summary)}</p>
-							<div className="flex flex-wrap my-2">
-								{props.technologies.map((tech, idx) => (
-									<Chip key={idx}>{tech}</Chip>
-								))}
+							<div className="flex flex-col gap-y-4">
+								<p className="text-sm text-light font-medium mt-4">
+									{props.start}-{props.end}
+								</p>
+								<h6 className="inline-flex items-center text-light font-medium gap-x-2">
+									{props.company}{' '}
+									<IconButton className="text-accent-500">
+										<a href={props.link} target="_blank">
+											<BiLinkExternal size={20} />
+										</a>
+									</IconButton>
+								</h6>
+								<p className="text- text-light font-medium">{props.title}</p>
+								<p className="text-md text-light/70 font-medium">{t(props.summary)}</p>
+								<div className="flex flex-wrap my-2">
+									{props.technologies.map(({ name, url, tag }) => (
+										<Chip className="group/chip hover:bg-accent-400/70" key={tag}>
+											<Link href={url} className="chip-link group-hover/chip:text-accent-200" target="_blank">
+												{name}
+											</Link>
+										</Chip>
+									))}
+								</div>
 							</div>
 						</TabPane>
 					))}

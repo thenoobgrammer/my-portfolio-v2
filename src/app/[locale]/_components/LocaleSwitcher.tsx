@@ -1,35 +1,31 @@
 'use client'
 
-import { BiArrowFromBottom, BiDownArrow, BiSolidDownArrow } from 'react-icons/bi'
-import { useParams, usePathname, useRouter } from 'next/navigation'
-
+import { BiGlobe } from 'react-icons/bi'
+import IconButton from 'src/components/IconButton'
 import Link from 'next/link'
-import clsx from 'clsx'
+import Menu from 'src/components/Menu'
+import { useParams } from 'next/navigation'
 import { useState } from 'react'
-import { useTranslations } from 'next-intl'
 
-export default function LocaleSwitcher({ children, defaultValue, label }) {
-	const t = useTranslations('LocaleSwitcher')
-	const pathname = usePathname()
+export default function LocaleSwitcher() {
 	const params = useParams()
-	const router = useRouter()
-	console.log('pathname', pathname)
-	console.log('params', params)
-	console.log('router', router)
 
-	function changeLocale() {
-		if (params.locale === 'en') {
-		}
-	}
-	//const otherLocale = locales?.find((cur) => cur !== locale)
+	const [open, setOpen] = useState<boolean>(false)
 
 	return (
-		<div className="">
-			<button className="text-white font-medium block hover:text-indigo-200/70 hover:scale-90 transition-all">
-				<Link className="capitalize" href="/" locale={params.locale === 'en' ? 'fr' : 'en'}>
-					{params.locale}
+		<div className="relative">
+			<IconButton className="space-x-2" onClick={() => setOpen(true)}>
+				<BiGlobe />
+				<span className="capitalize">{params.locale}</span>
+			</IconButton>
+			<Menu open={open} onClose={() => setOpen(false)}>
+				<Link className="p-3 hover:bg-accent-400 hover:text-accent-600 capitalize w-full h-full" href="/en" locale="en">
+					English
 				</Link>
-			</button>
+				<Link className="p-3 hover:bg-accent-400 hover:text-accent-600 capitalize w-full h-full" href="/fr" locale="fr">
+					Francais
+				</Link>
+			</Menu>
 		</div>
 	)
 }
