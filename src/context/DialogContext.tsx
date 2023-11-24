@@ -47,7 +47,7 @@ export const DialogProvider: FC<any> = ({ children }) => {
 			<DialogDispatchContext.Provider value={dispatch}>
 				{state.opened && (
 					<>
-						<div className="fixed inset-0 bg-black/30 z-50" onClick={clearState} />
+						<div className="fixed inset-0 w-screen h-screen bg-black/60 z-50" onClick={clearState} />
 						<AnimatePresence>
 							<motion.div
 								initial={{ y: -80, opacity: 0 }}
@@ -70,9 +70,9 @@ export const DialogProvider: FC<any> = ({ children }) => {
 										ease: [0.25, 0.25, 0.25, 0.4],
 									},
 								}}
-								className="w-[95%] fixed m-auto md:top-0 max-h-[85%] md:max-w-fit inset-0 overflow-hidden bg-primary shadow-lg rounded-md z-50 text-light/80"
+								className="fixed w-[95%] h-[85%] m-auto inset-0 overflow-hidden shadow-lg rounded-md z-50 bg-primary text-secondary md:max-w-[1200px] md:max-h-[1200px]"
 							>
-								<header className="flex items-center justify-between border-b-light/20 border-b-[1px] p-3">
+								<header className="flex items-center justify-between p-3">
 									<h6 className="ml-2">{state.title}</h6>
 									<button
 										className="p-1 hover:bg-light/20 hover:text-accent-200 rounded-md transition-all"
@@ -81,7 +81,7 @@ export const DialogProvider: FC<any> = ({ children }) => {
 										<MdClose className="text-accent-300" size={20} />
 									</button>
 								</header>
-								<div className="px-6 py-3 overflow-y-auto scrollbar">{state.content}</div>
+								{state.content}
 							</motion.div>
 						</AnimatePresence>
 					</>

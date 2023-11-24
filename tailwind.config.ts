@@ -1,20 +1,41 @@
 /** @type {import('tailwindcss').Config} */
 
 import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
 
 const config: Config = {
 	darkMode: 'class',
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
+		animation: {
+			'drop-in': 'drop-in 700ms ease-in-out',
+		},
+
+		keyframes: {
+			'drop-in': {
+				from: { display: 'none', opacity: '0', transform: 'translateY(-80px)' },
+				to: { display: 'block', opacity: '1', transform: 'translateY(0)' },
+			},
+		},
 		fontFamily: {
-			primary: ['sans-serif'],
-			secondary: '"Roboto Slab"',
-			tertiary: 'Aldrich',
-			sans: ['Calibre', 'Inter', 'San Francisco', 'SF Pro Text', '-apple-system,system-ui', 'sans-serif'],
+			sans: ['var(--font-inter)'],
+			mono: ['var(--font-roboto-mono)'],
 		},
 		fill: {
-			primary: '#2D4263',
-			accent: '#C84B31',
+			primary: '#303841',
+			secondary: '#c3bdb6',
+			accent: {
+				50: '#EDE7F6',
+				100: '#D1C4E9',
+				200: '#B39DDB',
+				300: '#9575CD',
+				400: '#7E57C2',
+				500: '#673AB7',
+				600: '#5E35B1',
+				700: '#512DA8',
+				800: '#4527A0',
+				DEFAULT: '#311B92',
+			},
 		},
 		fontSize: {
 			xs: ['10px', { lineHeight: '1.5' }],
@@ -27,25 +48,32 @@ const config: Config = {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 				'goto-color': "url('/Goto-colored.webp')",
+				'goto-white': "url('/Goto-white.png')",
 				'desjardins-color': "url('/Desjardins-colored.png')",
+				'desjardins-white': "url('/Desjardins-white.png')",
 				'bell-color': "url('/Bell-colored.png')",
+				'bell-white': "url('/Bell-white.png')",
 			},
 			colors: {
-				primary: '#2D4263',
+				primary: '#303841',
+				secondary: '#c3bdb6',
 				accent: {
-					50: '#f7e9e9',
-					100: '#f8ccc2',
-					200: '#f4ab9b',
-					300: '#f28c74',
-					400: '#f07357',
-					500: '#f05c3e',
-					600: '#e55639',
-					700: '#d75035',
-					800: '#C84B31', //accent
-					900: '#ad402b',
+					50: '#fef8e0',
+					100: '#fbebb0',
+					200: '#f9de7c',
+					300: '#f7d345',
+					DEFAULT: '#F6C90E',
+					500: '#f5be00',
+					600: '#f6b000',
+					700: '#f79d00',
+					800: '#f88c00',
+					900: '#f96b00',
 				},
-				light: '#ECDBBA',
-				dark: '#191919',
+				light: '#EEEEEE',
+				dark: '#3A4750',
+			},
+			textShadow: {
+				DEFAULT: 'var(--tw-shadow-color) .5px .5px 10px',
 			},
 		},
 		screens: {
@@ -56,6 +84,6 @@ const config: Config = {
 			xl: '1200px',
 		},
 	},
-	plugins: [],
+	plugins: [require('./plugins/animationDelay'), require('./plugins/textShadow')],
 }
 export default config

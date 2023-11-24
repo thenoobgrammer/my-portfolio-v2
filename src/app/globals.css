@@ -4,8 +4,8 @@
 
 @layer base {
 	html {
-		font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Futura', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-			'Droid Sans', 'Helvetica Neue', sans-serif;
+		font-family: var(--font-inter);
+		scroll-behavior: smooth;
 	}
 
 	body {
@@ -37,6 +37,22 @@
 		@apply w-screen h-screen;
 	}
 
+	.icon-btn {
+		@apply inline-flex items-center whitespace-nowrap cursor-pointer w-fit transition-all px-2 py-1 text-accent rounded-md hover:bg-light/20 hover:text-accent-200 disabled:bg-gray-100/30 disabled:text-gray-400 focus:bg-accent-100;
+	}
+
+	.chip {
+		@apply rounded-full bg-accent-50/10 text-accent-200 w-fit px-2 py-1 text-sm font-medium my-2 mx-1 overflow-hidden transition-all;
+	}
+
+	.chip-link {
+		@apply w-full h-full;
+	}
+
+	.link {
+		@apply rounded-md text-primary font-semibold hover:text-accent-500 hover:bg-accent-200/50 hover:p-1 transition-all;
+	}
+
 	.tab {
 		@apply text-light/70;
 	}
@@ -63,5 +79,9 @@
 
 	.tab[tabIndex='3'].active ~ .glider {
 		@apply translate-x-[300%];
+	}
+
+	.shadow {
+		@apply drop-shadow-md shadow-lg transition-all;
 	}
 }
