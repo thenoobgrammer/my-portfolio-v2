@@ -20,17 +20,16 @@ export default function JobHistory() {
 		<div className="relative flex items-center w-full h-[50vh] py-10 space-y-3">
 			<div className="max-w-screen-lg m-auto px-5">
 				<header className="relative flex items-center justify-between mb-10">
-					<h4 className="w-fit text-light/90 font-medium leading-tight tracking-tight capitalize">
-						{t('Job History')}
-					</h4>
-					<div className="flex-grow-0 group/links space-x-3">
+					<h4 className="w-fit text-light font-medium leading-tight tracking-tight capitalize">{t('Job History')}</h4>
+					<div className="flex items-center gap-x-3 text-light">
+						<span>{t('Full screen')}</span>
 						<IconButton
-							className="text-accent-500"
+							className="text-accent-300"
 							onClick={() =>
 								dispatch({
 									type: 'open',
 									content: <Resume />,
-									title: t('curriculumDialogTitle'),
+									title: t('Resume'),
 								})
 							}
 						>
@@ -43,7 +42,7 @@ export default function JobHistory() {
 						{WorkExperiences.map((props, idx) => (
 							<Tab id={props.id} className="w-36 h-10" key={idx} label={props.company} tabIndex={idx} />
 						))}
-						<p className="glider absolute w-36 h-10 border-b-2 border-accent-400" />
+						<p className="glider absolute w-36 h-10 border-b-2 border-accent" />
 					</div>
 					{WorkExperiences.map((props, idx) => (
 						<TabPane key={idx} tabIndex={idx}>
@@ -53,8 +52,8 @@ export default function JobHistory() {
 								</p>
 								<h6 className="inline-flex items-center text-light font-medium gap-x-2">
 									{props.company}{' '}
-									<IconButton className="text-accent-500">
-										<a href={props.link} target="_blank">
+									<IconButton className="text-accent-300">
+										<a href={props.url} target="_blank">
 											<BiLinkExternal size={20} />
 										</a>
 									</IconButton>
@@ -63,7 +62,7 @@ export default function JobHistory() {
 								<p className="text-md text-light/70 font-medium">{t(props.summary)}</p>
 								<div className="flex flex-wrap my-2">
 									{props.technologies.map(({ name, url, tag }) => (
-										<Chip className="group/chip hover:bg-accent-400/70" key={tag}>
+										<Chip className="group/chip hover:bg-accent/70" key={tag}>
 											<Link href={url} className="chip-link group-hover/chip:text-accent-200" target="_blank">
 												{name}
 											</Link>

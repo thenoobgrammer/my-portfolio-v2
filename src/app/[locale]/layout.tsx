@@ -1,6 +1,5 @@
 import { Inter } from 'next/font/google'
 import type { Metadata } from 'next'
-import Navbar from 'src/app/[locale]/_components/Navbar'
 import NextIntlClientProvider from 'src/context/NextIntlClientProvider'
 import { Providers } from 'src/context/Providers'
 import clsx from 'clsx'
@@ -36,10 +35,7 @@ export default async function RootLayout({ children, params: { locale } }) {
 		<html lang={locale}>
 			<body className={clsx(inter.className)}>
 				<NextIntlClientProvider locale={locale} messages={messages} timeZone="America/Toronto" now={new Date()}>
-					<Providers>
-						<Navbar />
-						{children}
-					</Providers>
+					<Providers>{children}</Providers>
 				</NextIntlClientProvider>
 			</body>
 		</html>

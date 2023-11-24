@@ -5,7 +5,7 @@ export default function Menu({ children, open, onClose }) {
 		<>
 			<div className="fixed inset-0 w-screen h-screen bg-black/0 z-0" onClick={onClose} />
 			<motion.div
-				initial={{ y: -80, opacity: 0 }}
+				initial={{ y: -40, opacity: 0 }}
 				animate={{
 					y: 0,
 					x: 0,
@@ -25,7 +25,7 @@ export default function Menu({ children, open, onClose }) {
 						ease: [0.25, 0.25, 0.25, 0.4],
 					},
 				}}
-				className="absolute left-0 z-10 flex flex-col w-fit h-fit my-2 bg-primary shadow-md rounded-sm"
+				className="absolute left-0 z-10 flex flex-col w-fit h-fit my-2 bg-primary shadow-md rounded-sm overflow-hidden"
 			>
 				{children}
 			</motion.div>

@@ -14,11 +14,11 @@ export const EMAIL_PUBLIC_KEY = 'gdUsqVZJvLcgL1JXC'
 export const EMAIL_SERVICE_ID = 'service_gbfzv1f'
 export const EMAIL_TEMPLATE_ID = 'template_k1dy7ba'
 
-export const Address = { icon: FaMap, text: 'Montreal, QC' }
-export const Phone = { icon: FaPhone, text: '+1 514-966-8481' }
-export const Email = { icon: FaEnvelope, text: 'ant.hakim.stud@gmail.com' }
-export const SpokenLanguages = { icon: FaGlobe, text: ['English', 'French'] }
-export const Website = { icon: CgWebsite, url: 'https://thenoobgrammer.com', text: 'My Website' }
+export const Address = 'Montreal, QC'
+export const Phone = '+1 514-966-8481'
+export const Email = 'ant.hakim.stud@gmail.com'
+export const SpokenLanguages = ['English', 'French']
+export const Website = { url: 'https://thenoobgrammer.com', text: 'My Website' }
 
 const DISCORD_GIT_REPO = 'https://github.com/thenoobgrammer/bramble'
 const PICKSIDE_GIT_REPO = 'https://github.com/PickSide'
@@ -148,22 +148,12 @@ export const WorkExperiences = [
 		id: 'goto',
 		start: 'Jan 2022',
 		logoClassname: 'bg-goto-color',
-		link: 'https://goto.com',
+		url: 'https://goto.com',
 		end: 'Present',
 		company: 'GoTo',
 		title: 'Senior Frontend Engineer',
 		descriptions: ['GoTo.a', 'GoTo.b', 'GoTo.c', 'GoTo.d', 'GoTo.e', 'GoTo.f', 'GoTo.g', 'GoTo.h'],
 		summary: 'GoTo.summary',
-		descriptionsHighlighted: [
-			'GoToHighlighted.a',
-			'GoToHighlighted.b',
-			'GoToHighlighted.c',
-			'GoToHighlighted.d',
-			'GoToHighlighted.e',
-			'GoToHighlighted.f',
-			'GoToHighlighted.g',
-			'GoToHighlighted.h',
-		],
 		technologies: extract([
 			'react',
 			'redux',
@@ -183,19 +173,11 @@ export const WorkExperiences = [
 		start: 'Dec 2020',
 		end: 'Jan 2022',
 		logoClassname: 'bg-desjardins-white',
-		link: 'https://desjardins.com',
+		url: 'https://desjardins.com',
 		company: 'Desjardins',
 		title: 'Fullstack engineer',
 		summary: 'Desjardins.summary',
 		descriptions: ['Desjardins.a', 'Desjardins.b', 'Desjardins.c', 'Desjardins.d', 'Desjardins.e', 'Desjardins.f'],
-		descriptionsHighlighted: [
-			'DesjardinsHighlighted.a',
-			'DesjardinsHighlighted.b',
-			'DesjardinsHighlighted.c',
-			'DesjardinsHighlighted.d',
-			'DesjardinsHighlighted.e',
-			'DesjardinsHighlighted.f',
-		],
 		technologies: extract([
 			'java',
 			'stencil',
@@ -216,18 +198,11 @@ export const WorkExperiences = [
 		start: 'Jan 2019',
 		end: 'May 2019',
 		logoClassname: 'bg-bell-white',
-		link: 'https://bell.ca',
+		url: 'https://bell.ca',
 		company: 'Bell Canada',
 		title: 'Fullstack engineer',
 		descriptions: ['Bell.a', 'Bell.b', 'Bell.c', 'Bell.d', 'Bell.e'],
 		summary: 'Bell.summary',
-		descriptionsHighlighted: [
-			'BellHighlighted.a',
-			'BellHighlighted.b',
-			'BellHighlighted.c',
-			'BellHighlighted.d',
-			'BellHighlighted.e',
-		],
 		technologies: extract([
 			'csharp',
 			'ember',
@@ -246,18 +221,11 @@ export const WorkExperiences = [
 		start: 'Jan 2018',
 		end: 'May 2018',
 		logoClassname: 'bg-ubisoft',
-		link: 'https://ubisoft.com',
+		url: 'https://ubisoft.com',
 		title: 'Intern Frontend developer',
 		company: 'Ubisoft',
 		descriptions: ['Ubisoft.a', 'Ubisoft.b', 'Ubisoft.c', 'Ubisoft.d', 'Ubisoft.e'],
 		summary: 'Ubisoft.summary',
-		descriptionsHighlighted: [
-			'BellHighlighted.a',
-			'BellHighlighted.b',
-			'BellHighlighted.c',
-			'BellHighlighted.d',
-			'BellHighlighted.e',
-		],
 		technologies: extract([
 			'csharp',
 			'ember',
@@ -276,7 +244,7 @@ export const WorkExperiences = [
 export const PersonalProjects = [
 	{
 		name: 'Pickside',
-		title: 'Rest API application',
+		type: 'Custom website',
 		gitUrl: PICKSIDE_GIT_REPO,
 		url: PICKSIDE_URL,
 		summary: 'Pickside.summary',
@@ -292,19 +260,6 @@ export const PersonalProjects = [
 			'Pickside.i',
 			'Pickside.j',
 			'Pickside.k',
-		],
-		descriptionsHighlighted: [
-			'PicksideHighlighted.a',
-			'PicksideHighlighted.b',
-			'PicksideHighlighted.c',
-			'PicksideHighlighted.d',
-			'PicksideHighlighted.e',
-			'PicksideHighlighted.f',
-			'PicksideHighlighted.g',
-			'PicksideHighlighted.h',
-			'PicksideHighlighted.i',
-			'PicksideHighlighted.j',
-			'PicksideHighlighted.k',
 		],
 		technologies: extract([
 			'react',
@@ -324,7 +279,7 @@ export const PersonalProjects = [
 	},
 	{
 		name: 'Portfolio V1',
-		title: 'Web development',
+		type: 'Portfolio',
 		gitUrl: PORTFOLIO_V1_GIT_REPO,
 		url: PORTFOLIO_V1_URL,
 		summary: 'PortfolioV1.summary',
@@ -337,20 +292,11 @@ export const PersonalProjects = [
 			'PortfolioV1.f',
 			'PortfolioV1.g',
 		],
-		descriptionsHighlighted: [
-			'PortfolioV1ighlighted.a',
-			'PortfolioV1ighlighted.b',
-			'PortfolioV1ighlighted.c',
-			'PortfolioV1ighlighted.d',
-			'PortfolioV1ighlighted.e',
-			'PortfolioV1ighlighted.f',
-			'PortfolioV1ighlighted.g',
-		],
 		technologies: extract(['react', 'tailwind', 'route53', 'acm', 's3']),
 	},
 	{
 		name: 'Portfolio V2',
-		title: 'Web development',
+		type: 'Portfolio',
 		url: PORTFOLIO_V2_URL,
 		gitUrl: PORTFOLIO_V2_GIT_REPO,
 		summary: 'PortfolioV2.summary',
@@ -363,20 +309,11 @@ export const PersonalProjects = [
 			'PortfolioV2.f',
 			'PortfolioV2.g',
 		],
-		descriptionsHighlighted: [
-			'PortfolioV2Highlighted.a',
-			'PortfolioV2Highlighted.b',
-			'PortfolioV2Highlighted.c',
-			'PortfolioV2Highlighted.d',
-			'PortfolioV2Highlighted.e',
-			'PortfolioV2Highlighted.f',
-			'PortfolioV2Highlighted.g',
-		],
 		technologies: extract(['next', 'react', 'tailwind', 'route53', 'acm', 's3']),
 	},
 	{
 		name: 'Discord',
-		title: 'Rest API application',
+		type: 'Service',
 		summary: 'Discord.summary',
 		gitUrl: DISCORD_GIT_REPO,
 		descriptions: ['Discord.a', 'Discord.b'],
@@ -385,11 +322,11 @@ export const PersonalProjects = [
 	},
 	{
 		name: 'Sadbois',
-		title: 'Rest API application',
+		type: 'E commerce website',
 		summary: 'Sadbois.summary',
 		gitUrl: SADBOIS_GIT_REPO,
-		descriptions: ['Sadboiss.a', 'Sadboiss.b', 'Sadboiss.c'],
-		descriptionsHighlighted: ['SadboissHighlighted.a', 'SadboissHighlighted.b', 'SadboissHighlighted.c'],
+		descriptions: ['Sadbois.a', 'Sadbois.b', 'Sadbois.c'],
+		descriptionsHighlighted: ['SadboisHighlighted.a', 'SadboisHighlighted.b', 'SadboisHighlighted.c'],
 		technologies: extract(['react', 'github', 'rest', 'typescript']),
 	},
 ]

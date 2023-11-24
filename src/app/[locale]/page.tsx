@@ -1,40 +1,46 @@
+'use client'
+
 import About from './_sections/about'
 import Introduction from './_sections/introduction'
 import JobHistory from './_sections/job-history'
+import Loader from './_components/Loader'
+import Navbar from './_components/Navbar'
 import Projects from './_sections/projects'
 import Section from 'src/components/Section'
+import Services from './_sections/services'
 import SocialMediaLinks from './_components/SocialMediaLinks'
-import { notFound } from 'next/navigation'
-import { unstable_setRequestLocale } from 'next-intl/server'
+import { useState } from 'react'
 
-const locales = ['en', 'fr']
+export default function Index() {
+	const [isLoading, setIsLoading] = useState<boolean>(true)
 
-export default function Index({ params: { locale } }) {
-	const isValidLocale = locales.some((cur) => cur === locale)
-
-	if (!isValidLocale) {
-		notFound()
-	}
-
-	unstable_setRequestLocale(locale)
-
-	return (
-		<main className="relative h-[calc(100vh-64px)] justify-center mt-16 overflow-y-scroll">
-			<Section id="intro" className="flex items-center w-full h-full p-5">
-				<Introduction />
-			</Section>
-			<Section id="about" className="w-full h-fit bg-primary">
-				<About />
-			</Section>
-			<Section id="jobs" className="w-full h-fit bg-primary">
-				<JobHistory />
-			</Section>
-			<Section id="projects" className="w-full h-full bg-primary p-5">
-				<Projects />
-			</Section>
-			<footer>
-				<SocialMediaLinks />
-			</footer>
-		</main>
+	return isLoading ? (
+		<Section id="loader" className="flex items-center justify-center w-screen h-screen overflow-hidden">
+			<Loader finishLoading={() => setIsLoading(false)} />
+		</Section>
+	) : (
+		<>
+			<Navbar />
+			<main className="relative h-screen justify-center overflow-y-scroll overflow-x-hidden">
+				<Section id="intro" className="flex items-center w-full h-full p-5">
+					<Introduction />
+				</Section>
+				<Section id="about">
+					<About />
+				</Section>
+				<Section id="jobs">
+					<JobHistory />
+				</Section>
+				<Section id="projects">
+					<Projects />
+				</Section>
+				<Section id="services">
+					<Services />
+				</Section>
+				<footer>
+					<SocialMediaLinks />
+				</footer>
+			</main>
+		</>
 	)
 }

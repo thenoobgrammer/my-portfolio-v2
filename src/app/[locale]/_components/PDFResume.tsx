@@ -73,11 +73,11 @@ export default function DownloadLink() {
 					<View style={styles.column}>
 						<Text style={styles.sectionTitle}>{t('Relevant Experience')}</Text>
 						<View style={styles.column}>
-							{WorkExperiences.map(({ company, descriptions, link, start, end, title, technologies }, idx) => (
+							{WorkExperiences.map(({ company, descriptions, url, start, end, title, technologies }, idx) => (
 								<View key={idx} style={{ marginVertical: 6 }}>
 									<View style={{ ...styles.row, alignItems: 'center', gap: 4, fontSize: 10 }}>
 										<Text style={{ fontWeight: 'bold' }}>{title},</Text>
-										<Link src={link} style={{ textDecoration: 'none', color: '#000' }}>
+										<Link src={url} style={{ textDecoration: 'none', color: '#000' }}>
 											{company}
 										</Link>
 										<Text style={{ fontSize: 7, color: '#dedede' }}>
@@ -106,22 +106,10 @@ export default function DownloadLink() {
 				</View>
 				<View style={styles.right}>
 					<View style={{ ...styles.column, fontSize: 8 }}>
-						<Text>
-							{Address.icon}
-							{Address.text}
-						</Text>
-						<Text>
-							{Phone.icon}
-							{Phone.text}
-						</Text>
-						<Text>
-							{Email.icon}
-							{Email.text}
-						</Text>
-						<Link src={Website.url}>
-							{Website.icon}
-							{Website.text}
-						</Link>
+						<Text>{Address}</Text>
+						<Text>{Phone}</Text>
+						<Text>{Email}</Text>
+						<Link src={Website.url}>{Website.text}</Link>
 					</View>
 					<View style={styles.column}>
 						<Text style={styles.sectionTitle}>{t('Skills')}</Text>

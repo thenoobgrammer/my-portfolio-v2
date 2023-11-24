@@ -6,39 +6,31 @@ import {
 	PersonalProjects,
 	Phone,
 	SpokenLanguages,
-	Website,
 	WorkExperiences,
 } from 'lib/data'
+import { FaExternalLinkAlt, FaGit, FaGithub } from 'react-icons/fa'
 
-import { BiLinkExternal } from 'react-icons/bi'
 import Chip from 'src/components/Chip'
 import Link from 'next/link'
-import { cn } from 'src/utils/common'
 import { useTranslations } from 'next-intl'
 
 export default function Resume() {
 	const t = useTranslations('Resume')
 
 	return (
-		<div
-			id="CV"
-			className="flex flex-col h-full font-medium text-inherit w-full gap-11 scroll-smooth md:flex-row md:max-h-[70vh] p-4"
-		>
+		<div id="CV" className="flex text-inherit scroll-smooth h-[95%] overflow-y-scroll px-10 py-10">
 			<div className="flex flex-col gap-y-7">
-				<h5 className="text-accent-300">{t('Work experience')}</h5>
-				<div className="flex flex-col gap-y-4">
-					{WorkExperiences.map(
-						(
-							{ start, end, link, company, title, logoClassname, descriptions, descriptionsHighlighted, technologies },
-							idx,
-						) => (
+				<>
+					<h6 className="text-accent-300">{t('Work experience')}</h6>
+					<div className="flex flex-col gap-y-4">
+						{WorkExperiences.map(({ start, end, url, company, title, descriptions, technologies }, idx) => (
 							<>
 								<div className="inline-flex items-center gap-x-2">
-									<span className={cn('w-10 h-6 bg-contain bg-no-repeat bg-center', logoClassname)} />
 									<span>{t(title)}</span>
 									<Link
-										href={link}
+										href={url}
 										className="font-semibold hover:text-accent-300 hover:translate-x-1 hover:-translate-y-1 transition-all"
+										target="_blank"
 									>
 										{company}
 									</Link>
@@ -55,7 +47,7 @@ export default function Resume() {
 									))}
 									<li className="my-1 flex flex-wrap items-center font-semibold">
 										{technologies.map(({ name, tag, url }) => (
-											<Chip className="group/chip hover:bg-accent-400/70" key={tag}>
+											<Chip className="group/chip hover:bg-accent/70" key={tag}>
 												<Link href={url} className="chip-link group-hover/chip:text-accent-200" target="_blank">
 													{name}
 												</Link>
@@ -64,33 +56,75 @@ export default function Resume() {
 									</li>
 								</ul>
 							</>
-						),
-					)}
-				</div>
+						))}
+					</div>
+				</>
+				<>
+					<h6 className="text-accent-300">{t('Projects')}</h6>
+					<div className="flex flex-col gap-y-4">
+						{PersonalProjects.map(({ url, gitUrl, type, descriptions, technologies, name }, idx) => (
+							<>
+								<div className="inline-flex items-center gap-x-3">
+									<span>{name}</span>
+									<span>{`(${type})`}</span>
+									{url && (
+										<Link
+											href={url}
+											className="font-semibold hover:text-accent-300 hover:translate-x-1 hover:-translate-y-1 transition-all"
+											target="_blank"
+										>
+											<FaExternalLinkAlt />
+										</Link>
+									)}
+									<Link
+										href={gitUrl}
+										className="font-semibold hover:text-accent-300 hover:translate-x-1 hover:-translate-y-1 transition-all"
+										target="_blank"
+									>
+										<FaGithub />
+									</Link>
+								</div>
+								<ul>
+									{descriptions.map((description, innerIdx) => (
+										<li className="flex gap-x-4" key={innerIdx}>
+											<span>•</span>
+											<span>{t(description)}</span>
+										</li>
+									))}
+									<li className="my-1 flex flex-wrap items-center font-semibold">
+										{technologies.map(({ name, tag, url }) => (
+											<Chip className="group/chip hover:bg-accent/70" key={tag}>
+												<Link href={url} className="chip-link group-hover/chip:text-accent-200" target="_blank">
+													{name}
+												</Link>
+											</Chip>
+										))}
+									</li>
+								</ul>
+							</>
+						))}
+					</div>
+				</>
 			</div>
 			<div className="flex flex-col gap-y-10">
 				<div>
-					<span className="h4">{t('Personal information')}</span>
-					<div className="flex flex-col gap-y-1"></div>
-				</div>
-
-				<div>
-					<span className="h4">{t('Skillset')}</span>
-					<div className="flex flex-col">
-						{Languages.map((language, idx) => (
-							<span key={idx}>{t(language)}</span>
-						))}
+					<span className="text-lg text-accent-300">{t('My information')}</span>
+					<div className="group flex flex-col gap-y-1">
+						<span>{Address}</span>
+						<span>{Email}</span>
+						<span>{Phone}</span>
+						<span>{SpokenLanguages.join(', ')}</span>
 					</div>
 				</div>
 				<div>
-					<span className="h4">{t('Education')}</span>
+					<span className="text-lg text-accent-300">{t('Education')}</span>
 					<div className="flex flex-col gap-y-4">
 						{Education.map(({ start, end, institution, program }, idx) => (
 							<div className="flex flex-col items-start" key={idx}>
-								<span>
+								<span className="text-sm text-light/50 font-extralight">
 									{start} - {end} - {institution}
 								</span>
-								<span>{program}</span>
+								<span>{t(program)}</span>
 							</div>
 						))}
 					</div>

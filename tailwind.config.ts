@@ -7,12 +7,22 @@ const config: Config = {
 	darkMode: 'class',
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
+		animation: {
+			'drop-in': 'drop-in 700ms ease-in-out',
+		},
+
+		keyframes: {
+			'drop-in': {
+				from: { display: 'none', opacity: '0', transform: 'translateY(-80px)' },
+				to: { display: 'block', opacity: '1', transform: 'translateY(0)' },
+			},
+		},
 		fontFamily: {
 			sans: ['var(--font-inter)'],
 			mono: ['var(--font-roboto-mono)'],
 		},
 		fill: {
-			primary: '#232541',
+			primary: '#303841',
 			secondary: '#c3bdb6',
 			accent: {
 				50: '#EDE7F6',
@@ -26,18 +36,6 @@ const config: Config = {
 				800: '#4527A0',
 				DEFAULT: '#311B92',
 			},
-			// accent: {
-			// 	50: '#e1f4f1',
-			// 	100: '#b6e5da',
-			// 	200: '#87d4c3',
-			// 	300: '#57c3ab',
-			// 	400: '#34b499',
-			// 	500: '#1aa688',
-			// 	600: '#17987b',
-			// 	700: '#12886b',
-			// 	DEFAULT: '#74a3c9',
-			// 	900: '#005b41',
-			// },
 		},
 		fontSize: {
 			xs: ['10px', { lineHeight: '1.5' }],
@@ -57,36 +55,22 @@ const config: Config = {
 				'bell-white': "url('/Bell-white.png')",
 			},
 			colors: {
-				primary: '#232541',
+				primary: '#303841',
 				secondary: '#c3bdb6',
 				accent: {
-					50: '#EDE7F6',
-					100: '#D1C4E9',
-					200: '#B39DDB',
-					300: '#9575CD',
-					400: '#7E57C2',
-					500: '#673AB7',
-					600: '#5E35B1',
-					700: '#512DA8',
-					800: '#4527A0',
-					DEFAULT: '#311B92',
+					50: '#fef8e0',
+					100: '#fbebb0',
+					200: '#f9de7c',
+					300: '#f7d345',
+					DEFAULT: '#F6C90E',
+					500: '#f5be00',
+					600: '#f6b000',
+					700: '#f79d00',
+					800: '#f88c00',
+					900: '#f96b00',
 				},
-				// accent: {
-				// 	50: '#e1f4f1',
-				// 	100: '#b6e5da',
-				// 	200: '#87d4c3',
-				// 	300: '#57c3ab',
-				// 	400: '#34b499',
-				// 	500: '#1aa688',
-				// 	600: '#17987b',
-				// 	700: '#12886b',
-				// 	DEFAULT: '#74a3c9',
-				// 	900: '#005b41',
-				// },
-				'accent-primary': '#78a6c3',
-				'accent-secondary': '#6882ac',
-				light: '#627ea6',
-				dark: '#005B41',
+				light: '#EEEEEE',
+				dark: '#3A4750',
 			},
 			textShadow: {
 				DEFAULT: 'var(--tw-shadow-color) .5px .5px 10px',
@@ -100,17 +84,6 @@ const config: Config = {
 			xl: '1200px',
 		},
 	},
-	plugins: [
-		plugin(function ({ matchUtilities, theme }) {
-			matchUtilities(
-				{
-					'text-shadow': (value) => ({
-						textShadow: value,
-					}),
-				},
-				{ values: theme('textShadow') },
-			)
-		}),
-	],
+	plugins: [require('./plugins/animationDelay'), require('./plugins/textShadow')],
 }
 export default config

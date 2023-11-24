@@ -6,10 +6,6 @@
 		"p3": "as a frontend developer. I am constantly challenged with new constraints weekly and I take pride and joy intothe work I'm doing.",
 		"p4": "My end goal is a mansion and soccer field in my backyard, and that day will comes with effort. But don't worry, I am very down to earth and enjoying the process to that mountain."
 	},
-	"Career": {
-		"title": "Little about me",
-		"summary": "I started my web development journey {{year}} years ago. It turned out I had a passion for creating content and clean code."
-	},
 	"Home": {
 		"Hello, I am": "Hello, I am",
 		"Web designer": "Web designer",
@@ -25,44 +21,55 @@
 		"jobTitle": "Web developer, based in Montreal",
 		"summary": "I'm a full-stack developer with a background experience in building full-fledged custom platform, tailed to customers needs. My past accomplishments holds in the companies I've worked for, but right now, I am looking and hoping to connect with people and work together to design amazing content. If you have a project and would love to bring it to reality, I am your man for the job."
 	},
-	"JobHistory": {
-		"dialogtitle": "What's my role at {company}",
-		"curriculumDialogTitle": "Curriculum",
-		"Montreal, QC": "Montreal, QC",
-		"English": "English",
-		"French": "French",
-		"My LinkedIn": "My LinkedIn",
-		"My Github": "My Github",
+	"Navbar": {
+		"About": "About",
+		"Job history": "Job history",
+		"Projects": "Projects",
+		"Services": "Services"
+	},
+	"Services": {
+		"Services": "Services",
+		"Starting price": "Starting price",
+		"What's included": "What's included",
+		"Design": {
+			"title": "Design",
+			"a": "A figma design with of how your website will look like",
+			"b": "Unlimited calls to go over your design",
+			"c": "Fully responsive design",
+			"d": "Fully interactable design"
+		},
+		"SinglePage": {
+			"title": "One page",
+			"a": "A portoflio to showcase your work projects",
+			"b": "A blog page that will allow you to post content about your favorite subjects",
+			"c": "A restaurant website with an integrated menu",
+			"d": "An event promoting website to market yourself",
+			"e": "Promote your business by building an online presence"
+		},
+		"Custom": {
+			"title": "Custom made",
+			"a": "Unique design that will represent your brand identity and goal",
+			"b": "Tailored functionalities to your needs",
+			"c": "Scalable to support large amounts of request activities. This is crucial for business, allowing them to evolve with the growing number of users",
+			"d": "Great performance, depending on the framework selection and how the code is written can often increase loading speed of your website",
+			"e": "Search Engine Optimization (SEO) can allow your website to appear in the first tier lists of a search engine",
+			"f": "Security is key if your website holds very sensitive information, protecting yourself and your users against any data breaches"
+		},
+		"Inquire": "Inquire"
+	},
+	"Resume": {
+		"Resume": "Resume",
+		"Download": "Resume",
+		"Projects": "Projects",
+		"Antoine Hakim": "Antoine Hakim",
+		"Role": "Experienced full-stack engineer focused on building accessible & custom experience",
+		"Relevant Experience": "Relevant Experience",
+		"Skills": "Skills",
 		"Software Engineering": "Software Engineering",
 		"Computer Science (Certificate)": "Computer Science (Certificate)",
 		"Computer Science & technology": "Computer Science & technology",
 		"Vanier College": "Vanier College",
 		"Rest API application": "Rest API application",
-		"Web development": "Web development",
-		"My CV": "My CV",
-		"Personal information": "Personal information",
-		"Skillset": "Skillset",
-		"Education": "Education",
-		"Work experience": "Work experience",
-		"Technologies": "Technologies",
-		"Personal highlights": "Personal highlights",
-		"In progress": "In progress"
-	},
-	"LocaleSwitcher": {
-		"switchLocale": "Switch to {locale}",
-		"summary": "I started my web development journey {{year}} years ago. It turned out I had a passion for creating content and clean code. "
-	},
-	"Navbar": {
-		"About": "About",
-		"Job history": "Job history",
-		"Projects": "Projects"
-	},
-	"Resume": {
-		"Download": "Resume",
-		"Antoine Hakim": "Antoine Hakim",
-		"Role": "Experienced full-stack engineer focused on building accessible & custom experience",
-		"Relevant Experience": "Relevant Experience",
-		"Skills": "Skills",
 		"Selected Projects": "Selected Projects",
 		"Education": "Education",
 		"Interests": "Interests",
@@ -71,6 +78,8 @@
 		"Senior Frontend Engineer": "Senior Frontend Engineer",
 		"Fullstack engineer": "Fullstack engineer",
 		"Intern Frontend developer": "Intern Frontend developer",
+		"Full screen": "Full screen",
+		"My information": "My information",
 		"GoTo": {
 			"summary": "I contribute to the development of a top-notch SaaS business communication tool, focusing on customer-facing features. My work ensures the platform remains high quality and robust, delivering a seamless experience for users.",
 			"a": "Developed a high-end business communication settings tool using ReactJS, Redux-Thunk, React-Router, Javascript, Typescript, HTML5, CSS3, and MUI5",
