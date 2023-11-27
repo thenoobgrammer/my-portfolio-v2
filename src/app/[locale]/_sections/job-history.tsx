@@ -1,7 +1,7 @@
 'use client'
 
 import { BiFullscreen, BiLinkExternal } from 'react-icons/bi'
-import { Tab, TabPane, Tabs } from 'src/context/TabContext'
+import { Tab, TabPanel, Tabs } from 'src/context/TabContext'
 
 import Chip from 'src/components/Chip'
 import { DialogDispatchContext } from 'src/context/DialogContext'
@@ -9,6 +9,7 @@ import IconButton from 'src/components/IconButton'
 import Link from 'next/link'
 import Resume from '../_components/Resume'
 import { WorkExperiences } from 'lib/data'
+import { cn } from 'src/utils/common'
 import { useContext } from 'react'
 import { useTranslations } from 'next-intl'
 
@@ -17,10 +18,10 @@ export default function JobHistory() {
 	const t = useTranslations('Resume')
 
 	return (
-		<div className="relative flex items-center w-full h-[50vh] py-10 space-y-3">
-			<div className="max-w-screen-lg m-auto px-5">
-				<header className="relative flex items-center justify-between mb-10">
-					<h4 className="w-fit text-light font-medium leading-tight tracking-tight capitalize">{t('Job History')}</h4>
+		<div className="relative flex h-fit w-full items-center space-y-3 py-10">
+			<div className="m-auto max-w-screen-lg px-10 md:px-0">
+				<header className="relative mb-10 flex items-center justify-between">
+					<h4 className="w-fit font-medium capitalize leading-tight tracking-tight text-light">{t('Job History')}</h4>
 					<div className="flex items-center gap-x-3 text-light">
 						<span>{t('Full screen')}</span>
 						<IconButton
@@ -38,19 +39,18 @@ export default function JobHistory() {
 					</div>
 				</header>
 				<Tabs>
-					<div className="relative flex items-center justify-start">
+					<div className="relative grid w-full grid-flow-col grid-cols-4 overflow-x-auto text-sm">
 						{WorkExperiences.map((props, idx) => (
-							<Tab id={props.id} className="w-36 h-10" key={idx} label={props.company} tabIndex={idx} />
+							<Tab id={props.id} key={idx} label={props.company} tabIndex={idx} />
 						))}
-						<p className="glider absolute w-36 h-10 border-b-2 border-accent" />
 					</div>
 					{WorkExperiences.map((props, idx) => (
-						<TabPane key={idx} tabIndex={idx}>
+						<TabPanel id="tab-panel" key={idx} tabIndex={idx}>
 							<div className="flex flex-col gap-y-4">
-								<p className="text-sm text-light font-medium mt-4">
+								<p className="mt-4 text-sm font-medium text-light">
 									{props.start}-{props.end}
 								</p>
-								<h6 className="inline-flex items-center text-light font-medium gap-x-2">
+								<h6 className="inline-flex items-center gap-x-2 font-medium text-light">
 									{props.company}{' '}
 									<IconButton className="text-accent-300">
 										<a href={props.url} target="_blank">
@@ -58,9 +58,9 @@ export default function JobHistory() {
 										</a>
 									</IconButton>
 								</h6>
-								<p className="text- text-light font-medium">{props.title}</p>
-								<p className="text-md text-light/70 font-medium">{t(props.summary)}</p>
-								<div className="flex flex-wrap my-2">
+								<p className="text- font-medium text-light">{props.title}</p>
+								<p className="text-md font-medium text-light/70">{t(props.summary)}</p>
+								<div className="my-2 flex flex-wrap">
 									{props.technologies.map(({ name, url, tag }) => (
 										<Chip className="group/chip hover:bg-accent/70" key={tag}>
 											<Link href={url} className="chip-link group-hover/chip:text-accent-200" target="_blank">
@@ -70,7 +70,7 @@ export default function JobHistory() {
 									))}
 								</div>
 							</div>
-						</TabPane>
+						</TabPanel>
 					))}
 				</Tabs>
 			</div>

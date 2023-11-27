@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 export default function Section({ children, ...props }) {
 	return (
-		<motion.section id={props.id} className={cn('backdrop-blur-3xl bg-primary', props.className)}>
+		<motion.section id={props.id} className={cn('bg-primary backdrop-blur-3xl', props.className)}>
 			{cloneElement(children)}
 		</motion.section>
 	)

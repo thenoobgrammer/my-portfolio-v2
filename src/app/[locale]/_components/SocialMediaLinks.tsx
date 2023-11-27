@@ -12,16 +12,18 @@ export default function SocialMediaLinks() {
 	const [open, setOpen] = useState<boolean>(false)
 
 	return (
-		<div className="fixed bottom-16 left-16">
-			<div className="relative">
-				<IconButton disabled={open} onClick={() => setOpen(true)}>
-					<TbSocial size={25} />
-				</IconButton>
-			</div>
+		<div className="fixed bottom-16 left-2 text-accent-100 md:left-16">
+			<button
+				className="m-auto flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-accent-500 p-2 text-dark shadow disabled:bg-gray-400 md:h-12 md:w-12"
+				disabled={open}
+				onClick={() => setOpen(true)}
+			>
+				<TbSocial className="text-md md:text-lg" />
+			</button>
 
 			{open && (
 				<>
-					<div className="fixed inset-0 overflow-y-auto scroll-m-10" onClick={() => setOpen(false)} />
+					<div className="fixed inset-0 scroll-m-10 overflow-y-auto" onClick={() => setOpen(false)} />
 					<AnimatePresence>
 						<motion.ul
 							initial="hidden"
@@ -31,23 +33,30 @@ export default function SocialMediaLinks() {
 								visible: {
 									opacity: 1,
 									scale: 1,
+									y: -30,
 									transition: {
 										delayChildren: 0.3,
 										staggerChildren: 0.2,
 									},
 								},
 							}}
-							className="absolute -top-full left-1/2 -translate-x-1/2 -translate-y-full flex flex-col items-center"
+							className="absolute -top-full left-1/2 flex -translate-x-1/2 -translate-y-full flex-col items-center"
 						>
 							<motion.li
 								initial="hidden"
 								animate="visible"
 								variants={{
-									hidden: { y: 0, opacity: 0, translateX: 0, translateY: 0 },
+									hidden: {
+										x: '-50%',
+										y: 0,
+										opacity: 0,
+									},
 									visible: {
-										y: -10,
-										x: -10,
+										y: '-200%',
 										opacity: 1,
+										transition: {
+											delay: 0.2,
+										},
 									},
 								}}
 								key="github"
@@ -63,11 +72,18 @@ export default function SocialMediaLinks() {
 								initial="hidden"
 								animate="visible"
 								variants={{
-									hidden: { y: 0, opacity: 0, translateX: 0, translateY: 0 },
-									visible: {
+									hidden: {
+										x: '-50%',
 										y: 0,
-										x: 30,
+										opacity: 0,
+									},
+									visible: {
+										y: '-200%',
 										opacity: 1,
+										marginTop: 10,
+										transition: {
+											delay: 0.1,
+										},
 									},
 								}}
 								key="facebook"
@@ -83,10 +99,14 @@ export default function SocialMediaLinks() {
 								initial="hidden"
 								animate="visible"
 								variants={{
-									hidden: { y: 0, opacity: 0, translateX: 0, translateY: 0 },
+									hidden: {
+										x: '-50%',
+										y: 0,
+										opacity: 0,
+									},
 									visible: {
-										y: 10,
-										x: -10,
+										y: '-200%',
+										marginTop: 10,
 										opacity: 1,
 									},
 								}}
