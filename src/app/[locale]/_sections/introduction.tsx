@@ -11,7 +11,6 @@ export default function Introduction() {
 	const ref = useRef<any>(null)
 	const t = useTranslations('Introduction')
 
-	const [introCompleted, setIntroCompleted] = useState(false)
 	const [isFirstCompleted, setIsFirstCompleted] = useState(false)
 
 	useEffect(() => {
@@ -30,11 +29,11 @@ export default function Introduction() {
 
 	return (
 		<>
-			<div ref={ref} className="absolute w-screen h-screen opacity-5 overflow-hidden"></div>
-			<div className="max-w-[960px] mx-auto space-y-3 whitespace-pre-wrap">
+			<div ref={ref} className="absolute h-screen w-screen overflow-hidden opacity-5"></div>
+			<div className="mx-auto max-w-[960px] space-y-3 whitespace-pre-wrap px-10 md:px-0">
 				<TypeAnimation
 					sequence={[t('hi'), t('intro'), () => setIsFirstCompleted(true)]}
-					className="text-lg text-accent-300 font-medium"
+					className="text-lg font-medium text-accent-300"
 					wrapper="p"
 					speed={50}
 					omitDeletionAnimation={true}
@@ -42,7 +41,7 @@ export default function Introduction() {
 				/>
 				{isFirstCompleted && (
 					<TypeAnimation
-						className="text-gray-300 font-medium"
+						className="font-medium text-gray-300"
 						sequence={[300, t('name')]}
 						wrapper="h3"
 						speed={50}
@@ -50,10 +49,10 @@ export default function Introduction() {
 						cursor={false}
 					/>
 				)}
-				<h4 id="title" className="text-gray-300/70 font-medium opacity-0">
+				<h4 id="title" className="font-medium text-gray-300/70 opacity-0">
 					{t('jobTitle')}
 				</h4>
-				<p id="desc" className="text-md text-gray-300/70 font-medium opacity-0">
+				<p id="desc" className="text-md font-medium text-gray-300/70 opacity-0">
 					{t('summary')}
 				</p>
 			</div>

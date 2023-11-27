@@ -1,14 +1,5 @@
-import {
-	Address,
-	Education,
-	Email,
-	Languages,
-	PersonalProjects,
-	Phone,
-	SpokenLanguages,
-	WorkExperiences,
-} from 'lib/data'
-import { FaExternalLinkAlt, FaGit, FaGithub } from 'react-icons/fa'
+import { Address, Education, Email, PersonalProjects, Phone, SpokenLanguages, WorkExperiences } from 'lib/data'
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 import Chip from 'src/components/Chip'
 import Link from 'next/link'

@@ -6,6 +6,7 @@
 	html {
 		font-family: var(--font-inter);
 		scroll-behavior: smooth;
+		font-size: 14px;
 	}
 
 	body {
@@ -13,59 +14,63 @@
 	}
 
 	h1 {
-		@apply text-[76px] tracking-[10%];
+		@apply text-[4.75rem] tracking-[10%];
 	}
 	h2 {
-		@apply text-[61px] tracking-[10%];
+		@apply text-[3.813rem] tracking-[10%];
 	}
 	h3 {
-		@apply text-[49px] tracking-[10%];
+		@apply text-[3.063rem] tracking-[10%];
 	}
 	h4 {
-		@apply text-[39px] tracking-[10%];
+		@apply text-[2.438rem] tracking-[10%];
 	}
 	h5 {
-		@apply text-[31px] tracking-[10%];
+		@apply text-[1.938rem] tracking-[10%];
 	}
 	h6 {
-		@apply text-[25px] tracking-[10%];
+		@apply text-[1.563rem] tracking-[10%];
+	}
+
+	@screen md {
+		font-size: 16px;
 	}
 }
 
 @layer components {
 	.section-full {
-		@apply w-screen h-screen;
+		@apply h-screen w-screen;
 	}
 
 	.icon-btn {
-		@apply inline-flex items-center whitespace-nowrap cursor-pointer w-fit transition-all px-2 py-1 text-accent rounded-md hover:bg-light/20 hover:text-accent-200 disabled:bg-gray-100/30 disabled:text-gray-400 focus:bg-accent-100;
+		@apply inline-flex w-fit cursor-pointer items-center whitespace-nowrap rounded-md px-2 py-1 text-inherit transition-all hover:bg-light/20 hover:text-accent-200 focus:bg-accent-100/40 disabled:bg-gray-100/30 disabled:text-gray-400;
 	}
 
 	.chip {
-		@apply rounded-full bg-accent-50/10 text-accent-200 w-fit px-2 py-1 text-sm font-medium my-2 mx-1 overflow-hidden transition-all;
+		@apply mx-1 my-2 w-fit overflow-hidden rounded-full bg-accent-50/10 px-2 py-1 text-sm font-medium text-accent-200 transition-all;
 	}
 
 	.chip-link {
-		@apply w-full h-full;
+		@apply h-full w-full;
 	}
 
 	.link {
-		@apply rounded-md text-primary font-semibold hover:text-accent-500 hover:bg-accent-200/50 hover:p-1 transition-all;
+		@apply rounded-md font-semibold text-primary transition-all hover:bg-accent-200/50 hover:p-1 hover:text-accent-500;
 	}
 
 	.tab {
-		@apply text-light/70;
+		@apply block w-24 p-3 text-light/80;
 	}
 
 	.tab.active {
-		@apply text-accent-50;
+		@apply bg-accent-200/30 text-accent-500 transition-all;
 	}
 
 	.glider {
-		@apply transition-all py-1 px-2;
+		@apply px-2 py-1 transition-all;
 	}
 
-	.tab[tabIndex='0'].active + .glider {
+	/* .tab[tabIndex='0'].active + .glider {
 		@apply translate-x-[0];
 	}
 
@@ -79,9 +84,9 @@
 
 	.tab[tabIndex='3'].active ~ .glider {
 		@apply translate-x-[300%];
-	}
+	} */
 
 	.shadow {
-		@apply drop-shadow-md shadow-lg transition-all;
+		@apply shadow-lg drop-shadow-md transition-all;
 	}
 }

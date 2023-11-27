@@ -15,14 +15,14 @@ export default function Index() {
 	const [isLoading, setIsLoading] = useState<boolean>(true)
 
 	return isLoading ? (
-		<Section id="loader" className="flex items-center justify-center w-screen h-screen overflow-hidden">
+		<Section id="loader" className="flex h-screen w-screen items-center justify-center overflow-hidden">
 			<Loader finishLoading={() => setIsLoading(false)} />
 		</Section>
 	) : (
 		<>
 			<Navbar />
-			<main className="relative h-screen justify-center overflow-y-scroll overflow-x-hidden">
-				<Section id="intro" className="flex items-center w-full h-full p-5">
+			<main className="relative h-screen justify-center overflow-x-hidden overflow-y-scroll">
+				<Section id="intro" className="flex h-full w-full items-center p-5">
 					<Introduction />
 				</Section>
 				<Section id="about">

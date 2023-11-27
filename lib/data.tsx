@@ -199,7 +199,7 @@ export const WorkExperiences = [
 		end: 'May 2019',
 		logoClassname: 'bg-bell-white',
 		url: 'https://bell.ca',
-		company: 'Bell Canada',
+		company: 'Bell',
 		title: 'Fullstack engineer',
 		descriptions: ['Bell.a', 'Bell.b', 'Bell.c', 'Bell.d', 'Bell.e'],
 		summary: 'Bell.summary',
