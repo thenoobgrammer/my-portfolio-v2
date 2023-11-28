@@ -111,7 +111,7 @@ export default function Navbar() {
 								</Link>
 							</li>
 							<li key="mobile-nav-resume" className="link">
-								<PDFDownloadLink document={<PDFResume t={t_resume} />} fileName="CV">
+								<PDFDownloadLink document={<PDFResume t={t_resume} />} fileName={t('Filename')}>
 									{({ loading }) => (loading ? <Spinner /> : t('Download'))}
 								</PDFDownloadLink>
 							</li>
@@ -128,7 +128,7 @@ export default function Navbar() {
 					<PDFDownloadLink
 						className="text-accent-100 transition-all hover:border-accent-300/50 hover:text-accent-50 md:ml-2 md:rounded-sm md:border-2 md:border-accent-300 md:p-2 md:hover:bg-accent-300/30"
 						document={<PDFResume t={t_resume} />}
-						fileName="CV"
+						fileName={t('Filename')}
 					>
 						{({ loading }) => (loading ? <Spinner /> : t('Download'))}
 					</PDFDownloadLink>

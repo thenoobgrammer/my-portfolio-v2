@@ -26,7 +26,8 @@
 		"Job history": "Job history",
 		"Projects": "Projects",
 		"Services": "Services",
-		"Download": "Resume"
+		"Download": "Resume",
+		"Filename": "CV_Antoine_Hakim_En"
 	},
 	"Services": {
 		"Services": "Services",
@@ -94,7 +95,6 @@
 		"Climbing": "Climbing",
 		"Web development": "Web development",
 		"Axe throwing": "Axe throwing",
-		"Filename": "CV_Antoine_Hakim_En",
 		"GoTo": {
 			"summary": "I contribute to the development of a top-notch SaaS business communication tool, focusing on customer-facing features. My work ensures the platform remains high quality and robust, delivering a seamless experience for users.",
 			"a": "Developed a high-end business communication settings tool using ReactJS, Redux-Thunk, React-Router, Javascript, Typescript, HTML5, CSS3, and MUI5",
