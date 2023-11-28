@@ -64,6 +64,7 @@
 		"Climbing": "Escalade",
 		"Web development": "Développement",
 		"Axe throwing": "Lancer de hache",
+		"Selected projects": "Projets sélectionnés",
 		"GoTo": {
 			"summary": "Je contribue au développement d'un outil de communication d'entreprise SaaS de premier ordre, en mettant l'accent sur les fonctionnalités orientées client. Mon travail garantit que la plateforme reste de haute qualité et robuste, offrant une expérience fluide aux utilisateurs.",
 			"a": "Développé un outil haut de gamme de communication d'entreprise en utilisant ReactJS, Redux-Thunk, React-Router, Javascript, Typescript, HTML5, CSS3 et MUI5",
