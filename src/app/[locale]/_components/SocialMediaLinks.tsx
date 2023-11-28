@@ -5,6 +5,7 @@ import { FACEBOOK_URL, GITHUB_PROFILE_URL, LINKEDIN_URL } from 'lib/data'
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 import IconButton from 'src/components/IconButton'
+import Link from 'next/link'
 import { TbSocial } from 'react-icons/tb'
 import { useState } from 'react'
 
@@ -12,9 +13,9 @@ export default function SocialMediaLinks() {
 	const [open, setOpen] = useState<boolean>(false)
 
 	return (
-		<div className="fixed bottom-16 left-2 text-accent-100 md:left-16">
+		<div className="text-primary md:fixed md:bottom-16 md:left-4">
 			<button
-				className="m-auto flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-accent-500 p-2 text-dark shadow disabled:bg-gray-400 md:h-12 md:w-12"
+				className="m-auto flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-secondary p-2 text-primary disabled:bg-gray-400"
 				disabled={open}
 				onClick={() => setOpen(true)}
 			>
@@ -33,14 +34,14 @@ export default function SocialMediaLinks() {
 								visible: {
 									opacity: 1,
 									scale: 1,
-									y: -30,
+									y: -10,
 									transition: {
 										delayChildren: 0.3,
 										staggerChildren: 0.2,
 									},
 								},
 							}}
-							className="absolute -top-full left-1/2 flex -translate-x-1/2 -translate-y-full flex-col items-center"
+							className="absolute -top-full left-1/2 flex -translate-x-1/2 -translate-y-full flex-col items-center text-accent-700"
 						>
 							<motion.li
 								initial="hidden"
@@ -55,7 +56,7 @@ export default function SocialMediaLinks() {
 										y: '-200%',
 										opacity: 1,
 										transition: {
-											delay: 0.2,
+											delay: 0.1,
 										},
 									},
 								}}
@@ -63,36 +64,9 @@ export default function SocialMediaLinks() {
 								className="relative active:bg-slate-100"
 							>
 								<IconButton>
-									<a href={GITHUB_PROFILE_URL} target="_blank">
+									<Link href={GITHUB_PROFILE_URL} target="_blank">
 										<FaGithub size={25} />
-									</a>
-								</IconButton>
-							</motion.li>
-							<motion.li
-								initial="hidden"
-								animate="visible"
-								variants={{
-									hidden: {
-										x: '-50%',
-										y: 0,
-										opacity: 0,
-									},
-									visible: {
-										y: '-200%',
-										opacity: 1,
-										marginTop: 10,
-										transition: {
-											delay: 0.1,
-										},
-									},
-								}}
-								key="facebook"
-								className="relative active:bg-slate-100"
-							>
-								<IconButton>
-									<a href={FACEBOOK_URL} target="_blank">
-										<FaFacebook size={25} />
-									</a>
+									</Link>
 								</IconButton>
 							</motion.li>
 							<motion.li
@@ -114,9 +88,9 @@ export default function SocialMediaLinks() {
 								className="relative active:bg-slate-100"
 							>
 								<IconButton>
-									<a href={LINKEDIN_URL} target="_blank">
+									<Link href={LINKEDIN_URL} target="_blank">
 										<FaLinkedin size={25} />
-									</a>
+									</Link>
 								</IconButton>
 							</motion.li>
 						</motion.ul>

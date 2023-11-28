@@ -12,7 +12,7 @@ type Props = {
 	timeZone: string
 }
 
-export default function NextIntlProvider({ messages, locale, children, now, timeZone }: Props) {
+export default function NextIntlProvider({ messages, locale, children, now, timeZone, ...rest }: Props) {
 	return (
 		<NextIntlClientProvider
 			locale={locale}
@@ -22,6 +22,7 @@ export default function NextIntlProvider({ messages, locale, children, now, time
 			}}
 			now={now}
 			timeZone={timeZone}
+			{...rest}
 		>
 			{children}
 		</NextIntlClientProvider>

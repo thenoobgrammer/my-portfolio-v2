@@ -1,62 +1,72 @@
-'use client'
-
 import {
 	Address,
+	BE_Frameworks,
 	Education,
 	Email,
-	Github,
-	Languages,
-	LinkedIn,
+	FE_Frameworks,
+	LINKEDIN_URL,
 	PersonalProjects,
 	Phone,
-	SpokenLanguages,
 	Website,
 	WorkExperiences,
+	extract,
 } from 'lib/data'
-import {
-	Document,
-	Font,
-	Link,
-	PDFDownloadLink,
-	Page,
-	StyleSheet,
-	Text,
-	View,
-} from '@react-pdf/renderer/lib/react-pdf.browser.es'
+import { Document, Font, Link, Page, StyleSheet, Text, View } from '@react-pdf/renderer/lib/react-pdf.browser.es'
 
-import Spinner from 'src/components/Spinner'
-import { useTranslations } from 'next-intl'
-
+Font.clear()
 Font.register({
-	family: 'Inter',
-	src: 'https://fonts.googleapis.com/css?family=Inter',
+	family: 'Roboto',
+	fonts: [
+		{
+			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-bold-webfont.ttf',
+			fontWeight: 'bold',
+		},
+		{
+			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-black-webfont.ttf',
+			fontWeight: 'semibold',
+		},
+		{
+			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-medium-webfont.ttf',
+			fontWeight: 'medium',
+		},
+		{
+			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-regular-webfont.ttf',
+			fontWeight: 'regular',
+		},
+		{
+			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-light-webfont.ttf',
+			fontWeight: 'light',
+		},
+		{
+			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-thin-webfont.ttf',
+			fontWeight: 'thin',
+		},
+	],
 })
 
 const styles = StyleSheet.create({
-	page: { padding: 40, textAlign: 'left' },
+	page: { padding: 40, textAlign: 'left', fontFamily: 'Roboto', fontSize: 8 },
 	title: {
 		fontSize: 24,
-		fontWeight: 'heavy',
+		fontWeight: 'bold',
 		color: '#0256ee',
 		marginBottom: 6,
 	},
-	subtitle: { color: '#9c9c9c', textAlign: 'left', marginBottom: 6, maxWidth: '50%', fontSize: 9 },
+	subtitle: { color: '#9c9c9c', textAlign: 'left', marginBottom: 6, maxWidth: '60%' },
 	textLeft: { textAlign: 'left' },
 	sectionTitle: { color: '#0256ee', fontSize: 12 },
-	left: { width: '70%', paddingRight: 10 },
+	left: { width: '60%', marginRight: '10%' },
 	right: { width: '30%' },
 	row: { display: 'flex', flexDirection: 'row' },
 	column: { display: 'flex', flexDirection: 'column' },
 })
 
-export default function DownloadLink() {
-	const t = useTranslations('Resume')
-
-	const Doc = () => (
+export default function PDFResume({ t }) {
+	return (
 		<Document pageLayout="oneColumn">
 			<Page size="A4" style={{ ...styles.row, ...styles.page }}>
 				<View style={styles.left}>
-					<Text style={{ fontSize: 24, fontWeight: 'heavy', color: '#0256ee', marginBottom: 6 }}>
+					<Text style={{ fontSize: 24, fontWeight: 'bold', color: '#0256ee', marginBottom: 6 }}>
 						{t('Antoine Hakim')}
 					</Text>
 					<Text
@@ -64,23 +74,27 @@ export default function DownloadLink() {
 							color: '#9c9c9c',
 							textAlign: 'left',
 							marginBottom: 6,
-							maxWidth: '40%',
-							fontSize: 9,
+							maxWidth: '70%',
 						}}
 					>
 						{t('Role')}
 					</Text>
+					{/* Work experience */}
 					<View style={styles.column}>
 						<Text style={styles.sectionTitle}>{t('Relevant Experience')}</Text>
 						<View style={styles.column}>
-							{WorkExperiences.map(({ company, descriptions, url, start, end, title, technologies }, idx) => (
+							{WorkExperiences.map(({ company, descriptions, url, start, end, title }, idx) => (
 								<View key={idx} style={{ marginVertical: 6 }}>
-									<View style={{ ...styles.row, alignItems: 'center', gap: 4, fontSize: 10 }}>
-										<Text style={{ fontWeight: 'bold' }}>{title},</Text>
-										<Link src={url} style={{ textDecoration: 'none', color: '#000' }}>
+									<View style={{ ...styles.row, alignItems: 'center', gap: 4, marginVertical: 6 }}>
+										<Text>{t(title)},</Text>
+										<Link
+											src={url}
+											target="_blank"
+											style={{ fontWeight: 'bold', textDecoration: 'none', color: '#000' }}
+										>
 											{company}
 										</Link>
-										<Text style={{ fontSize: 7, color: '#dedede' }}>
+										<Text style={{ fontSize: 7, color: '#939393' }}>
 											{start} - {end}
 										</Text>
 									</View>
@@ -91,7 +105,6 @@ export default function DownloadLink() {
 											style={{
 												...styles.row,
 												gap: 4,
-												fontSize: 9,
 												marginVertical: 2,
 											}}
 										>
@@ -105,55 +118,83 @@ export default function DownloadLink() {
 					</View>
 				</View>
 				<View style={styles.right}>
-					<View style={{ ...styles.column, fontSize: 8 }}>
+					{/* Personal Info */}
+					<View style={{ ...styles.column, color: '#9c9c9c' }}>
 						<Text>{Address}</Text>
-						<Text>{Phone}</Text>
-						<Text>{Email}</Text>
-						<Link src={Website.url}>{Website.text}</Link>
+						<Link src="tel:+15149668481" style={{ textDecoration: 'none', color: '#9c9c9c', marginVertical: 2 }}>
+							{Phone}
+						</Link>
+						<Link src={`mailto:${Email}`} style={{ textDecoration: 'none', color: '#9c9c9c', marginVertical: 2 }}>
+							{Email}
+						</Link>
+						<Link src={LINKEDIN_URL} style={{ textDecoration: 'none', color: '#9c9c9c', marginVertical: 2 }}>
+							LinkedIn
+						</Link>
 					</View>
-					<View style={styles.column}>
-						<Text style={styles.sectionTitle}>{t('Skills')}</Text>
-						<Text style={{ fontSize: 10 }}>
-							<Text></Text>
-							<Text></Text>
-						</Text>
-						<Text style={{ fontSize: 10 }}>
-							<Text></Text>
-							<Text></Text>
-						</Text>
-						<Text style={{ fontSize: 10 }}>
-							<Text></Text>
-							<Text></Text>
-						</Text>
+					{/* Skills */}
+					<View style={{ ...styles.column, marginVertical: 6 }}>
+						<Text style={{ ...styles.sectionTitle, marginVertical: 5 }}>{t('Skills')}</Text>
+						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
+							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Programming languages')}</Text>
+							<Text>
+								{extract(['java', 'js', 'typescript', 'html', 'css', 'sql'])
+									.map((e: any) => e.name)
+									.join(', ')}
+							</Text>
+						</View>
+						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
+							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Libraries & Frameworks')}</Text>
+							<Text>
+								{extract(['react', 'next', 'tailwind', 'redux', 'ember', 'stencil', 'jest'])
+									.map((e: any) => e.name)
+									.join(', ')}
+							</Text>
+						</View>
+						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
+							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Tools and platforms')}</Text>
+							<Text>
+								{extract(['git', 'ec2', 's3', 'vercel', 'docker', 'mongodb'])
+									.map((e: any) => e.name)
+									.join(', ')}
+							</Text>
+						</View>
 					</View>
-					<View style={styles.column}>
-						<Text style={styles.sectionTitle}>{t('Selected Projects')}</Text>
-						<Text style={{ fontSize: 10 }}>
-							<Link src=""></Link>
-							<Link src=""></Link>
+					{/* Selected projects */}
+					<View style={{ ...styles.column, marginVertical: 6 }}>
+						<Text style={{ ...styles.sectionTitle, marginVertical: 5 }}>{t('Education')}</Text>
+						{PersonalProjects.filter((p) => ['pickside', 'pv1', 'pv2'].includes(p.tag)).map(
+							({ name, summary, url }, idx) => (
+								<View key={idx} style={{ ...styles.column, marginBottom: 5, color: '#5f5f5f' }}>
+									<Link
+										src={url}
+										style={{ fontWeight: 'bold', textDecoration: 'none', color: '#000', marginBottom: 2 }}
+									>
+										{name}
+									</Link>
+									<Text>{t(summary)}</Text>
+								</View>
+							),
+						)}
+					</View>
+					{/* Education */}
+					<View style={{ ...styles.column, marginVertical: 6 }}>
+						<Text style={{ ...styles.sectionTitle, marginVertical: 5 }}>{t('Education')}</Text>
+						{Education.map((e, idx) => (
+							<View key={idx} style={{ ...styles.column, marginBottom: 5, color: '#5f5f5f' }}>
+								<Text style={{ fontWeight: 'bold', marginBottom: 2 }}>{e.institution}</Text>
+								<Text>{t(e.program)}</Text>
+							</View>
+						))}
+					</View>
+					{/* Interests */}
+					<View style={{ ...styles.column, marginVertical: 6 }}>
+						<Text style={{ ...styles.sectionTitle, marginVertical: 5 }}>{t('Interests')}</Text>
+						<Text>
+							{['Soccer', 'Hiking', 'Climbing', 'Web development', 'Axe throwing'].map((i: any) => t(i)).join(', ')}
 						</Text>
-					</View>
-					<View style={styles.column}>
-						<Text style={styles.sectionTitle}>{t('Education')}</Text>
-						<Text>{t('Education')}</Text>
-						<Text style={{ fontSize: 10 }}></Text>
-					</View>
-					<View style={styles.column}>
-						<Text style={styles.sectionTitle}>{t('Interests')}</Text>
-						<Text style={{ fontSize: 10 }}></Text>
 					</View>
 				</View>
 			</Page>
 		</Document>
-	)
-
-	return (
-		<PDFDownloadLink
-			className="ml-2 border-2 rounded-sm border-accent-300 p-2 text-accent-100 hover:bg-accent-300/30 hover:border-accent-300/50 hover:text-accent-50 transition-all"
-			document={<Doc />}
-			fileName="CV"
-		>
-			{({ loading }) => (loading ? <Spinner /> : t('Download'))}
-		</PDFDownloadLink>
 	)
 }

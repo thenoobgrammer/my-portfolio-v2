@@ -14,16 +14,18 @@ export default function LocaleSwitcher() {
 	const [open, setOpen] = useState<boolean>(false)
 
 	return (
-		<div className="relative">
+		<div className="text-md relative">
 			<IconButton className="space-x-2" onClick={() => setOpen(true)}>
-				<BiGlobe />
+				<BiGlobe size={20} />
 				<span className="capitalize">{params.locale}</span>
 			</IconButton>
 			<Menu open={open} onClose={() => setOpen(false)}>
 				<Link
 					className={cn(
 						'p-3 capitalize',
-						params.locale === 'en' ? 'cursor-default bg-accent text-accent-100' : 'hover:text-accent-600',
+						params.locale === 'en'
+							? 'cursor-default bg-accent-200 text-dark'
+							: 'hover:bg-accent-300/30 hover:text-accent-600',
 					)}
 					href="/en"
 					locale="en"
@@ -33,7 +35,9 @@ export default function LocaleSwitcher() {
 				<Link
 					className={cn(
 						'p-3 capitalize',
-						params.locale === 'fr' ? 'cursor-default bg-accent text-accent-100' : 'hover:text-accent-600',
+						params.locale === 'fr'
+							? 'cursor-default bg-accent-200 text-dark'
+							: 'hover:bg-accent-300/30 hover:text-accent-600',
 					)}
 					href="/fr"
 					locale="fr"

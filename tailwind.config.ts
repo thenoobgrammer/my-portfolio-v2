@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
 import type { Config } from 'tailwindcss'
-import plugin from 'tailwindcss/plugin'
 
 const config: Config = {
 	darkMode: 'class',
@@ -9,13 +8,6 @@ const config: Config = {
 	theme: {
 		animation: {
 			'drop-in': 'drop-in 700ms ease-in-out',
-		},
-
-		keyframes: {
-			'drop-in': {
-				from: { display: 'none', opacity: '0', transform: 'translateY(-80px)' },
-				to: { display: 'block', opacity: '1', transform: 'translateY(0)' },
-			},
 		},
 		fontFamily: {
 			sans: ['var(--font-inter)'],
@@ -25,16 +17,16 @@ const config: Config = {
 			primary: '#303841',
 			secondary: '#c3bdb6',
 			accent: {
-				50: '#EDE7F6',
-				100: '#D1C4E9',
-				200: '#B39DDB',
-				300: '#9575CD',
-				400: '#7E57C2',
-				500: '#673AB7',
-				600: '#5E35B1',
-				700: '#512DA8',
-				800: '#4527A0',
-				DEFAULT: '#311B92',
+				50: '#fef8e0',
+				100: '#fbebb0',
+				200: '#f9de7c',
+				300: '#f7d345',
+				DEFAULT: '#F6C90E',
+				500: '#f5be00',
+				600: '#f6b000',
+				700: '#f79d00',
+				800: '#f88c00',
+				900: '#f96b00',
 			},
 		},
 		fontSize: {
