@@ -9,6 +9,7 @@ import PDFResume from '../_components/PDFResume'
 import { PDFViewer } from '@react-pdf/renderer'
 import Resume from '../_components/Resume'
 import { WorkExperiences } from 'lib/data'
+import { cn } from 'src/utils/common'
 import { useContext } from 'react'
 import { useTranslations } from 'next-intl'
 
