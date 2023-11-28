@@ -95,6 +95,7 @@
 		"Climbing": "Climbing",
 		"Web development": "Web development",
 		"Axe throwing": "Axe throwing",
+		"Selected projects": "Selected projects",
 		"GoTo": {
 			"summary": "I contribute to the development of a top-notch SaaS business communication tool, focusing on customer-facing features. My work ensures the platform remains high quality and robust, delivering a seamless experience for users.",
 			"a": "Developed a high-end business communication settings tool using ReactJS, Redux-Thunk, React-Router, Javascript, Typescript, HTML5, CSS3, and MUI5",

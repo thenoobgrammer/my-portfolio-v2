@@ -161,7 +161,7 @@ export default function PDFResume({ t }) {
 					</View>
 					{/* Selected projects */}
 					<View style={{ ...styles.column, marginVertical: 6 }}>
-						<Text style={{ ...styles.sectionTitle, marginVertical: 5 }}>{t('Education')}</Text>
+						<Text style={{ ...styles.sectionTitle, marginVertical: 5 }}>{t('Selected projects')}</Text>
 						{PersonalProjects.filter((p) => ['pickside', 'pv1', 'pv2'].includes(p.tag)).map(
 							({ name, summary, url }, idx) => (
 								<View key={idx} style={{ ...styles.column, marginBottom: 5, color: '#5f5f5f' }}>
