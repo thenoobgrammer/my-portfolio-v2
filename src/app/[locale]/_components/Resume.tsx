@@ -9,7 +9,38 @@ export default function Resume() {
 	const t = useTranslations('Resume')
 
 	return (
-		<div id="CV" className="flex text-inherit scroll-smooth h-[95%] overflow-y-scroll px-10 py-10">
+		<div
+			id="resume"
+			className="flex h-[95%] flex-col gap-y-6 overflow-y-scroll scroll-smooth p-5 text-inherit md:flex-row-reverse md:p-10"
+		>
+			{/* Information */}
+			<div className="flex flex-col gap-y-6">
+				<div>
+					<span className="text-lg text-accent-300">{t('My information')}</span>
+					<div className="group flex flex-col gap-y-1">
+						<span>{Address}</span>
+						<a href={`mailto:${Email}`} className="text-accent-200 underline transition-all hover:text-amber-50">
+							{Email}
+						</a>
+						<span>{Phone}</span>
+						<span>{SpokenLanguages.join(', ')}</span>
+					</div>
+				</div>
+				<div>
+					<span className="text-lg text-accent-300">{t('Education')}</span>
+					<div className="flex flex-col gap-y-6">
+						{Education.map(({ start, end, institution, program }, idx) => (
+							<div className="flex flex-col items-start" key={idx}>
+								<span className="text-sm font-extralight text-light/50">
+									{start} - {end} - {institution}
+								</span>
+								<span>{t(program)}</span>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+			{/* Experience */}
 			<div className="flex flex-col gap-y-7">
 				<>
 					<h6 className="text-accent-300">{t('Work experience')}</h6>
@@ -20,12 +51,12 @@ export default function Resume() {
 									<span>{t(title)}</span>
 									<Link
 										href={url}
-										className="font-semibold hover:text-accent-300 hover:translate-x-1 hover:-translate-y-1 transition-all"
+										className="font-semibold transition-all hover:-translate-y-1 hover:translate-x-1 hover:text-accent-300"
 										target="_blank"
 									>
 										{company}
 									</Link>
-									<span className="text-sm text-light/50 font-extralight">
+									<span className="text-sm font-extralight text-light/50">
 										{start}-{end}
 									</span>
 								</div>
@@ -61,7 +92,7 @@ export default function Resume() {
 									{url && (
 										<Link
 											href={url}
-											className="font-semibold hover:text-accent-300 hover:translate-x-1 hover:-translate-y-1 transition-all"
+											className="font-semibold transition-all hover:-translate-y-1 hover:translate-x-1 hover:text-accent-300"
 											target="_blank"
 										>
 											<FaExternalLinkAlt />
@@ -69,7 +100,7 @@ export default function Resume() {
 									)}
 									<Link
 										href={gitUrl}
-										className="font-semibold hover:text-accent-300 hover:translate-x-1 hover:-translate-y-1 transition-all"
+										className="font-semibold transition-all hover:-translate-y-1 hover:translate-x-1 hover:text-accent-300"
 										target="_blank"
 									>
 										<FaGithub />
@@ -96,30 +127,6 @@ export default function Resume() {
 						))}
 					</div>
 				</>
-			</div>
-			<div className="flex flex-col gap-y-10">
-				<div>
-					<span className="text-lg text-accent-300">{t('My information')}</span>
-					<div className="group flex flex-col gap-y-1">
-						<span>{Address}</span>
-						<span>{Email}</span>
-						<span>{Phone}</span>
-						<span>{SpokenLanguages.join(', ')}</span>
-					</div>
-				</div>
-				<div>
-					<span className="text-lg text-accent-300">{t('Education')}</span>
-					<div className="flex flex-col gap-y-4">
-						{Education.map(({ start, end, institution, program }, idx) => (
-							<div className="flex flex-col items-start" key={idx}>
-								<span className="text-sm text-light/50 font-extralight">
-									{start} - {end} - {institution}
-								</span>
-								<span>{t(program)}</span>
-							</div>
-						))}
-					</div>
-				</div>
 			</div>
 		</div>
 	)

@@ -25,7 +25,9 @@
 		"About": "About",
 		"Job history": "Job history",
 		"Projects": "Projects",
-		"Services": "Services"
+		"Services": "Services",
+		"Download": "Resume",
+		"Filename": "CV_Antoine_Hakim_En"
 	},
 	"Services": {
 		"Services": "Services",
@@ -59,8 +61,12 @@
 	},
 	"Resume": {
 		"Resume": "Resume",
-		"Download": "Resume",
 		"Projects": "Projects",
+		"Personal projects": "Personal projects",
+		"Custom website": "Custom website",
+		"Portfolio": "Portfolio",
+		"Service": "Service",
+		"E commerce website": "E commerce website",
 		"Antoine Hakim": "Antoine Hakim",
 		"Role": "Experienced full-stack engineer focused on building accessible & custom experience",
 		"Relevant Experience": "Relevant Experience",
@@ -68,6 +74,10 @@
 		"Software Engineering": "Software Engineering",
 		"Computer Science (Certificate)": "Computer Science (Certificate)",
 		"Computer Science & technology": "Computer Science & technology",
+		"Bachelor of software engineering": "Bachelor of software engineering",
+		"Programming languages": "Programming languages",
+		"Libraries & Frameworks": "Libraries & Frameworks",
+		"Tools and platforms": "Tools & platforms",
 		"Vanier College": "Vanier College",
 		"Rest API application": "Rest API application",
 		"Selected Projects": "Selected Projects",
@@ -78,8 +88,13 @@
 		"Senior Frontend Engineer": "Senior Frontend Engineer",
 		"Fullstack engineer": "Fullstack engineer",
 		"Intern Frontend developer": "Intern Frontend developer",
-		"Full screen": "Full screen",
+		"Full resume": "Full resume",
 		"My information": "My information",
+		"Soccer": "Soccer",
+		"Hiking": "Hiking",
+		"Climbing": "Climbing",
+		"Web development": "Web development",
+		"Axe throwing": "Axe throwing",
 		"GoTo": {
 			"summary": "I contribute to the development of a top-notch SaaS business communication tool, focusing on customer-facing features. My work ensures the platform remains high quality and robust, delivering a seamless experience for users.",
 			"a": "Developed a high-end business communication settings tool using ReactJS, Redux-Thunk, React-Router, Javascript, Typescript, HTML5, CSS3, and MUI5",
@@ -140,7 +155,7 @@
 			"website": "https://pickside.net"
 		},
 		"PortfolioV1": {
-			"summary": "Not much to say about this project. It's my first ever online portfolio.",
+			"summary": "First version of my personal portfolio developed in React without typescript.",
 			"a": "Developed a portfolio/profile website with no backend, utilizing React 18 and TailwindCSS",
 			"b": "Designed and implemented custom-made components such as Dialogs, Buttons, LanguageSwitchers, and Spinners",
 			"c": "Implemented a small contact form that allows visitors to reach out via Email using the EmailJS library",
@@ -151,7 +166,7 @@
 			"repo": "https://github.com/thenoobgrammer/my-portfolio"
 		},
 		"PortfolioV2": {
-			"summary": "This is a second version of my portfolio developed in NextJS. I did for the sole purpose of learning the framework.",
+			"summary": "This is a second version of my portfolio developed with NextJS with typescript.",
 			"a": "Developed a portfolio/profile website with no backend, utilizing React 18 and TailwindCSS",
 			"b": "Designed and implemented custom-made components such as Dialogs, Buttons, LanguageSwitchers, and Spinners",
 			"c": "Implemented a small contact form that allows visitors to reach out via Email using the EmailJS library",

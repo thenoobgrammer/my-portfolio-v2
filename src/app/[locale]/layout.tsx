@@ -19,6 +19,10 @@ export const metadata: Metadata = {
 	description: 'Antoine is a full-stack developer with 5 years of experience',
 }
 
+export function generateStaticParams() {
+	return [{ locale: 'en' }]
+}
+
 export default async function RootLayout({ children, params: { locale } }) {
 	let messages
 	try {

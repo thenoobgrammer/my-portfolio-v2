@@ -1,5 +1,3 @@
-'use client'
-
 import { BiFullscreen, BiLinkExternal } from 'react-icons/bi'
 import { Tab, TabPanel, Tabs } from 'src/context/TabContext'
 
@@ -7,6 +5,8 @@ import Chip from 'src/components/Chip'
 import { DialogDispatchContext } from 'src/context/DialogContext'
 import IconButton from 'src/components/IconButton'
 import Link from 'next/link'
+import PDFResume from '../_components/PDFResume'
+import { PDFViewer } from '@react-pdf/renderer'
 import Resume from '../_components/Resume'
 import { WorkExperiences } from 'lib/data'
 import { cn } from 'src/utils/common'
@@ -23,7 +23,7 @@ export default function JobHistory() {
 				<header className="relative mb-10 flex items-center justify-between">
 					<h4 className="w-fit font-medium capitalize leading-tight tracking-tight text-light">{t('Job History')}</h4>
 					<div className="flex items-center gap-x-3 text-light">
-						<span>{t('Full screen')}</span>
+						<span>{t('Full resume')}</span>
 						<IconButton
 							className="text-accent-300"
 							onClick={() =>

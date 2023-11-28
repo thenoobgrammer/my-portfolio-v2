@@ -15,7 +15,7 @@ export const EMAIL_SERVICE_ID = 'service_gbfzv1f'
 export const EMAIL_TEMPLATE_ID = 'template_k1dy7ba'
 
 export const Address = 'Montreal, QC'
-export const Phone = '+1 514-966-8481'
+export const Phone = '+1514-966-8481'
 export const Email = 'ant.hakim.stud@gmail.com'
 export const SpokenLanguages = ['English', 'French']
 export const Website = { url: 'https://thenoobgrammer.com', text: 'My Website' }
@@ -27,7 +27,7 @@ const PORTFOLIO_V2_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio-v2
 const SADBOIS_GIT_REPO = 'https://github.com/orgs/Sadboiss/repositories'
 const PICKSIDE_URL = 'https://pickside.net'
 const PORTFOLIO_V1_URL = 'https://thenoobgrammer.com'
-const PORTFOLIO_V2_URL = 'https://v2.thenoobgrammer.com'
+const PORTFOLIO_V2_URL = 'https://antoinehakim.ca'
 
 export const LinkedIn = {
 	icon: FaLinkedinIn,
@@ -111,6 +111,7 @@ export const DeploymentTools = [
 	{ name: 'Terraform', tag: 'terraform', url: 'https://www.terraform.io/' },
 	{ name: 'SonarQube', tag: 'sonar', url: 'https://www.sonarsource.com/products/sonarqube/' },
 	{ name: 'CloudFoundry', tag: 'cf', url: 'https://www.cloudfoundry.org/' },
+	{ name: 'Vercel', tag: 'vercel', url: 'https://vercel.com/' },
 ]
 
 export const ExternalSaas = [
@@ -139,7 +140,7 @@ export const Concepts = [
 
 export const Education = [
 	{ start: '2016', end: '2020', institution: 'ETS', program: 'Software Engineering' },
-	{ start: '2015', end: '2016', institution: 'UQAM', program: 'Computer Science (Certificate' },
+	{ start: '2015', end: '2016', institution: 'UQAM', program: 'Computer Science (Certificate)' },
 	{ start: '2011', end: '2014', institution: 'Vanier College', program: 'Computer Science & technology' },
 ]
 
@@ -216,34 +217,12 @@ export const WorkExperiences = [
 			'rest',
 		]),
 	},
-	{
-		id: 'ubisoft',
-		start: 'Jan 2018',
-		end: 'May 2018',
-		logoClassname: 'bg-ubisoft',
-		url: 'https://ubisoft.com',
-		title: 'Intern Frontend developer',
-		company: 'Ubisoft',
-		descriptions: ['Ubisoft.a', 'Ubisoft.b', 'Ubisoft.c', 'Ubisoft.d', 'Ubisoft.e'],
-		summary: 'Ubisoft.summary',
-		technologies: extract([
-			'csharp',
-			'ember',
-			'mysql',
-			'html',
-			'css',
-			'jira',
-			'confluence',
-			'bitbucket',
-			'docker',
-			'rest',
-		]),
-	},
 ]
 
 export const PersonalProjects = [
 	{
 		name: 'Pickside',
+		tag: 'pickside',
 		type: 'Custom website',
 		gitUrl: PICKSIDE_GIT_REPO,
 		url: PICKSIDE_URL,
@@ -280,6 +259,7 @@ export const PersonalProjects = [
 	{
 		name: 'Portfolio V1',
 		type: 'Portfolio',
+		tag: 'pv1',
 		gitUrl: PORTFOLIO_V1_GIT_REPO,
 		url: PORTFOLIO_V1_URL,
 		summary: 'PortfolioV1.summary',
@@ -297,6 +277,7 @@ export const PersonalProjects = [
 	{
 		name: 'Portfolio V2',
 		type: 'Portfolio',
+		tag: 'pv2',
 		url: PORTFOLIO_V2_URL,
 		gitUrl: PORTFOLIO_V2_GIT_REPO,
 		summary: 'PortfolioV2.summary',
@@ -314,6 +295,7 @@ export const PersonalProjects = [
 	{
 		name: 'Discord',
 		type: 'Service',
+		tag: 'discord',
 		summary: 'Discord.summary',
 		gitUrl: DISCORD_GIT_REPO,
 		descriptions: ['Discord.a', 'Discord.b'],
@@ -322,6 +304,7 @@ export const PersonalProjects = [
 	},
 	{
 		name: 'Sadbois',
+		tag: 'sadbois',
 		type: 'E commerce website',
 		summary: 'Sadbois.summary',
 		gitUrl: SADBOIS_GIT_REPO,

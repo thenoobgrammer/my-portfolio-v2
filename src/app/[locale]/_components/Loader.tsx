@@ -19,34 +19,35 @@ const Loader = ({ finishLoading }) => {
 			.add({
 				targets: '.wrapper',
 				opacity: 1,
-				delay: 200,
+				delay: 100,
 				duration: 100,
 				easing: 'easeInOutQuart',
 			})
 			.add({
 				targets: '#logo rect',
-				delay: 300,
+				delay: 200,
 				duration: 1000,
 				easing: 'easeInOutQuart',
 				strokeDashoffset: [anime.setDashoffset, 0],
 			})
 			.add({
 				targets: '#logo #A path',
-				duration: 1000,
+				duration: 700,
 				easing: 'easeInOutQuart',
 				strokeDashoffset: [anime.setDashoffset, 0],
 			})
+
 			.add({
 				targets: '#logo',
-				delay: 500,
-				duration: 1000,
+				delay: 300,
+				duration: 700,
 				opacity: 0,
 				scale: 0.1,
 				easing: 'easeInOutQuart',
 			})
 			.add({
 				targets: '.wrapper',
-				duration: 1000,
+				duration: 700,
 				opacity: 0,
 				easing: 'easeInOutQuart',
 			})
@@ -67,7 +68,7 @@ const Loader = ({ finishLoading }) => {
 	}, [animate, mounted])
 
 	return (
-		<div className={cn('wrapper flex items-center text-accent w-16 h-16 opacity-0')}>
+		<div className={cn('wrapper flex h-16 w-16 items-center text-accent opacity-0')}>
 			<Logo />
 		</div>
 	)

@@ -1,5 +1,3 @@
-'use client'
-
 import { CgExternal } from 'react-icons/cg'
 import Chip from 'src/components/Chip'
 import IconButton from 'src/components/IconButton'
@@ -20,7 +18,7 @@ export default function Projects() {
 						key={idx}
 						className="group relative m-1 flex cursor-pointer flex-col justify-start overflow-hidden rounded-md bg-accent-200/5 p-3 shadow-md transition-all hover:-translate-y-2 hover:bg-accent/10 hover:shadow-accent-200/5"
 					>
-						<div className="group-hover:text-accent-light absolute right-2 top-2 flex items-center gap-x-2 transition-all">
+						<div className="group-hover:text-accent-light absolute right-2 top-2 flex items-center gap-x-2 text-accent-200 transition-all">
 							<IconButton className="group-hover:text-accent-light/90">
 								<Link href={project.gitUrl} target="_blank">
 									<VscGithub size={20} />
@@ -32,9 +30,7 @@ export default function Projects() {
 								</Link>
 							</IconButton>
 						</div>
-						<p className="group-hover:text-accent-primary text-lg font-semibold text-light transition-all">
-							{project.name}
-						</p>
+						<p className="text-lg font-semibold text-light transition-all group-hover:text-accent">{project.name}</p>
 						<p className="flex-grow text-light">{t(project.summary)}</p>
 						<div className="flex flex-wrap">
 							{project.technologies.map(({ name, url, tag }) => (

@@ -5,12 +5,15 @@
 @layer base {
 	html {
 		font-family: var(--font-inter);
-		scroll-behavior: smooth;
 		font-size: 14px;
 	}
 
 	body {
 		margin: 0;
+	}
+
+	main {
+		scroll-behavior: smooth !important;
 	}
 
 	h1 {
@@ -55,7 +58,7 @@
 	}
 
 	.link {
-		@apply rounded-md font-semibold text-primary transition-all hover:bg-accent-200/50 hover:p-1 hover:text-accent-500;
+		@apply block px-3 py-2 transition-all hover:text-accent-50;
 	}
 
 	.tab {

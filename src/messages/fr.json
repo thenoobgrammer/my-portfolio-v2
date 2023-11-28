@@ -6,14 +6,6 @@
 		"p3": "en tant que développeur frontend. Je suis constamment confronté à de nouvelles contraintes chaque semaine et je suis fier et heureux du travail que j'accomplis.",
 		"p4": "Mon objectif ultime est d'avoir une maison immense avec un terrain de football dans mon jardin, et ce jour viendra avec des efforts. Mais ne vous inquiétez pas, je suis très terre à terre et j'apprécie le chemin vers cette montagne."
 	},
-	"Home": {
-		"Hello, I am": "Hello, I am",
-		"Web designer": "Web designer",
-		"Full stack dev": "Full stack dev",
-		"Content creator": "Content creator",
-		"Portfolio designer": "Portfolio designer",
-		"Antoine Hakim": "Antoine Hakim"
-	},
 	"Introduction": {
 		"hi": "Salut,",
 		"intro": "Salut, mon nom est",
@@ -25,7 +17,9 @@
 		"About": "À propos",
 		"Job history": "Emplois",
 		"Projects": "Projets",
-		"Services": "Services"
+		"Services": "Services",
+		"Download": "Resumé",
+		"Filename": "CV_Antoine_Hakim_Fr"
 	},
 	"Services": {
 		"Services": "Services",
@@ -37,27 +31,39 @@
 	},
 	"Resume": {
 		"Resume": "Curriculum",
-		"Download": "Télécharger",
 		"Projects": "Projets",
+		"Personal projects": "Projects personel",
+		"Portfolio": "Portfolio",
+		"E commerce website": "Siteweb de commerce",
+		"Custom website": "Siteweb personalisé",
 		"Antoine Hakim": "Antoine Hakim",
 		"Role": "Ingénieur full-stack expérimenté axé sur la création d'expériences accessibles et personnalisées",
 		"Relevant Experience": "Expérience Pertinente",
 		"Skills": "Compétences",
 		"Selected Projects": "Projets Sélectionnés",
 		"Education": "Éducation",
-		"Software Engineering": "Software Engineering",
-		"Computer Science (Certificate)": "Computer Science (Certificate)",
-		"Computer Science & technology": "Computer Science & technology",
+		"Software Engineering": "Ingénieur logiciel",
+		"Computer Science (Certificate)": "Science de l'info (Certificat)",
+		"Computer Science & technology": "Science de l'info & technology",
+		"Bachelor of software engineering": "Baccalauréat en génie logiciel",
+		"Programming languages": "Langages de prog",
+		"Libraries & Frameworks": "Libraries & Frameworks",
+		"Tools and platforms": "Outils & platformes",
 		"Vanier College": "Vanier College",
-		"Rest API application": "Rest API application",
+		"Rest API application": "Application REST",
 		"Interests": "Centres d'intérêt",
 		"Job History": "Historique professionnel",
 		"Work experience": "Expérience professionnelle",
 		"Senior Frontend Engineer": "Ingénieur Frontend Senior",
 		"Fullstack engineer": "Ingénieur Fullstack",
 		"Intern Frontend developer": "Développeur Frontend en stage",
-		"Full screen": "Plein écran",
+		"Full resume": "Plein résumé",
 		"My information": "Mes informations",
+		"Soccer": "Soccer",
+		"Hiking": "Randonnée",
+		"Climbing": "Escalade",
+		"Web development": "Développement",
+		"Axe throwing": "Lancer de hache",
 		"GoTo": {
 			"summary": "Je contribue au développement d'un outil de communication d'entreprise SaaS de premier ordre, en mettant l'accent sur les fonctionnalités orientées client. Mon travail garantit que la plateforme reste de haute qualité et robuste, offrant une expérience fluide aux utilisateurs.",
 			"a": "Développé un outil haut de gamme de communication d'entreprise en utilisant ReactJS, Redux-Thunk, React-Router, Javascript, Typescript, HTML5, CSS3 et MUI5",
@@ -118,7 +124,7 @@
 			"website": "https://pickside.net"
 		},
 		"PortfolioV1": {
-			"summary": "Pas grand-chose à dire sur ce projet. C'est mon tout premier portfolio en ligne.",
+			"summary": "La première version de mon portfolio personnel a été développée en React sans TypeScript.",
 			"a": "Développé un site web de portfolio/profil sans backend en utilisant React 18 et TailwindCSS",
 			"b": "Conçu et implémenté des composants sur mesure tels que des Dialogues, des Boutons, des Sélecteurs de Langue et des Indicateurs de Chargement (Spinners)",
 			"c": "Mis en place un petit formulaire permettant aux visiteurs de me contacter par e-mail en utilisant la bibliothèque EmailJS",
@@ -129,7 +135,7 @@
 			"repo": "https://github.com/thenoobgrammer/my-portfolio"
 		},
 		"PortfolioV2": {
-			"summary": "Il s'agit d'une deuxième version de mon portfolio développée en NextJS. Je l'ai faite dans le seul but d'apprendre le framework.",
+			"summary": "Il s'agit d'une deuxième version de mon portfolio développée avec NextJS.",
 			"a": "Developed a portfolio/profile website with no backend, utilizing React 18 and TailwindCSS",
 			"b": "Designed and implemented custom-made components such as Dialogs, Buttons, LanguageSwitchers, and Spinners",
 			"c": "Implemented a small contact form that allows visitors to reach out via Email using the EmailJS library",
