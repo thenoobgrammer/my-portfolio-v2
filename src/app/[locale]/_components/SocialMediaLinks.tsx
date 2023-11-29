@@ -1,8 +1,8 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import { FACEBOOK_URL, GITHUB_PROFILE_URL, LINKEDIN_URL } from 'lib/data'
-import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { GITHUB_PROFILE_URL, LINKEDIN_URL } from 'lib/data'
 
 import IconButton from 'src/components/IconButton'
 import Link from 'next/link'
@@ -13,7 +13,7 @@ export default function SocialMediaLinks() {
 	const [open, setOpen] = useState<boolean>(false)
 
 	return (
-		<div className="text-primary md:fixed md:bottom-16 md:left-4">
+		<div className="hidden text-primary md:fixed md:bottom-16 md:left-8 lg:left-16">
 			<button
 				className="m-auto flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-secondary p-2 text-primary disabled:bg-gray-400"
 				disabled={open}
