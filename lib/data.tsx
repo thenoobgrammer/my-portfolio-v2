@@ -20,14 +20,14 @@ export const Email = 'ant.hakim.stud@gmail.com'
 export const SpokenLanguages = ['English', 'French']
 export const Website = { url: 'https://thenoobgrammer.com', text: 'My Website' }
 
-const DISCORD_GIT_REPO = 'https://github.com/thenoobgrammer/bramble'
-const PICKSIDE_GIT_REPO = 'https://github.com/PickSide'
-const PORTFOLIO_V1_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio'
-const PORTFOLIO_V2_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio-v2'
-const SADBOIS_GIT_REPO = 'https://github.com/orgs/Sadboiss/repositories'
 const PICKSIDE_URL = 'https://pickside.net'
+const PICKSIDE_GIT_REPO = 'https://github.com/PickSide'
 const PORTFOLIO_V1_URL = 'https://thenoobgrammer.com'
+const PORTFOLIO_V1_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio'
 const PORTFOLIO_V2_URL = 'https://antoinehakim.ca'
+const PORTFOLIO_V2_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio-v2'
+const DISCORD_GIT_REPO = 'https://github.com/thenoobgrammer/bramble'
+const SADBOIS_GIT_REPO = 'https://github.com/orgs/Sadboiss/repositories'
 
 export const LinkedIn = {
 	icon: FaLinkedinIn,
@@ -66,7 +66,7 @@ export const FE_Frameworks = [
 	{ name: 'React 18', tag: 'react', url: 'https://react.dev/blog/2022/03/29/react-v18' },
 	{ name: 'NextJS', tag: 'next', url: 'https://nextjs.org/' },
 	{ name: 'Typescript', tag: 'typescript', url: 'https://www.typescriptlang.org/' },
-	{ name: 'Redux Thunk', tag: 'redux', url: 'https://redux.js.org/usage/writing-logic-thunks' },
+	{ name: 'Redux', tag: 'redux', url: 'https://redux.js.org/usage/writing-logic-thunks' },
 	{ name: 'Tailwind', tag: 'tailwind', url: 'https://tailwindcss.com/' },
 	{
 		name: 'React Testing Library',
@@ -226,6 +226,7 @@ export const PersonalProjects = [
 		type: 'Custom website',
 		gitUrl: PICKSIDE_GIT_REPO,
 		url: PICKSIDE_URL,
+		imgSrc: '/pickside.png',
 		summary: 'Pickside.summary',
 		descriptions: [
 			'Pickside.a',
@@ -240,21 +241,7 @@ export const PersonalProjects = [
 			'Pickside.j',
 			'Pickside.k',
 		],
-		technologies: extract([
-			'react',
-			'node',
-			'redux',
-			'google-api',
-			'typescript',
-			'tailwind',
-			'github',
-			'mongodb',
-			'docker',
-			'ec2',
-			's3',
-			'route53',
-			'acm',
-		]),
+		technologies: extract(['react', 'node', 'redux', 'typescript', 'tailwind', 'mongodb']),
 	},
 	{
 		name: 'Portfolio V1',
@@ -262,6 +249,7 @@ export const PersonalProjects = [
 		tag: 'pv1',
 		gitUrl: PORTFOLIO_V1_GIT_REPO,
 		url: PORTFOLIO_V1_URL,
+		imgSrc: '/portfolio_v1.png',
 		summary: 'PortfolioV1.summary',
 		descriptions: [
 			'PortfolioV1.a',
@@ -278,6 +266,7 @@ export const PersonalProjects = [
 		name: 'Portfolio V2',
 		type: 'Portfolio',
 		tag: 'pv2',
+		imgSrc: '/portfolio_v2.png',
 		url: PORTFOLIO_V2_URL,
 		gitUrl: PORTFOLIO_V2_GIT_REPO,
 		summary: 'PortfolioV2.summary',
@@ -292,26 +281,28 @@ export const PersonalProjects = [
 		],
 		technologies: extract(['next', 'react', 'tailwind', 'route53', 'acm', 's3']),
 	},
-	{
-		name: 'Discord',
-		type: 'Service',
-		tag: 'discord',
-		summary: 'Discord.summary',
-		gitUrl: DISCORD_GIT_REPO,
-		descriptions: ['Discord.a', 'Discord.b'],
-		descriptionsHighlighted: ['DiscordHighlighted.a', 'DiscordHighlighted.b'],
-		technologies: extract(['node', 'git', 'typescript', 'ec2']),
-	},
-	{
-		name: 'Sadbois',
-		tag: 'sadbois',
-		type: 'E commerce website',
-		summary: 'Sadbois.summary',
-		gitUrl: SADBOIS_GIT_REPO,
-		descriptions: ['Sadbois.a', 'Sadbois.b', 'Sadbois.c'],
-		descriptionsHighlighted: ['SadboisHighlighted.a', 'SadboisHighlighted.b', 'SadboisHighlighted.c'],
-		technologies: extract(['react', 'github', 'rest', 'typescript']),
-	},
+	// {
+	// 	name: 'Discord',
+	// 	type: 'Service',
+	// 	tag: 'discord',
+	// 	imgSrc: '',
+	// 	summary: 'Discord.summary',
+	// 	gitUrl: DISCORD_GIT_REPO,
+	// 	descriptions: ['Discord.a', 'Discord.b'],
+	// 	descriptionsHighlighted: ['DiscordHighlighted.a', 'DiscordHighlighted.b'],
+	// 	technologies: extract(['node', 'git', 'typescript', 'ec2']),
+	// },
+	// {
+	// 	name: 'Sadbois',
+	// 	tag: 'sadbois',
+	// 	imgSrc: '',
+	// 	type: 'E commerce website',
+	// 	summary: 'Sadbois.summary',
+	// 	gitUrl: SADBOIS_GIT_REPO,
+	// 	descriptions: ['Sadbois.a', 'Sadbois.b', 'Sadbois.c'],
+	// 	descriptionsHighlighted: ['SadboisHighlighted.a', 'SadboisHighlighted.b', 'SadboisHighlighted.c'],
+	// 	technologies: extract(['react', 'github', 'rest', 'typescript']),
+	// },
 ]
 
 export function extract(tags: string[]) {
