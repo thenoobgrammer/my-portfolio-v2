@@ -10,15 +10,21 @@
 		"hi": "Salut,",
 		"intro": "Salut, mon nom est",
 		"name": "Antoine Hakim.",
-		"jobTitle": "Developpeur web, situe a Montreal",
+		"jobTitle": "Développeur web, situe a Montreal",
 		"summary": "Je suis un développeur full-stack avec une solide expérience dans la création de plateformes sur mesure, spécialement conçues pour répondre aux besoins des clients. Mes réussites passées se sont déroulées au sein des entreprises où j'ai travaillé. En ce moment, je suis à la recherche de nouvelles connexions et j'adorerais collaborer avec vous pour concevoir du contenu incroyable. Si vous avez un projet que vous aimeriez concrétiser, je suis la personne idéale pour vous aider !"
+	},
+	"Index": {
+		"About me": "À propos de moi",
+		"Career timeline": "Carrière",
+		"Projects": "Projects",
+		"My offers": "Mes services"
 	},
 	"Navbar": {
 		"About": "À propos",
-		"Job history": "Emplois",
+		"Career": "Carrière",
 		"Projects": "Projets",
 		"Services": "Services",
-		"Download": "Resumé",
+		"Download": "Résumé",
 		"Filename": "CV_Antoine_Hakim_Fr"
 	},
 	"Services": {
@@ -32,10 +38,10 @@
 	"Resume": {
 		"Resume": "Curriculum",
 		"Projects": "Projets",
-		"Personal projects": "Projects personel",
+		"Personal projects": "Projects personnel",
 		"Portfolio": "Portfolio",
-		"E commerce website": "Siteweb de commerce",
-		"Custom website": "Siteweb personalisé",
+		"E commerce website": "Page de commerce",
+		"Custom website": "Page personnalisé",
 		"Antoine Hakim": "Antoine Hakim",
 		"Role": "Ingénieur full-stack expérimenté axé sur la création d'expériences accessibles et personnalisées",
 		"Relevant Experience": "Expérience Pertinente",
@@ -48,7 +54,7 @@
 		"Bachelor of software engineering": "Baccalauréat en génie logiciel",
 		"Programming languages": "Langages de prog",
 		"Libraries & Frameworks": "Libraries & Frameworks",
-		"Tools and platforms": "Outils & platformes",
+		"Tools and platforms": "Outils & platforms",
 		"Vanier College": "Vanier College",
 		"Rest API application": "Application REST",
 		"Interests": "Centres d'intérêt",
@@ -92,14 +98,6 @@
 			"c": "Encadré des stagiaires sur l'utilisation d'EmberJS",
 			"d": "Travaillé avec l'équipe backend pour développer des endpoints pour des cas d'utilisation spécifiques requis par les clients en utilisant C# avec certains modèles de conception bien connus tels que la OOP et le polymorphisme",
 			"e": "Suivi des pratiques de développement agile et utilisé Bitbucket/JIRA pour le suivi des bugs"
-		},
-		"Ubisoft": {
-			"summary": "Ubisoft est l'endroit où j'ai découvert mon amour pour le développement web. Lors de mon stage, je travaillais pour une équipe qui développait des widgets pour un tableau de bord utilisateur. J'ai réussi à développer un widget qui était un IFrame, permettant à un site web externe virtuel de se charger dans le tableau de bord, avec un système de gestion des événements. Cela a permis aux événements de circuler entre le contexte de la page actuelle et le cadre web.",
-			"a": "Built a fully functional JIRA-like dashboard for internal teams to use at standups from scratch using EmberJS, and the Ember Octane framework, along with HTML, JavaScript, and CSS",
-			"b": "Introduced a solid structured code design that creates reusable modular components across the app",
-			"c": "Mentored interns on the use of EmberJS",
-			"d": "Worked with the backend team to develop endpoints for specific use cases required by the clients using C# with some well-known design patterns such as OOP and Polymorphism",
-			"e": "Followed agile development practices and used Bitbucket/JIRA for bug tracking"
 		},
 		"Discord": {
 			"summary": "J'ai développé un bot Discord avec une fonctionnalité de file d'attente musicale, pour mes amis et moi.",

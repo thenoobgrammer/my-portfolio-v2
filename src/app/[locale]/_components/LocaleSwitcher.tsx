@@ -1,5 +1,7 @@
 'use client'
 
+import { FR, US } from 'country-flag-icons/react/3x2'
+
 import { BiGlobe } from 'react-icons/bi'
 import IconButton from 'src/components/IconButton'
 import Link from 'next/link'
@@ -13,37 +15,42 @@ export default function LocaleSwitcher() {
 
 	const [open, setOpen] = useState<boolean>(false)
 
+	const Locales = [
+		{
+			value: 'en',
+			description: 'English',
+			icon: <US />,
+		},
+		{
+			value: 'fr',
+			description: 'Français',
+			icon: <FR />,
+		},
+	]
+
 	return (
-		<div className="text-md relative">
-			<IconButton className="space-x-2" onClick={() => setOpen(true)}>
+		<div className="relative text-light">
+			<IconButton className="space-x-2 text-lg" onClick={() => setOpen(true)}>
 				<BiGlobe size={20} />
 				<span className="capitalize">{params.locale}</span>
 			</IconButton>
 			<Menu open={open} onClose={() => setOpen(false)}>
-				<Link
-					className={cn(
-						'p-3 capitalize',
-						params.locale === 'en'
-							? 'cursor-default bg-accent-200 text-dark'
-							: 'hover:bg-accent-300/30 hover:text-accent-600',
-					)}
-					href="/en"
-					locale="en"
-				>
-					English
-				</Link>
-				<Link
-					className={cn(
-						'p-3 capitalize',
-						params.locale === 'fr'
-							? 'cursor-default bg-accent-200 text-dark'
-							: 'hover:bg-accent-300/30 hover:text-accent-600',
-					)}
-					href="/fr"
-					locale="fr"
-				>
-					Francais
-				</Link>
+				{Locales.map(({ value, description, icon }, idx) => (
+					<Link
+						key={idx}
+						className={cn(
+							'flex h-12 items-center gap-x-3 p-3 capitalize',
+							params.locale === value
+								? 'cursor-default bg-accent-200 text-dark'
+								: 'hover:bg-accent-300/30 hover:text-accent-600',
+						)}
+						href={`/${value}`}
+						locale={value}
+					>
+						{description}
+						<span className="h-auto w-6">{icon}</span>
+					</Link>
+				))}
 			</Menu>
 		</div>
 	)
