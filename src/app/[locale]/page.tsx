@@ -22,8 +22,8 @@ export default function Index() {
 		</Section>
 	) : (
 		<>
-			<div className="pointer-events-none fixed inset-0 h-screen w-screen bg-primary" />
-			<div className="relative mx-auto flex min-h-screen max-w-screen-xl flex-col bg-primary px-5 py-10 lg:flex-row lg:py-0">
+			<div className="pointer-events-none fixed inset-0 h-screen w-screen bg-gradient-to-r from-dark to-primary" />
+			<div className="relative mx-auto flex min-h-screen max-w-screen-xl flex-col px-5 py-10 lg:flex-row lg:py-0">
 				<header className="fixed left-full top-0 flex items-center"></header>
 				<aside className="top-0 hidden lg:sticky lg:flex lg:h-fit lg:max-h-screen lg:w-1/2 lg:flex-col lg:gap-y-6 lg:px-6 lg:py-24">
 					<Introduction />
