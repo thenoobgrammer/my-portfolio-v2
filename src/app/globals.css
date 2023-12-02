@@ -6,14 +6,15 @@
 	html {
 		font-family: var(--font-inter);
 		font-size: 14px;
+		scroll-behavior: smooth !important;
+	}
+
+	html::selection {
+		@apply text-accent-300;
 	}
 
 	body {
 		margin: 0;
-	}
-
-	main {
-		scroll-behavior: smooth !important;
 	}
 
 	h1 {
@@ -41,8 +42,8 @@
 }
 
 @layer components {
-	.section-full {
-		@apply h-screen w-screen;
+	.section {
+		@apply w-full scroll-mt-20 pb-24;
 	}
 
 	.icon-btn {
@@ -50,7 +51,7 @@
 	}
 
 	.chip {
-		@apply mx-1 my-2 w-fit overflow-hidden rounded-full bg-accent-50/10 px-2 py-1 text-sm font-medium text-accent-200 transition-all;
+		@apply mb-2 mr-2 w-fit overflow-hidden rounded-full bg-accent-50/10 px-2 py-1 text-sm font-medium text-accent-200 transition-all;
 	}
 
 	.chip-link {
@@ -58,36 +59,16 @@
 	}
 
 	.link {
-		@apply block px-3 py-2 transition-all hover:text-accent-50;
+		@apply block py-2 transition-all hover:translate-x-5 hover:text-accent-50;
 	}
 
 	.tab {
-		@apply block w-24 p-3 text-light/80;
+		@apply block min-w-[6rem] p-3 font-medium text-light/80;
 	}
 
 	.tab.active {
-		@apply bg-accent-200/30 text-accent-500 transition-all;
+		@apply rounded-md bg-accent-200/30 font-semibold text-accent-500 transition-all;
 	}
-
-	.glider {
-		@apply px-2 py-1 transition-all;
-	}
-
-	/* .tab[tabIndex='0'].active + .glider {
-		@apply translate-x-[0];
-	}
-
-	.tab[tabIndex='1'].active ~ .glider {
-		@apply translate-x-[100%];
-	}
-
-	.tab[tabIndex='2'].active ~ .glider {
-		@apply translate-x-[200%];
-	}
-
-	.tab[tabIndex='3'].active ~ .glider {
-		@apply translate-x-[300%];
-	} */
 
 	.shadow {
 		@apply shadow-lg drop-shadow-md transition-all;

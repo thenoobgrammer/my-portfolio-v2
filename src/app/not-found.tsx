@@ -2,7 +2,7 @@
 
 import Error from 'next/error'
 
-export default function NotFound() {
+const NotFound = () => {
 	return (
 		<html lang="en">
 			<body className="bg-primary">
@@ -11,3 +11,5 @@ export default function NotFound() {
 		</html>
 	)
 }
+
+export default NotFound
