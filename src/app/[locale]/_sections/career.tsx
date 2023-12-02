@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { WorkExperiences } from 'lib/data'
 import { useTranslations } from 'next-intl'
 
-export default function JobHistory() {
+export default function Career() {
 	const t = useTranslations('Resume')
 
 	return (
