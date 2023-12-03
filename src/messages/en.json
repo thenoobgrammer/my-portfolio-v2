@@ -1,43 +1,33 @@
 {
 	"About": {
 		"title": "Little about me",
-		"p1": "Hello :) My name is Antoine and I take joy in creating content for myself as a hobby. I never worked for a client independantly but I am looking fourth to that day. Anyways, I'm 29 years old, based in Montreal, Canada (yes I speak french). I was very into sports when I was still in school. So much that I tried to become pro. However, it took me quite some time to understand that I wanted to dedicate my life to become more entrepeneurial.",
-		"p2": "I took an interest in web development during one of my internship and here I am today, still loving it. I currently work at",
-		"p3": "as a frontend developer. I am constantly challenged with new constraints weekly and I take pride and joy into the work I'm doing."
+		"p1": "Hi there! 😊 I'm Antoine and I absolutely love creating content as a hobby. While I haven't had the chance to work independently for clients just yet, I'm really looking forward to that opportunity. I'm 29 years old and proud to call Montreal, Canada my home (and yes, I speak French!).",
+		"p2": "Back in school, I was super passionate about sports and even dreamed of going pro. However, as time went on, I realized my true calling was in entrepreneurship.",
+		"p3": "My journey into web development began during one of my internships, and here I am today, still completely enamored with it. Currently, I'm a frontend developer at {company}, where I face new challenges every week. I take immense pride and joy in the work I do—it's truly fulfilling!"
 	},
-	"Home": {
-		"Hello, I am": "Hello, I am",
-		"Web designer": "Web designer",
-		"Full stack dev": "Full stack dev",
-		"Content creator": "Content creator",
-		"Portfolio designer": "Portfolio designer",
-		"Antoine Hakim": "Antoine Hakim"
-	},
+
 	"Introduction": {
 		"hi": "Hi,",
 		"intro": "Hi, my name is",
 		"name": "Antoine Hakim",
 		"jobTitle": "Web developer, based in Montreal",
-		"summary": "I'm a full-stack developer with a background experience in building full-fledged custom platform, tailed to customers needs. My past accomplishments holds in the companies I've worked for, but right now, I am looking and hoping to connect with people and work together to design amazing content. If you have a project and would love to bring it to reality, I am your man for the job."
+		"summary": "I'm a full-stack developer with background experience in building complex platforms and design."
 	},
 	"Index": {
 		"About me": "About me",
 		"Career timeline": "Career timeline",
 		"Projects": "Projects",
-		"My offers": "My offers"
+		"My packages": "My packages"
 	},
 	"Navbar": {
 		"About": "About",
 		"Career": "Career",
 		"Projects": "Projects",
 		"Services": "Services",
-		"Download": "Resume",
-		"Filename": "CV_Antoine_Hakim_En"
+		"Download": "Resume"
 	},
 	"Services": {
-		"Services": "Services",
-		"Starting price": "Starting price",
-		"What's included": "What's included",
+		"Starting from": "Starting from {price}$",
 		"Design": {
 			"title": "Design",
 			"a": "A figma design with of how your website will look like",
@@ -47,20 +37,18 @@
 		},
 		"SinglePage": {
 			"title": "One page",
-			"a": "A portoflio to showcase your work projects",
-			"b": "A blog page that will allow you to post content about your favorite subjects",
-			"c": "A restaurant website with an integrated menu",
-			"d": "An event promoting website to market yourself",
-			"e": "Promote your business by building an online presence"
+			"a": "Could be a portfolio to showcase your skills",
+			"b": "Could be a blog page that will allow you to post content about your favorite subjects",
+			"c": "Could be a restaurant menu",
+			"d": "Could be an event promotion website"
 		},
 		"Custom": {
-			"title": "Custom made",
-			"a": "Unique design that will represent your brand identity and goal",
-			"b": "Tailored functionalities to your needs",
-			"c": "Scalable to support large amounts of request activities. This is crucial for business, allowing them to evolve with the growing number of users",
-			"d": "Great performance, depending on the framework selection and how the code is written can often increase loading speed of your website",
-			"e": "Search Engine Optimization (SEO) can allow your website to appear in the first tier lists of a search engine",
-			"f": "Security is key if your website holds very sensitive information, protecting yourself and your users against any data breaches"
+			"title": "Custom",
+			"a": "Unique design",
+			"b": "Tailored to your needs & vision",
+			"c": "Scalable",
+			"d": "Optimized",
+			"e": "Will include SEO (Search engine Optimization) to index your website amongst the first results"
 		},
 		"Inquire": "Inquire"
 	},

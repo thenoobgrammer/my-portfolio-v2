@@ -1,39 +1,55 @@
 {
 	"About": {
 		"title": "Un peu sur moi",
-		"p1": "Salut :) Je m'appelle Antoine et je prends plaisir à créer du contenu pour moi-même en tant que passe-temps. Je n'ai jamais travaillé pour un client de manière indépendante, mais j'attends avec impatience ce jour. Quoi qu'il en soit, j'ai 29 ans et je suis basé à Montréal, Canada. J'étais très passionné par le sport quand j'étais encore à l'école. Tellement passionné que j'ai essayé de devenir professionnel. Cependant, il m'a fallu un certain temps pour comprendre que je voulais consacrer ma vie à devenir plus entrepreneur.",
-		"p2": "Je me suis intéressé au développement web lors d'un de mes stages et me voilà aujourd'hui, toujours passionné par ce domaine. Je travaille actuellement chez",
-		"p3": "en tant que développeur frontend. Je suis constamment confronté à de nouvelles contraintes chaque semaine et je suis fier et heureux du travail que j'accomplis.",
-		"p4": "Mon objectif ultime est d'avoir une maison immense avec un terrain de football dans mon jardin, et ce jour viendra avec des efforts. Mais ne vous inquiétez pas, je suis très terre à terre et j'apprécie le chemin vers cette montagne."
+		"p1": "Salut ! 😊 Je suis Antoine et j'adore créer du contenu en tant que passe-temps. Même si je n'ai pas encore eu l'occasion de travailler de manière indépendante pour des clients, j'attends avec impatience cette opportunité. J'ai 29 ans et je suis fier d'appeler Montréal, Canada, chez moi (et oui, je parle français !).",
+		"p2": "À l'école, j'étais passionné par le sport et rêvais même de devenir professionnel. Cependant, au fil du temps, j'ai réalisé que ma véritable vocation était l'entrepreneuriat.",
+		"p3": "Mon parcours dans le développement web a commencé pendant l'un de mes stages, et me voici aujourd'hui, toujours complètement passionné par cela. Actuellement, je suis développeur frontend chez {company}, où je suis confronté à de nouveaux défis chaque semaine. Je suis extrêmement fier et heureux du travail que je fais, c'est vraiment gratifiant !"
 	},
 	"Introduction": {
 		"hi": "Salut,",
-		"intro": "Salut, mon nom est",
-		"name": "Antoine Hakim.",
-		"jobTitle": "Développeur web, situe a Montreal",
-		"summary": "Je suis un développeur full-stack avec une solide expérience dans la création de plateformes sur mesure, spécialement conçues pour répondre aux besoins des clients. Mes réussites passées se sont déroulées au sein des entreprises où j'ai travaillé. En ce moment, je suis à la recherche de nouvelles connexions et j'adorerais collaborer avec vous pour concevoir du contenu incroyable. Si vous avez un projet que vous aimeriez concrétiser, je suis la personne idéale pour vous aider !"
+		"intro": "Salut, je m'appelle",
+		"name": "Antoine Hakim",
+		"jobTitle": "Développeur web, basé à Montréal",
+		"summary": "Je suis un développeur full-stack avec une expérience antérieure dans la création de plateformes complexes et de design."
 	},
 	"Index": {
 		"About me": "À propos de moi",
 		"Career timeline": "Carrière",
 		"Projects": "Projects",
-		"My offers": "Mes services"
+		"My packages": "Mes services"
 	},
 	"Navbar": {
 		"About": "À propos",
 		"Career": "Carrière",
 		"Projects": "Projets",
 		"Services": "Services",
-		"Download": "Résumé",
-		"Filename": "CV_Antoine_Hakim_Fr"
+		"Download": "Résumé"
 	},
 	"Services": {
-		"Services": "Services",
-		"What's included": "Ce qui est inclue",
-		"One page": "Une page",
-		"Custom website": "Personnalisé",
-		"Design": "Design",
-		"Inquire": "S'informer"
+		"Starting from": "À partir de {price} $",
+		"Design": {
+			"title": "Conception",
+			"a": "Une maquette Figma montrant à quoi ressemblera votre site web",
+			"b": "Appels illimités pour discuter de votre conception",
+			"c": "Conception entièrement responsive",
+			"d": "Conception entièrement interactive"
+		},
+		"SinglePage": {
+			"title": "Page unique",
+			"a": "Peut être un portfolio pour présenter vos compétences",
+			"b": "Peut être une page de blog vous permettant de publier du contenu sur vos sujets préférés",
+			"c": "Peut être un menu de restaurant",
+			"d": "Peut être un site de promotion d'événement"
+		},
+		"Custom": {
+			"title": "Personnalisé",
+			"a": "Conception unique",
+			"b": "Adapté à vos besoins et à votre vision",
+			"c": "Évolutif",
+			"d": "Optimisé",
+			"e": "Inclura le référencement SEO (Search Engine Optimization) pour indexer votre site web parmi les premiers résultats"
+		},
+		"Inquire": "Demander"
 	},
 	"Resume": {
 		"Resume": "Curriculum",

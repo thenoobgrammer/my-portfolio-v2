@@ -39,12 +39,6 @@ const config: Config = {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-				'goto-color': "url('/Goto-colored.webp')",
-				'goto-white': "url('/Goto-white.png')",
-				'desjardins-color': "url('/Desjardins-colored.png')",
-				'desjardins-white': "url('/Desjardins-white.png')",
-				'bell-color': "url('/Bell-colored.png')",
-				'bell-white': "url('/Bell-white.png')",
 			},
 			colors: {
 				primary: '#303841',

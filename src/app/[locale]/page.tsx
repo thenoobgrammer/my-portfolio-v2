@@ -43,7 +43,7 @@ export default function Index() {
 					<Section id="projects" title={t('Projects')}>
 						<Projects />
 					</Section>
-					<Section id="services" title={t('My offers')}>
+					<Section id="services" title={t('My packages')}>
 						<Services />
 					</Section>
 				</main>
