@@ -9,31 +9,31 @@
 		scroll-behavior: smooth !important;
 	}
 
-	html::selection {
-		@apply text-accent-300;
+	::selection {
+		@apply text-dark bg-accent-300;
 	}
 
 	body {
-		margin: 0;
+		@apply m-0 leading-relaxed;
 	}
 
 	h1 {
-		@apply text-[4.75rem] tracking-[10%];
+		@apply text-[4.75rem];
 	}
 	h2 {
-		@apply text-[3.813rem] tracking-[10%];
+		@apply text-[3.813rem];
 	}
 	h3 {
-		@apply text-[3.063rem] tracking-[10%];
+		@apply text-[3.063rem];
 	}
 	h4 {
-		@apply text-[2.438rem] tracking-[10%];
+		@apply text-[2.438rem];
 	}
 	h5 {
-		@apply text-[1.938rem] tracking-[10%];
+		@apply text-[1.938rem];
 	}
 	h6 {
-		@apply text-[1.563rem] tracking-[10%];
+		@apply text-[1.563rem];
 	}
 
 	@screen md {
