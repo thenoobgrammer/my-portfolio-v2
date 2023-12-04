@@ -197,7 +197,7 @@ export const WorkExperiences = [
 	},
 	{
 		id: 'bell',
-		start: 'Jan 2019',
+		start: 'Jan 2018',
 		end: 'May 2019',
 		logoClassname: 'bg-bell-white',
 		url: 'https://bell.ca',
