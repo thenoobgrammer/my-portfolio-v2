@@ -25,7 +25,7 @@ export default function Menu({ children, open, onClose }) {
 						ease: [0.25, 0.25, 0.25, 0.4],
 					},
 				}}
-				className="boder-2 absolute left-0 z-10 my-2 flex h-fit w-fit flex-col overflow-hidden rounded-sm border-dark/80 bg-primary shadow-md"
+				className="absolute right-0 z-10 my-2 flex h-fit w-fit flex-col overflow-hidden rounded-sm border-dark/80 bg-primary shadow-md"
 			>
 				{children}
 			</motion.div>

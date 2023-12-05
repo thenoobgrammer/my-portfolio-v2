@@ -63,7 +63,7 @@
 	}
 
 	.tab {
-		@apply text-highlight/80 block min-w-[6rem] p-3 font-medium;
+		@apply text-highlight/80 block w-fit p-3 font-medium;
 	}
 
 	.tab.active {
