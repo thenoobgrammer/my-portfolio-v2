@@ -1,6 +1,5 @@
-import { FaEnvelope, FaGithub, FaGlobe, FaLinkedinIn, FaMap, FaPhone } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
-import { CgWebsite } from 'react-icons/cg'
 import { uniq } from 'lodash'
 
 export const GITHUB_PROFILE_URL = 'https://github.com/thenoobgrammer'
@@ -27,8 +26,8 @@ const PORTFOLIO_V1_URL = 'https://thenoobgrammer.com'
 const PORTFOLIO_V1_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio'
 const PORTFOLIO_V2_URL = 'https://antoinehakim.ca'
 const PORTFOLIO_V2_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio-v2'
-const DISCORD_GIT_REPO = 'https://github.com/thenoobgrammer/bramble'
-const SADBOIS_GIT_REPO = 'https://github.com/orgs/Sadboiss/repositories'
+// const DISCORD_GIT_REPO = 'https://github.com/thenoobgrammer/bramble'
+// const SADBOIS_GIT_REPO = 'https://github.com/orgs/Sadboiss/repositories'
 
 export const LinkedIn = {
 	icon: FaLinkedinIn,
@@ -179,7 +178,7 @@ export const WorkExperiences = [
 		company: 'Desjardins',
 		title: 'Fullstack engineer',
 		summary: 'Desjardins.summary',
-		descriptions: ['Desjardins.a', 'Desjardins.b', 'Desjardins.c', 'Desjardins.d', 'Desjardins.e', 'Desjardins.f'],
+		descriptions: ['Desjardins.a', 'Desjardins.b', 'Desjardins.c', 'Desjardins.d', 'Desjardins.e'],
 		technologies: extract([
 			'java',
 			'stencil',
@@ -197,8 +196,8 @@ export const WorkExperiences = [
 	},
 	{
 		id: 'bell',
-		start: 'Jan 2018',
-		end: 'May 2019',
+		start: 'May 2019',
+		end: 'May 2020',
 		logoClassname: 'bg-bell-white',
 		url: 'https://bell.ca',
 		company: 'Bell',
@@ -217,6 +216,18 @@ export const WorkExperiences = [
 			'docker',
 			'rest',
 		]),
+	},
+	{
+		id: 'ubisoft',
+		start: 'Jan 2018',
+		end: 'May 2018',
+		logoClassname: 'bg-ubisoft-white',
+		url: 'https://www.ubisoft.com/en-ca/',
+		company: 'Ubisoft',
+		title: 'Intern frontend engineer',
+		descriptions: ['Ubisoft.a', 'Ubisoft.b', 'Ubisoft.c', 'Ubisoft.d', 'Ubisoft.e'],
+		summary: 'Ubisoft.summary',
+		technologies: extract(['polymer', 'typescript', 'html', 'css', 'jira', 'docker']),
 	},
 ]
 

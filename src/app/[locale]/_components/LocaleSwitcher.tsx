@@ -42,7 +42,7 @@ export default function LocaleSwitcher() {
 							'flex h-12 items-center gap-x-3 p-3 capitalize',
 							params.locale === value
 								? 'cursor-default bg-accent-200 text-dark'
-								: 'hover:bg-accent-300/30 hover:text-accent-600',
+								: 'hover:bg-accent/30 hover:text-accent-600',
 						)}
 						href={`/${value}`}
 						locale={value}

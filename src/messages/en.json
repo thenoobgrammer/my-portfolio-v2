@@ -7,11 +7,8 @@
 	},
 
 	"Introduction": {
-		"hi": "Hi,",
-		"intro": "Hi, my name is",
-		"name": "Antoine Hakim",
-		"jobTitle": "Web developer, based in Montreal",
-		"summary": "I'm a full-stack developer with background experience in building complex platforms and design."
+		"Web developer, based in Montreal": "Web developer, based in Montreal",
+		"I'm a full-stack developer with background experience in building complex platforms and design": "I'm a full-stack developer with background experience in building complex platforms and design."
 	},
 	"Index": {
 		"About me": "About me",
@@ -53,6 +50,7 @@
 		"Inquire": "Inquire"
 	},
 	"Resume": {
+		"View resume": "View resume",
 		"Resume": "Resume",
 		"Projects": "Projects",
 		"Personal projects": "Personal projects",
@@ -78,9 +76,9 @@
 		"Interests": "Interests",
 		"Job History": "Job History",
 		"Work experience": "Work experience",
-		"Senior Frontend Engineer": "Senior Frontend Engineer",
+		"Senior frontend engineer": "Senior frontend engineer",
 		"Fullstack engineer": "Fullstack engineer",
-		"Intern Frontend developer": "Intern Frontend developer",
+		"Intern frontend engineer": "Intern frontend engineer",
 		"Full resume": "Full resume",
 		"My information": "My information",
 		"Soccer": "Soccer",
@@ -91,31 +89,38 @@
 		"Selected projects": "Selected projects",
 		"GoTo": {
 			"summary": "I contribute to the development of a top-notch SaaS business communication tool, focusing on customer-facing features. My work ensures the platform remains high quality and robust, delivering a seamless experience for users.",
-			"a": "Developed a high-end business communication settings tool using ReactJS, Redux-Thunk, React-Router, Javascript, Typescript, HTML5, CSS3, and MUI5",
-			"b": "Built and managed custom components for internal libraries, including custom Formik input/select/radio fields",
-			"c": "Exclusively used React-Hooks to handle application life-cycle processes",
-			"d": "Collaborated with the UI/UX team to establish specifications and system designs",
-			"e": "Worked in Agile Methodologies for iterative development to consistently deliver a better application",
-			"f": "Possesses strong expertise in Github (formerly used Bitbucket) as the main version control service",
-			"g": "Created features/sections/subsections for the new web app (coded in React) using a micro frontend approach",
-			"h": "Developed features that facilitated a smooth transition for 90% of clients using the legacy platform web app to the more modern web app, resulting in a significantly improved user experience"
+			"a": "Developed and modified 10+ core features, helping 85% of the existing clients move away from the legacy platform of a $4B company",
+			"b": "Developed 20+ reusable components",
+			"c": "Took initiative to add a refactoring sprint to gradually shorten the code debt gap",
+			"d": "Constantly collaborating with UI/UX team to establish specifications and system designs",
+			"e": "Oversaw the review and coding standard of new features",
+			"f": "Documented design workflow and technical aspects of new features, as well as tracking their progress",
+			"g": "Presented and conveyed ideas and designs approach with 3+ UX partners and 2+ Manager engineers",
+			"h": "Built small automated scripts to assist my feature deployment process, increasing my productivity by 10%"
 		},
 		"Desjardins": {
 			"summary": "Contributed to the development of a secured messaging platform for internal use with outside customer, where both parties can share documents, send and receive messages alongside other features. Working there also gave me hands-on experience with security management since it was a bank, and information is extremely sensitive. The backend worked as a microservice approach and I was responsible for one of them, therefore I learned to develop a REST backend with SpringBoot and a lot of experience with pipeline deployment.",
-			"a": "Led the development and introduced rigorous coding standards for our frontend application in Typescript using StencilJS",
-			"b": "Developed a frontend service from scratch using AngularJS, StencilJS, Typescript, HTML5, and CSS/SCSS",
-			"c": "Helped develop a RESTful service from scratch, using a microservices approach for better performance with the help of SpringBoot and libraries such as PKCE for secure authentication",
-			"d": "Configured Concourse/CI automated pipelines that would fetch a project, build, run unit tests, run smoke tests, and deploy to multiple environments (dev, stage and production)",
-			"e": "Developed unit tests using JUnit5 and JaCoCo for Spring Boot, and Jest for Stencil",
-			"f": "Connected our repositories to our dedicated SonarQube server, and added an 80% coverage test with 5% duplication thresholds for success (on both backend and frontend)"
+			"a": "Led the development and introduced rigorous coding standards for the frontend application using Typescript and StencilJS",
+			"b": "Developed micro-frontend services, with each 20+ custom reusable components",
+			"c": "Developed one of the 3 microservices Rest APIs used for the platform's authentication service using Spring and PKCE",
+			"d": "Configured a deployment pipeline for each microservice I developed, and added quality gate control with threshold of 80% test passing for the BFF",
+			"e": "Developed unit tests & integration tests using JUnit5/JaCoCo for for the backend, and Jest/Puppeteer for Stencil"
 		},
 		"Bell": {
 			"summary": "Led the development of a fully functional JIRA-like dashboard helping internal employees with their morning stand-ups. My work impacted their schedules and allowed them to be 70% more productive everyday. I took charge in setting up the code structure and using what I had at the time, very small knowledge of EmberJS. I also had the chance to work on the REST backend which was developed in C#.",
-			"a": "Built a fully functional JIRA-like dashboard for internal teams to use at standups from scratch using EmberJS, and the Ember Octane framework, along with HTML, JavaScript, and CSS",
-			"b": "Introduced a solid structured code design that creates reusable modular components across the app",
-			"c": "Mentored interns on the use of EmberJS",
-			"d": "Worked with the backend team to develop endpoints for specific use cases required by the clients using C# with some well-known design patterns such as OOP and Polymorphism",
-			"e": "Followed agile development practices and used Bitbucket/JIRA for bug tracking"
+			"a": "Built a fully functional internal dashboard connected to a SAP database, helping on-site teams boost their productivity by 70% and saving them 5 hours every week",
+			"b": "Introduced a solid component oriented design structure, improving the developers' efficiency to work with the code base",
+			"c": "Mentored interns on and seniors on EmberJS",
+			"d": "Helped optimizing a big relational database driven by a complex business logic and reduced the amount of queries needed by 2%",
+			"e": "Released 30+ features following the agile development practice"
+		},
+		"Ubisoft": {
+			"summary": "Ubisoft was my first job, as an intern and is also where I discovered my love for frontend development. I was responsible to develop some widgets with PolymerJS, a web components library developed by Google. I used my almost-to-no knowledge on component design approach (at the time) to learn a create my first widget.",
+			"a": "Built a fully functional iFrame widget that can receive & send events from the dashboard it is attached to using PolymerJS and Typescript",
+			"b": "Built 2+ widgets that were connected to a dashboard mostly for user metrics",
+			"c": "Learned about the agile development process and put it to practice",
+			"d": "Developed unit tests",
+			"e": "Attended over 100+ meetings during my internship"
 		},
 		"Discord": {
 			"summary": "I developed a discord bot with a music queue functionality, for my friends and I.",
@@ -128,26 +133,24 @@
 			"summary": "Pickside is an app that is still in development. It aims to be a platform where people can plan sporting events on outdoor/indoor fields, find teams and groups to play with.",
 			"a": "Developed a sporting event manager web app that allows users to plan outdoor activities related to sports using ReactJS, Redux-Thunk, TailwindCSS, and HTML",
 			"b": "Created a RESTful service backend using NodeJS/ExpressJS and Mongoose, which connects to a MongoDB server for data storage",
-			"c": "Implemented an authentication system with the help of the JWT library, allowing users to connect to the backend with an accessToken (currently lasting 1 minute) and a refreshToken",
-			"d": "Integrated a Swagger server to host the same endpoint for documentation purposes",
-			"e": "Implemented a Google login authentication option, allowing users to connect with their Google accounts",
-			"f": "Created custom-made reusable components such as TextField, Accordion, Stepper, Toast, Calendar, and Timepicker",
-			"g": "Exclusively utilized React-Hooks to handle application life-cycle processes",
-			"h": "Developed custom middlewares to intercept dispatches and execute some logic",
+			"c": "Implemented my own authentication process as a way to learn the process, also supporting Google authentication",
+			"d": "Integrated a Swagger endpoint for documentation purposes",
+			"e": "Created a messaging system using websockets",
+			"f": "Created over 30+ reusable components",
+			"g": "Created over 20+ react custom hooks",
+			"h": "Using no third party library other than Tailwind for CSS",
 			"i": "Utilized Google's Places library to connect a map and search for locations",
-			"j": "Used HTML's native geolocating function to ask for the user's location, so the map centers and zooms in on their area upon loading",
-			"k": "Implemented a language switcher and a theme switcher",
 			"repo": "https://github.com/PickSide",
 			"website": "https://pickside.net"
 		},
 		"PortfolioV1": {
 			"summary": "First version of my personal portfolio developed in React without typescript.",
-			"a": "Developed a portfolio/profile website with no backend, utilizing React 18 and TailwindCSS",
-			"b": "Designed and implemented custom-made components such as Dialogs, Buttons, LanguageSwitchers, and Spinners",
-			"c": "Implemented a small contact form that allows visitors to reach out via Email using the EmailJS library",
-			"d": "Integrated a language switcher (FR, EN) using i18next for improved user experience",
-			"e": "Implemeted a PDF download option for my curriculum that supports both languages",
-			"f": "Set up an S3 bucket to statically host this project under a purchased domain, ensuring secure HTTPS protocol",
+			"a": "Developed a static page with the help of React and TailwindCSS",
+			"b": "Developed over 10+  custom components",
+			"c": "Integrated EmailJS library with a form to contact me",
+			"d": "Integrated a language switcher using i18next",
+			"e": "Integrated a PDF downloader using @react-pdf/renderer, also supports localization",
+			"f": "Statically hosted on an S3 bucket",
 			"g": "Gained a comprehensive understanding of using aws-cli commands",
 			"repo": "https://github.com/thenoobgrammer/my-portfolio"
 		},

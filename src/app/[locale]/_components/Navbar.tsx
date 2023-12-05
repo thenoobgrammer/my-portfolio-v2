@@ -28,8 +28,8 @@ export default function Navbar() {
 						transition={{ duration: 0.1, delay: idx * 0.1, staggerChildren: 1 }}
 						key={`nav-${idx}`}
 					>
-						<Link className="link" href={id}>
-							{name}
+						<Link className="group/link link inline-flex" href={id}>
+							<motion.span>{`> ${name}`}</motion.span>
 						</Link>
 					</motion.li>
 				))}

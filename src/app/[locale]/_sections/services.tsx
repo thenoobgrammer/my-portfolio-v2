@@ -1,7 +1,5 @@
-import { DialogDispatchContext } from 'src/context/DialogContext'
 import Image from 'next/image'
 import { cn } from 'src/utils/common'
-import { useContext } from 'react'
 import { useTranslations } from 'next-intl'
 
 const Packages = [
@@ -42,8 +40,8 @@ export default function Services() {
 						/>
 						<ul className="row-span-4 md:col-span-4">
 							<div className="inline-flex items-center gap-x-2">
-								<p className="row-span-1 mb-4 text-lg font-semibold">{t(title)}</p>
-								<p className="text-md row-span-1 mb-4 font-medium">({t('Starting from', { price })})</p>
+								<p className="text-highlight row-span-1 mb-4 text-lg font-semibold">{t(title)}</p>
+								<p className="text-md text-dark-gray row-span-1 mb-4 font-medium">({t('Starting from', { price })})</p>
 							</div>
 							{description.map((text, innerIdx) => (
 								<li key={innerIdx} className="flex items-start gap-x-2">
