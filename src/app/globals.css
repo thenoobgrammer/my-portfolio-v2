@@ -10,7 +10,7 @@
 	}
 
 	::selection {
-		@apply text-dark bg-accent-300;
+		@apply text-dark-gray bg-accent;
 	}
 
 	body {
@@ -47,11 +47,11 @@
 	}
 
 	.icon-btn {
-		@apply inline-flex w-fit cursor-pointer items-center whitespace-nowrap rounded-md px-2 py-1 text-inherit transition-all hover:bg-light/20 hover:text-accent-200 focus:bg-accent-100/40 disabled:bg-gray-100/30 disabled:text-gray-400;
+		@apply hover:text-highlight inline-flex w-fit cursor-pointer items-center whitespace-nowrap rounded-md px-2 py-1 text-inherit transition-all hover:bg-light/20 focus:bg-accent-100/40 disabled:bg-gray-100/30 disabled:text-gray-400;
 	}
 
 	.chip {
-		@apply mb-2 mr-2 w-fit overflow-hidden rounded-full bg-accent-50/10 px-2 py-1 text-sm font-medium text-accent-200 transition-all;
+		@apply hover:bg-highlight/70 mb-2 mr-2 w-fit overflow-hidden rounded-full bg-accent-50/10 px-2 py-1 text-sm font-medium text-accent transition-all;
 	}
 
 	.chip-link {
@@ -59,15 +59,15 @@
 	}
 
 	.link {
-		@apply block py-2 transition-all hover:translate-x-5 hover:text-accent-50;
+		@apply hover:text-highlight block py-2 transition-all;
 	}
 
 	.tab {
-		@apply block min-w-[6rem] p-3 font-medium text-light/80;
+		@apply text-highlight/80 block min-w-[6rem] p-3 font-medium;
 	}
 
 	.tab.active {
-		@apply rounded-md bg-accent-200/30 font-semibold text-accent-500 transition-all;
+		@apply bg-highlight/70 rounded-md font-semibold text-light transition-all;
 	}
 
 	.shadow {

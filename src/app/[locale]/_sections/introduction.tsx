@@ -5,18 +5,18 @@ export default function Introduction() {
 	const t = useTranslations('Introduction')
 
 	return (
-		<div className="mx-auto space-y-3 whitespace-pre-wrap">
+		<div className="space-y-3 whitespace-pre-wrap">
 			<div className="inline-flex items-center justify-start gap-x-4">
 				<h3 className="hidden font-semibold text-light lg:block">Antoine Hakim</h3>
 				<h5 className="font-semibold text-light lg:hidden">Antoine Hakim</h5>
 				<LocaleSwitcher />
 			</div>
 
-			<h5 id="title" className="font-medium text-gray-300/90">
-				{t('jobTitle')}
+			<h5 id="title" className="font-medium leading-tight text-gray-300/90">
+				{t('Web developer, based in Montreal')}
 			</h5>
 			<p id="desc" className="text-md font-medium text-gray-300/90">
-				{t('summary')}
+				{t("I'm a full-stack developer with background experience in building complex platforms and design")}
 			</p>
 		</div>
 	)

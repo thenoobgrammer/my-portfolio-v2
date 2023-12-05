@@ -36,7 +36,7 @@ export default function Career() {
 							<p className="text-md font-medium text-light/70">{t(props.summary)}</p>
 							<div className="my-2 flex flex-wrap">
 								{props.technologies.map(({ name, url, tag }) => (
-									<Chip className="group/chip hover:bg-accent/70" key={tag}>
+									<Chip className="group/chip" key={tag}>
 										<Link href={url} className="chip-link group-hover/chip:text-accent-200" target="_blank">
 											{name}
 										</Link>

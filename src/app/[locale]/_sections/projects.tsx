@@ -2,7 +2,10 @@ import Chip from 'src/components/Chip'
 import IconButton from 'src/components/IconButton'
 import Image from 'next/image'
 import Link from 'next/link'
+import { PDFDownloadLink } from '@react-pdf/renderer'
+import PDFResume from '../_components/PDFResume'
 import { PersonalProjects } from 'lib/data'
+import Spinner from 'src/components/Spinner'
 import { VscGithub } from 'react-icons/vsc'
 import { useTranslations } from 'next-intl'
 
@@ -19,10 +22,10 @@ export default function Projects() {
 							{/* Text */}
 							<div className="z-10 col-span-3 flex flex-col gap-y-4 text-light">
 								<div className="inline-flex items-center">
-									<span className="text-md pr-2 font-semibold transition-all group-hover:text-accent-200">
+									<span className="text-md group-hover:text-highlight pr-2 font-semibold transition-all">
 										{project.name}
 									</span>
-									<IconButton className="group-hover:text-accent-200">
+									<IconButton className="group-hover:text-highlight">
 										<Link href={project.gitUrl} target="_blank">
 											<VscGithub size={20} />
 										</Link>
@@ -34,8 +37,8 @@ export default function Projects() {
 								</a>
 								<div className="flex flex-wrap">
 									{project.technologies.map(({ name, url, tag }) => (
-										<Chip className="hover:bg-accent/70" key={tag}>
-											<Link href={url} className="chip-link group-hover/chip:text-accent-200" target="_blank">
+										<Chip className="group-hover/chip:bg-highlight group-hover/chip:text-accent-200" key={tag}>
+											<Link href={url} className="chip-link" target="_blank">
 												{name}
 											</Link>
 										</Chip>
@@ -54,6 +57,15 @@ export default function Projects() {
 					</li>
 				))}
 			</ul>
+			<PDFDownloadLink document={<PDFResume t={t} />} fileName={t('Resume')}>
+				{({ loading }) =>
+					loading ? (
+						<Spinner />
+					) : (
+						<span className="link inline-flex items-center font-semibold text-light underline">{t('View resume')}</span>
+					)
+				}
+			</PDFDownloadLink>
 		</div>
 	)
 }

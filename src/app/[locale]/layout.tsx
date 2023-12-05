@@ -1,11 +1,12 @@
-import { Inter } from 'next/font/google'
+import { Inter, Victor_Mono } from 'next/font/google'
+
 import type { Metadata } from 'next'
 import NextIntlClientProvider from 'src/context/NextIntlClientProvider'
 import { Providers } from 'src/context/Providers'
 import clsx from 'clsx'
 import { notFound } from 'next/navigation'
 
-const inter = Inter({
+const victor = Victor_Mono({
 	weight: ['400', '700'],
 	style: ['normal'],
 	subsets: ['latin'],
@@ -41,7 +42,7 @@ export default async function RootLayout({ children, params: { locale } }) {
 
 	return (
 		<html lang={locale}>
-			<body className={clsx(inter.className)}>
+			<body className={clsx(victor.className)}>
 				<NextIntlClientProvider locale={locale} messages={messages} timeZone="America/Toronto" now={new Date()}>
 					<Providers>{children}</Providers>
 				</NextIntlClientProvider>

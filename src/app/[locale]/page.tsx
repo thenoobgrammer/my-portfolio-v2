@@ -17,7 +17,7 @@ export default function Index() {
 	const t = useTranslations('Index')
 
 	return isLoading ? (
-		<Section id="loader" className="flex h-screen w-screen items-center justify-center overflow-hidden bg-primary">
+		<Section id="loader" className="flex h-screen w-screen items-center justify-center overflow-hidden bg-dark">
 			<Loader finishLoading={() => setIsLoading(false)} />
 		</Section>
 	) : (
