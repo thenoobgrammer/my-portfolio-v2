@@ -1,7 +1,7 @@
 {
 	"About": {
 		"title": "Un peu sur moi",
-		"p1": "Salut ! 😊 Je suis Antoine et j'adore créer du contenu en tant que passe-temps. Même si je n'ai pas encore eu l'occasion de travailler de manière indépendante pour des clients, j'attends avec impatience cette opportunité. J'ai 29 ans et je suis fier d'appeler Montréal, Canada, chez moi (et oui, je parle français !).",
+		"p1": "Salut ! Je suis Antoine et j'adore créer du contenu en tant que passe-temps. Même si je n'ai pas encore eu l'occasion de travailler de manière indépendante pour des clients, j'attends avec impatience cette opportunité. J'ai 29 ans et je suis fier d'appeler Montréal, Canada, chez moi (et oui, je parle français !).",
 		"p2": "À l'école, j'étais passionné par le sport et rêvais même de devenir professionnel. Cependant, au fil du temps, j'ai réalisé que ma véritable vocation était l'entrepreneuriat.",
 		"p3": "Mon parcours dans le développement web a commencé pendant l'un de mes stages, et me voici aujourd'hui, toujours complètement passionné par cela. Actuellement, je suis développeur frontend chez {company}, où je suis confronté à de nouveaux défis chaque semaine. Je suis extrêmement fier et heureux du travail que je fais, c'est vraiment gratifiant !"
 	},
@@ -20,7 +20,7 @@
 		"Career": "Carrière",
 		"Projects": "Projets",
 		"Services": "Services",
-		"Download": "Résumé"
+		"Download resume": "Télécharger curriculum"
 	},
 	"Services": {
 		"Starting from": "À partir de {price} $",

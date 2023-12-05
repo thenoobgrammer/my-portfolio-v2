@@ -2,10 +2,7 @@ import Chip from 'src/components/Chip'
 import IconButton from 'src/components/IconButton'
 import Image from 'next/image'
 import Link from 'next/link'
-import { PDFDownloadLink } from '@react-pdf/renderer'
-import PDFResume from '../_components/PDFResume'
 import { PersonalProjects } from 'lib/data'
-import Spinner from 'src/components/Spinner'
 import { VscGithub } from 'react-icons/vsc'
 import { useTranslations } from 'next-intl'
 
@@ -17,8 +14,8 @@ export default function Projects() {
 			<ul className="group/list grid h-fit grid-flow-row grid-cols-1 gap-6">
 				{PersonalProjects.map((project, idx) => (
 					<li key={idx} className="mb-12">
-						<div className="group pointer-events-auto relative grid w-fit cursor-pointer grid-cols-5 place-items-center justify-center text-left transition-all lg:grid-flow-col lg:place-items-center lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-							<div className="absolute -inset-4 z-0 rounded-md transition-all group-hover:bg-light/5" />
+						<div className="group pointer-events-auto relative grid w-fit cursor-pointer place-items-center justify-center text-left transition-all md:grid-cols-5 lg:grid-flow-col lg:place-items-center lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+							<div className="absolute -inset-3 z-0 rounded-md transition-all group-hover:bg-light/5 md:-inset-4" />
 							{/* Text */}
 							<div className="z-10 col-span-3 flex flex-col gap-y-4 text-light">
 								<div className="inline-flex items-center">
@@ -33,7 +30,7 @@ export default function Projects() {
 								</div>
 								<a href={project.url} target="_blank" rel="noreferrer" className="text-md">
 									{t(project.summary)}
-									<span className="absolute -inset-4 -z-10 lg:block" />
+									<span className="absolute -inset-3 -z-10 md:-inset-4 lg:block" />
 								</a>
 								<div className="flex flex-wrap">
 									{project.technologies.map(({ name, url, tag }) => (
@@ -57,15 +54,6 @@ export default function Projects() {
 					</li>
 				))}
 			</ul>
-			<PDFDownloadLink document={<PDFResume t={t} />} fileName={t('Resume')}>
-				{({ loading }) =>
-					loading ? (
-						<Spinner />
-					) : (
-						<span className="link inline-flex items-center font-semibold text-light underline">{t('View resume')}</span>
-					)
-				}
-			</PDFDownloadLink>
 		</div>
 	)
 }

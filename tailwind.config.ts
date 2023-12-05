@@ -59,9 +59,6 @@ const config: Config = {
 				dark: '#232a2f',
 				'dark-gray': '#707A84',
 				highlight: '#BA8EF7',
-				key: '#BA8EF7',
-				'foreground-text': '#939DA5',
-				primitive: '#89DDFF',
 			},
 			textShadow: {
 				DEFAULT: 'var(--tw-shadow-color) .5px .5px 10px',

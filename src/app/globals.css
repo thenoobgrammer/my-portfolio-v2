@@ -43,7 +43,7 @@
 
 @layer components {
 	.section {
-		@apply w-full scroll-mt-20 pb-24;
+		@apply w-full scroll-mt-24 pb-14;
 	}
 
 	.icon-btn {

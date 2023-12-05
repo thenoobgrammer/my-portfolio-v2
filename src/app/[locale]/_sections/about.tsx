@@ -15,11 +15,3 @@ export default function About() {
 		</div>
 	)
 }
-
-// <a
-// 							className="font-semibold text-light transition-all hover:text-accent-300"
-// 							href="https://goto.com"
-// 							target="_blank"
-// 						>
-// 							GoTo
-// 						</a>

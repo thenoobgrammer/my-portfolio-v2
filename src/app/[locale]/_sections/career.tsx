@@ -4,6 +4,9 @@ import { BiLinkExternal } from 'react-icons/bi'
 import Chip from 'src/components/Chip'
 import IconButton from 'src/components/IconButton'
 import Link from 'next/link'
+import { PDFDownloadLink } from '@react-pdf/renderer'
+import PDFResume from '../_components/PDFResume'
+import Spinner from 'src/components/Spinner'
 import { WorkExperiences } from 'lib/data'
 import { useTranslations } from 'next-intl'
 
@@ -47,6 +50,17 @@ export default function Career() {
 					</TabPanel>
 				))}
 			</Tabs>
+			<PDFDownloadLink document={<PDFResume t={t} />} fileName={t('Resume')}>
+				{({ loading }) =>
+					loading ? (
+						<Spinner />
+					) : (
+						<span className="link mt-12 inline-flex items-center font-semibold text-light underline">
+							{t('View resume')}
+						</span>
+					)
+				}
+			</PDFDownloadLink>
 		</div>
 	)
 }

@@ -27,7 +27,7 @@ export default function Services() {
 	const t = useTranslations('Services')
 
 	return (
-		<div className="mx-auto max-w-screen-lg items-center">
+		<div className="mx-auto max-w-screen-lg text-start">
 			{Packages.map(({ title, imgSrc, price, description }, idx) => (
 				<div key={idx} className="grid-rows-8 mb-16 grid grid-flow-row grid-cols-1 text-accent-50">
 					<div className="grid-rows-8 grid gap-8 md:grid-cols-8">

@@ -39,8 +39,8 @@ export default function Navbar() {
 						loading ? (
 							<Spinner />
 						) : (
-							<motion.li className="inline-flex items-center gap-x-4">
-								<span>{t('Download')}</span>
+							<motion.li className="inline-flex items-center gap-x-4 pt-6">
+								<span>{t('Download resume')}</span>
 								<MdDownload />
 							</motion.li>
 						)

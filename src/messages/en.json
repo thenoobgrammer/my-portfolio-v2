@@ -1,7 +1,7 @@
 {
 	"About": {
 		"title": "Little about me",
-		"p1": "Hi there! 😊 I'm Antoine and I absolutely love creating content as a hobby. While I haven't had the chance to work independently for clients just yet, I'm really looking forward to that opportunity. I'm 29 years old and proud to call Montreal, Canada my home (and yes, I speak French!).",
+		"p1": "Hi there! I'm Antoine and I absolutely love creating content as a hobby. While I haven't had the chance to work independently for clients just yet, I'm really looking forward to that opportunity. I'm 29 years old and proud to call Montreal, Canada my home (and yes, I speak French!).",
 		"p2": "Back in school, I was super passionate about sports and even dreamed of going pro. However, as time went on, I realized my true calling was in entrepreneurship.",
 		"p3": "My journey into web development began during one of my internships, and here I am today, still completely enamored with it. Currently, I'm a frontend developer at {company}, where I face new challenges every week. I take immense pride and joy in the work I do—it's truly fulfilling!"
 	},
@@ -21,7 +21,7 @@
 		"Career": "Career",
 		"Projects": "Projects",
 		"Services": "Services",
-		"Download": "Resume"
+		"Download resume": "Download resume"
 	},
 	"Services": {
 		"Starting from": "Starting from {price}$",
