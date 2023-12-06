@@ -144,7 +144,7 @@
 			"website": "https://pickside.net"
 		},
 		"PortfolioV1": {
-			"summary": "First version of my personal portfolio developed in React without typescript.",
+			"summary": "First portfolio I ever developed with React.",
 			"a": "Developed a static page with the help of React and TailwindCSS",
 			"b": "Developed over 10+  custom components",
 			"c": "Integrated EmailJS library with a form to contact me",
@@ -155,7 +155,7 @@
 			"repo": "https://github.com/thenoobgrammer/my-portfolio"
 		},
 		"PortfolioV2": {
-			"summary": "This is a second version of my portfolio developed with NextJS with typescript.",
+			"summary": "This is a second version of my portfolio developed with NextJS & typescript.",
 			"a": "Developed a portfolio/profile website with no backend, utilizing React 18 and TailwindCSS",
 			"b": "Designed and implemented custom-made components such as Dialogs, Buttons, LanguageSwitchers, and Spinners",
 			"c": "Implemented a small contact form that allows visitors to reach out via Email using the EmailJS library",
