@@ -152,7 +152,7 @@ export const WorkExperiences = [
 		url: 'https://goto.com',
 		end: 'Present',
 		company: 'GoTo',
-		title: 'Senior Frontend Engineer',
+		title: 'Senior frontend engineer',
 		descriptions: ['GoTo.a', 'GoTo.b', 'GoTo.c', 'GoTo.d', 'GoTo.e', 'GoTo.f', 'GoTo.g', 'GoTo.h'],
 		summary: 'GoTo.summary',
 		technologies: extract([
