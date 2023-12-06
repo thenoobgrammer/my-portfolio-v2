@@ -11,10 +11,10 @@ export default function Projects() {
 
 	return (
 		<div className="mx-auto max-w-screen-lg items-center">
-			<ul className="group/list grid h-fit grid-flow-row grid-cols-1 gap-6">
+			<ul className="group/list grid h-fit grid-flow-row grid-cols-1">
 				{PersonalProjects.map((project, idx) => (
 					<li key={idx} className="mb-12">
-						<div className="group pointer-events-auto relative grid w-fit cursor-pointer place-items-center justify-center text-left transition-all md:grid-cols-5 lg:grid-flow-col lg:place-items-center lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+						<div className="group pointer-events-auto relative grid w-fit cursor-pointer place-items-center justify-center gap-3 text-left transition-all md:grid-cols-5 lg:grid-flow-col lg:place-items-center lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
 							<div className="absolute -inset-3 z-0 rounded-md transition-all group-hover:bg-light/5 md:-inset-4" />
 							{/* Text */}
 							<div className="z-10 col-span-3 flex flex-col gap-y-4 text-light">

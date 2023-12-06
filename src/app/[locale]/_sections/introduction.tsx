@@ -6,9 +6,9 @@ export default function Introduction() {
 
 	return (
 		<div className="space-y-3 whitespace-pre-wrap">
-			<div className="inline-flex items-center justify-start gap-x-4">
+			<div className="mb-6 inline-flex items-center justify-start gap-x-4">
 				<h3 className="hidden font-semibold text-light lg:block">Antoine Hakim</h3>
-				<h5 className="font-semibold text-light lg:hidden">Antoine Hakim</h5>
+				<h5 className="block font-semibold text-light lg:hidden">Antoine Hakim</h5>
 				<LocaleSwitcher />
 			</div>
 

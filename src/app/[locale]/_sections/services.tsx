@@ -55,5 +55,3 @@ export default function Services() {
 		</div>
 	)
 }
-
-// ;<a href="https://storyset.com/online">Online illustrations by Storyset</a>
