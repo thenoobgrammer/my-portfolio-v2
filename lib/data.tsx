@@ -3,8 +3,7 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { uniq } from 'lodash'
 
 export const GITHUB_PROFILE_URL = 'https://github.com/thenoobgrammer'
-export const FACEBOOK_URL = 'https://www.facebook.com/antonio.hakim.39/'
-export const LINKEDIN_URL = 'https://www.linkedin.com/in/antoine-hakim-359669105/'
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/antoine-h-359669105/'
 export const INSTAGRAM_URL = 'https://instagram.com/inotmikah?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr'
 export const PORTOFLIO_URL = 'https://thenoobgrammer.com'
 
@@ -26,8 +25,6 @@ const PORTFOLIO_V1_URL = 'https://thenoobgrammer.com'
 const PORTFOLIO_V1_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio'
 const PORTFOLIO_V2_URL = 'https://antoinehakim.ca'
 const PORTFOLIO_V2_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio-v2'
-// const DISCORD_GIT_REPO = 'https://github.com/thenoobgrammer/bramble'
-// const SADBOIS_GIT_REPO = 'https://github.com/orgs/Sadboiss/repositories'
 
 export const LinkedIn = {
 	icon: FaLinkedinIn,

@@ -1,13 +1,10 @@
 import {
 	Address,
-	BE_Frameworks,
 	Education,
 	Email,
-	FE_Frameworks,
 	LINKEDIN_URL,
 	PersonalProjects,
 	Phone,
-	Website,
 	WorkExperiences,
 	extract,
 } from 'lib/data'
