@@ -110,7 +110,7 @@
 			"summary": "Led the development of a fully functional JIRA-like dashboard helping internal employees with their morning stand-ups. My work impacted their schedules and allowed them to be 70% more productive everyday. I took charge in setting up the code structure and using what I had at the time, very small knowledge of EmberJS. I also had the chance to work on the REST backend which was developed in C#.",
 			"a": "Built a fully functional internal dashboard connected to a SAP database, helping on-site teams boost their productivity by 70% and saving them 5 hours every week",
 			"b": "Introduced a solid component oriented design structure, improving the developers' efficiency to work with the code base",
-			"c": "Mentored interns on and seniors on EmberJS",
+			"c": "Mentored interns and seniors on EmberJS",
 			"d": "Helped optimizing a big relational database driven by a complex business logic and reduced the amount of queries needed by 2%",
 			"e": "Released 30+ features following the agile development practice"
 		},
