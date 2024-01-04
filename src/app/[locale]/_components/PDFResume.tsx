@@ -142,7 +142,7 @@ export default function PDFResume({ t }) {
 						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
 							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Libraries & Frameworks')}</Text>
 							<Text>
-								{extract(['react', 'next', 'tailwind', 'redux', 'ember', 'stencil', 'jest'])
+								{extract(['react', 'next', 'tailwind', 'redux', 'ember', 'stencil', 'jest', 'vite', 'react-query', 'mui5'])
 									.map((e: any) => e.name)
 									.join(', ')}
 							</Text>
@@ -150,7 +150,7 @@ export default function PDFResume({ t }) {
 						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
 							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Tools and platforms')}</Text>
 							<Text>
-								{extract(['git', 'ec2', 's3', 'vercel', 'docker', 'mongodb'])
+								{extract(['git', 'ec2', 's3', 'vercel', 'docker', 'mongodb', 'bash'])
 									.map((e: any) => e.name)
 									.join(', ')}
 							</Text>
