@@ -56,27 +56,33 @@ export const Languages = [
 ]
 
 export const FE_Frameworks = [
-	{ name: 'CSS', tag: 'css', url: 'https://www.w3schools.com/css/' },
+	{ name: 'CSS3', tag: 'css', url: 'https://www.w3schools.com/css/' },
 	{ name: 'Ember.js', tag: 'ember', url: 'https://emberjs.com/' },
 	{ name: 'HTML', tag: 'html', url: 'https://www.w3schools.com/html/' },
 	{ name: 'Javascript', tag: 'js', url: 'https://www.javascript.com/' },
 	{ name: 'React 18', tag: 'react', url: 'https://react.dev/blog/2022/03/29/react-v18' },
 	{ name: 'NextJS', tag: 'next', url: 'https://nextjs.org/' },
-	{ name: 'Typescript', tag: 'typescript', url: 'https://www.typescriptlang.org/' },
-	{ name: 'Redux', tag: 'redux', url: 'https://redux.js.org/usage/writing-logic-thunks' },
-	{ name: 'Tailwind', tag: 'tailwind', url: 'https://tailwindcss.com/' },
-	{
-		name: 'React Testing Library',
-		tag: 'react-test',
-		url: 'https://testing-library.com/docs/react-testing-library/intro/',
-	},
+	{ name: 'Vite', tag: 'vite', url: 'https://vitejs.dev/' },
 	{ name: 'Jest', tag: 'jest-test', url: 'https://jestjs.io/' },
 	{ name: 'Stencil', tag: 'stencil', url: 'https://stenciljs.com/' },
+	{ name: 'Typescript', tag: 'typescript', url: 'https://www.typescriptlang.org/' },
 	{
 		name: 'Polymer Library',
 		tag: 'polymer',
 		url: 'https://polymer-library.polymer-project.org/3.0/docs/devguide/feature-overview',
 	},
+]
+
+export const FE_Libs = [
+	{ name: 'Material UI 5', tag: 'mui5', url: 'https://mui.com/material-ui/' },
+	{ name: 'Redux', tag: 'redux', url: 'https://redux.js.org/usage/writing-logic-thunks' },
+	{ name: 'React Query', tag: 'react-query', url: 'https://tanstack.com/query/v3/' },
+	{
+		name: 'React Testing Library',
+		tag: 'react-test',
+		url: 'https://testing-library.com/docs/react-testing-library/intro/',
+	},
+	{ name: 'Tailwind', tag: 'tailwind', url: 'https://tailwindcss.com/' },
 ]
 
 export const BE_Frameworks = [
@@ -125,6 +131,10 @@ export const VersionningTools = [
 	{ name: 'Bitbucket', tag: 'bitbucket', url: 'https://bitbucket.org/product' },
 	{ name: 'Github', tag: 'git', url: 'https://github.com/' },
 	{ name: 'Gitlab', tag: 'gitlab', url: 'https://about.gitlab.com/' },
+]
+
+export const CLIs = [
+	{ name: 'Bash CLI', tag: 'bash', url: 'https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html' }
 ]
 
 export const Concepts = [
@@ -250,7 +260,7 @@ export const PersonalProjects = [
 			'Pickside.j',
 			'Pickside.k',
 		],
-		technologies: extract(['react', 'node', 'redux', 'typescript', 'tailwind', 'mongodb']),
+		technologies: extract(['react', 'vite', 'node', 'redux', 'typescript', 'tailwind', 'mongodb']),
 	},
 	{
 		name: 'Portfolio V1',
@@ -325,7 +335,9 @@ export function extract(tags: string[]) {
 			uniq(ExternalPlanningTools.filter((el) => tags.includes(el.tag))),
 			uniq(ExternalSaas.filter((el) => tags.includes(el.tag))),
 			uniq(FE_Frameworks.filter((el) => tags.includes(el.tag))),
+			uniq(FE_Libs.filter((el) => tags.includes(el.tag))),
 			uniq(VersionningTools.filter((el) => tags.includes(el.tag))),
+			uniq(CLIs.filter((el) => tags.includes(el.tag))),
 		],
 	)
 }
