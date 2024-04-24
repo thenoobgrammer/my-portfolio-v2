@@ -1,13 +1,4 @@
-import {
-	Address,
-	Education,
-	Email,
-	LINKEDIN_URL,
-	PersonalProjects,
-	Phone,
-	WorkExperiences,
-	extract,
-} from 'lib/data'
+import { Address, Education, Email, LINKEDIN_URL, PersonalProjects, Phone, WorkExperiences, extract } from 'lib/data'
 import { Document, Font, Link, Page, StyleSheet, Text, View } from '@react-pdf/renderer/lib/react-pdf.browser.es'
 
 Font.clear()
@@ -142,7 +133,18 @@ export default function PDFResume({ t }) {
 						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
 							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Libraries & Frameworks')}</Text>
 							<Text>
-								{extract(['react', 'next', 'tailwind', 'redux', 'ember', 'stencil', 'jest', 'vite', 'react-query', 'mui5'])
+								{extract([
+									'react',
+									'next',
+									'tailwind',
+									'redux',
+									'ember',
+									'stencil',
+									'jest',
+									'vite',
+									'react-query',
+									'mui5',
+								])
 									.map((e: any) => e.name)
 									.join(', ')}
 							</Text>

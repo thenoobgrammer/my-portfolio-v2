@@ -5,19 +5,16 @@ import { useTranslations } from 'next-intl'
 const Packages = [
 	{
 		title: 'Design.title',
-		price: 500,
 		imgSrc: '/img1.png',
 		description: ['Design.a', 'Design.b', 'Design.c', 'Design.d'],
 	},
 	{
 		title: 'SinglePage.title',
-		price: 800,
 		imgSrc: '/img2.png',
 		description: ['SinglePage.a', 'SinglePage.b', 'SinglePage.c', 'SinglePage.d'],
 	},
 	{
 		title: 'Custom.title',
-		price: 2000,
 		imgSrc: '/img3.png',
 		description: ['Custom.a', 'Custom.b', 'Custom.c', 'Custom.d', 'Custom.e'],
 	},
@@ -28,7 +25,7 @@ export default function Services() {
 
 	return (
 		<div className="mx-auto max-w-screen-lg text-start">
-			{Packages.map(({ title, imgSrc, price, description }, idx) => (
+			{Packages.map(({ title, imgSrc, description }, idx) => (
 				<div key={idx} className="grid-rows-8 mb-16 grid grid-flow-row grid-cols-1 text-accent-50">
 					<div className="grid-rows-8 grid gap-8 md:grid-cols-8">
 						<Image
@@ -40,8 +37,7 @@ export default function Services() {
 						/>
 						<ul className="row-span-4 md:col-span-4">
 							<div className="inline-flex items-center gap-x-2">
-								<p className="text-highlight row-span-1 mb-4 text-lg font-semibold">{t(title)}</p>
-								<p className="text-md text-dark-gray row-span-1 mb-4 font-medium">({t('Starting from', { price })})</p>
+								<p className="row-span-1 mb-4 text-lg font-semibold text-highlight">{t(title)}</p>
 							</div>
 							{description.map((text, innerIdx) => (
 								<li key={innerIdx} className="flex items-start gap-x-2">

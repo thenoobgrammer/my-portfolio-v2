@@ -134,7 +134,7 @@ export const VersionningTools = [
 ]
 
 export const CLIs = [
-	{ name: 'Bash CLI', tag: 'bash', url: 'https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html' }
+	{ name: 'Bash CLI', tag: 'bash', url: 'https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html' },
 ]
 
 export const Concepts = [
