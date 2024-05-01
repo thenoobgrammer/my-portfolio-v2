@@ -10,7 +10,7 @@
 	}
 
 	::selection {
-		@apply text-dark-gray bg-accent;
+		@apply bg-accent text-dark-gray;
 	}
 
 	body {
@@ -47,11 +47,11 @@
 	}
 
 	.icon-btn {
-		@apply hover:text-highlight inline-flex w-fit cursor-pointer items-center whitespace-nowrap rounded-md px-2 py-1 text-inherit transition-all hover:bg-light/20 focus:bg-accent-100/40 disabled:bg-gray-100/30 disabled:text-gray-400;
+		@apply inline-flex w-fit cursor-pointer items-center whitespace-nowrap rounded-md px-2 py-1 text-inherit transition-all hover:bg-light/20 hover:text-highlight focus:bg-accent-100/40 disabled:bg-gray-100/30 disabled:text-gray-400;
 	}
 
 	.chip {
-		@apply hover:bg-highlight/70 mb-2 mr-2 w-fit overflow-hidden rounded-full bg-accent-50/10 px-2 py-1 text-sm font-medium text-accent transition-all;
+		@apply mb-2 mr-2 w-fit overflow-hidden rounded-full bg-accent-50/10 px-2 py-1 text-sm font-medium text-accent transition-all hover:bg-highlight/70;
 	}
 
 	.chip-link {
@@ -59,15 +59,15 @@
 	}
 
 	.link {
-		@apply hover:text-highlight block py-2 transition-all;
+		@apply block cursor-pointer py-2 transition-all hover:text-highlight;
 	}
 
 	.tab {
-		@apply text-highlight/80 block w-fit p-3 font-medium;
+		@apply block w-fit p-3 font-medium text-highlight/80;
 	}
 
 	.tab.active {
-		@apply bg-highlight/70 rounded-md font-semibold text-light transition-all;
+		@apply rounded-md bg-highlight/70 font-semibold text-light transition-all;
 	}
 
 	.shadow {

@@ -1,27 +1,70 @@
 {
 	"About": {
 		"title": "Little about me",
-		"p1": "Hi there! I'm Antoine and I absolutely love creating content as a hobby. While I haven't had the chance to work independently for clients just yet, I'm really looking forward to that opportunity. I'm 29 years old and proud to call Montreal, Canada my home (and yes, I speak French!).",
-		"p2": "Back in school, I was super passionate about sports and even dreamed of going pro. However, as time went on, I realized my true calling was in entrepreneurship.",
-		"p3": "My journey into web development began during one of my internships, and here I am today, still completely enamored with it. Currently, I'm a frontend developer at {company}, where I face new challenges every week. I take immense pride and joy in the work I do—it's truly fulfilling!"
+		"p1": "Hi there! I'm a software engineer with a good background of everything. I enjoy tackling real life issues with software solutions. I'm currently 30 years old and live in Montreal.",
+		"p2": "Couple years ago I decided to dedicated a portion of my life to football (European football) and try to strive in it. Turns out I enjoy coding more than traveling to play. Don't get me wrong, I still love playing but I prefer money. However, that hard rock competitivness and mentality is still present and I am grateful to have it.",
+		"p3": "I started as a web developer and now I'm a full stack engineer. My daily routine consist of 8 hours of work and 5 hours of hobby development. Currently, I'm a software developer for {company}, where I face new challenges every week. After work, I basically tackle my own projects."
 	},
-
 	"Introduction": {
-		"Web developer, based in Montreal": "Web developer, based in Montreal",
-		"I'm a full-stack developer with background experience in building complex platforms and design": "I'm a full-stack developer with background experience in building complex platforms and design."
+		"Web developer, based in Montreal": "Software Engineer, based in Montreal",
+		"I'm a full-stack developer with background experience in building complex platforms and design": "I'm a full-stack developer with background experience in building complex platforms and designs."
 	},
 	"Index": {
 		"About me": "About me",
 		"Career timeline": "Career timeline",
 		"Projects": "Projects",
-		"My packages": "My packages"
+		"Skillsets": "Skillsets",
+		"Contact": "Contact",
+		"Services": "Services"
 	},
 	"Navbar": {
 		"About": "About",
 		"Career": "Career",
 		"Projects": "Projects",
-		"Services": "Services",
+		"Skillsets": "Skillsets",
+		"Contact": "Contact",
 		"Download resume": "Download resume"
+	},
+	"Skills": {
+		"title": "Skillsets",
+		"Soft": {
+			"title": "My soft skills",
+			"adaptability": "Quickly adjust to new situations or requirements",
+			"communication": "Express ideas clearly and effectively",
+			"learning": "Hungry for new knowledge and skills",
+			"problemSolving": "Identify and resolve complex issues efficiently",
+			"resilience": "Very good at motivating myself because I take joy in coding",
+			"teamwork": "Collaborate effectively with others towards common goals"
+		},
+		"Cloud": {
+			"title": "Infrastructure stack",
+			"tools": "Proficiency with Terraform and Ansible",
+			"aws": "AWS -> Knows a lot about EC2, ECS, ECR and many more...",
+			"google": "GC -> GCC & GCR",
+			"experience": "Always trying different tools, and compare cost & services between them",
+			"challenges": "Understand cloud cost challenges and always looking for the best way to minimize cost on services"
+		},
+		"Dev": {
+			"title": "Software stack",
+			"stack": "Good with React, Typescript, Tailwind, Go and SQL",
+			"docker": "Very good with Docker and configuring/building containers",
+			"versionning": "Uses Github as my everyday tool for versionning"
+		},
+		"Devops": {
+			"title": "Devops knowledge",
+			"integration": "Worked in several multi-system integration environments",
+			"microservices": "Know how to work in a microservice driven project",
+			"automation": "Know how to automate a development process using tools like Github actions, Jenkins or Concourse",
+			"security": "Understand the importance of security practices such as using a vault storing secrets",
+			"commits": "Use semantic commits when coding, drafts release every functionning version",
+			"scripts": "Program small scripts that help me in my automation process such as upgrading & commiting a new version for a microservice",
+			"containerize": "Containerize my services for easy deployment"
+		}
+	},
+	"Contact": {
+		"title": "Contact",
+		"Description": "If you are looking for someone to work with or even just to discuss, please feel free to contact me.",
+		"Send me an email": "Send me an email"
 	},
 	"Services": {
 		"Starting from": "Starting from {price}$",

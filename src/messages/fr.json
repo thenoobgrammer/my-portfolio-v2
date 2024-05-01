@@ -1,26 +1,71 @@
 {
 	"About": {
 		"title": "Un peu sur moi",
-		"p1": "Salut ! Je suis Antoine et j'adore créer du contenu en tant que passe-temps. Même si je n'ai pas encore eu l'occasion de travailler de manière indépendante pour des clients, j'attends avec impatience cette opportunité. J'ai 29 ans et je suis fier d'appeler Montréal, Canada, chez moi (et oui, je parle français !).",
-		"p2": "À l'école, j'étais passionné par le sport et rêvais même de devenir professionnel. Cependant, au fil du temps, j'ai réalisé que ma véritable vocation était l'entrepreneuriat.",
-		"p3": "Mon parcours dans le développement web a commencé pendant l'un de mes stages, et me voici aujourd'hui, toujours complètement passionné par cela. Actuellement, je suis développeur frontend chez {company}, où je suis confronté à de nouveaux défis chaque semaine. Je suis extrêmement fier et heureux du travail que je fais, c'est vraiment gratifiant !"
+		"p1": "Salut ! Je suis un ingénieur logiciel avec une bonne connaissance générale. J'aime résoudre les problèmes réels par des solutions logicielles. J'ai actuellement 30 ans et je vis à Montréal.",
+		"p2": "Il y a quelques années, j'ai décidé de consacrer une partie de ma vie au football (football européen) et d'essayer de m'y épanouir. Il s'avère que j'aime plus le codage que les voyages pour jouer. Ne vous méprenez pas, j'aime toujours jouer, mais je préfère l'argent. Cependant, cette mentalité de compétition dure est toujours présente et je suis reconnaissant de l'avoir.",
+		"p3": "J'ai commencé comme développeur web et maintenant je suis ingénieur full stack. Ma routine quotidienne consiste en 8 heures de travail et 5 heures de développement de hobbies. Actuellement, je suis développeur de logiciels chez {company}, où je relève de nouveaux défis chaque semaine. Après le travail, je m'attaque essentiellement à mes propres projets."
 	},
 	"Introduction": {
-		"Web developer, based in Montreal": "Développeur web, basé à Montréal",
+		"Web developer, based in Montreal": "Ingénieur logiciel, basé à Montréal",
 		"I'm a full-stack developer with background experience in building complex platforms and design": "Je suis un développeur full-stack avec une expérience antérieure dans la création de plateformes complexes et de design."
 	},
 	"Index": {
 		"About me": "À propos de moi",
 		"Career timeline": "Carrière",
 		"Projects": "Projects",
-		"My packages": "Mes services"
+		"Skillsets": "Compétences",
+		"Contact": "Contact",
+		"Services": "Services"
 	},
 	"Navbar": {
 		"About": "À propos",
 		"Career": "Carrière",
 		"Projects": "Projets",
 		"Services": "Services",
+		"Skillsets": "Compétences",
+		"Contact": "Contact",
 		"Download resume": "Télécharger curriculum"
+	},
+	"Skills": {
+		"title": "Compétences",
+		"Soft": {
+			"title": "Mes compétences relationnelles",
+			"adaptability": "Je m'adapte rapidement à de nouvelles situations ou exigences",
+			"communication": "J'exprime mes idées de manière claire et efficace",
+			"learning": "Toujours avide de nouvelles connaissances et compétences",
+			"problemSolving": "J'identifie et résous les problèmes complexes de manière efficace",
+			"resilience": "Très bon pour me motiver car je prends plaisir à coder",
+			"teamwork": "Je collabore efficacement avec les autres pour atteindre des objectifs communs"
+		},
+		"Cloud": {
+			"title": "Stack d'infrastructure",
+			"tools": "Compétence avec Terraform et Ansible",
+			"aws": "AWS -> Je connais bien EC2, ECS, ECR et bien d'autres...",
+			"google": "GC -> GCC & GCR",
+			"experience": "J'essaie toujours différents outils et compare les coûts et services entre eux",
+			"challenges": "Je comprends les défis liés aux coûts du cloud et cherche toujours la meilleure manière de minimiser les coûts des services"
+		},
+		"Dev": {
+			"title": "Stack logicielle",
+			"stack": "Très Compétent avec React, Typescript, Tailwind, Go et SQL",
+			"docker": "Compétent avec Docker et la configuration/création de conteneurs",
+			"versionning": "J'utilise Github comme outil quotidien pour le versionnage"
+		},
+		"Devops": {
+			"title": "Connaissances en Devops",
+			"integration": "J'ai travaillé dans plusieurs environnements d'intégration multisystèmes",
+			"microservices": "Je sais comment travailler sur un projet piloté par des microservices",
+			"automation": "Je sais automatiser un processus de développement à l'aide d'outils comme Github Actions, Jenkins ou Concourse",
+			"security": "Je comprends l'importance des pratiques de sécurité, comme l'utilisation d'un coffre pour stocker les secrets",
+			"commits": "J'utilise des commits sémantiques lors de la programmation, et je crée des versions fonctionnelles à chaque mise à jour",
+			"scripts": "Je programme de petits scripts qui m'aident dans mon processus d'automatisation, tels que la mise à jour et la validation d'une nouvelle version pour un microservice",
+			"containerize": "Je conteneurise mes services pour faciliter le déploiement"
+		}
+	},
+	"Contact": {
+		"title": "Contact",
+		"Description": "Si vous recherchez quelqu'un avec qui travailler ou même simplement pour discuter, n'hésitez pas à me contacter.",
+		"Send me an email": "Envoyez-moi un courriel"
 	},
 	"Services": {
 		"Starting from": "À partir de {price} $",

@@ -2,12 +2,15 @@
 
 import About from './_sections/about'
 import Career from './_sections/career'
+import Contact from './_sections/contact'
+import Footer from './_sections/footer'
 import Introduction from './_sections/introduction'
 import Loader from './_components/Loader'
 import Navbar from './_components/Navbar'
 import Projects from './_sections/projects'
 import Section from 'src/components/Section'
 import Services from './_sections/services'
+import Skills from './_sections/skills'
 import SocialMediaLinks from './_components/SocialMediaLinks'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
@@ -43,9 +46,16 @@ export default function Index() {
 					<Section id="projects" title={t('Projects')}>
 						<Projects />
 					</Section>
-					<Section id="services" title={t('My packages')}>
-						<Services />
+					<Section id="skills" title={t('Skillsets')}>
+						<Skills />
 					</Section>
+					<Section id="contact" title={t('Contact')}>
+						<Contact />
+					</Section>
+					{/* <Section id="services" title={t('Services')}>
+						<Services />
+					</Section> */}
+					<Footer className="z-50" />
 				</main>
 			</div>
 		</>

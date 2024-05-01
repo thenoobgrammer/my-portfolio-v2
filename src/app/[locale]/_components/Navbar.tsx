@@ -15,7 +15,8 @@ export default function Navbar() {
 		{ name: t('About'), id: '#about' },
 		{ name: t('Career'), id: '#jobs' },
 		{ name: t('Projects'), id: '#projects' },
-		{ name: t('Services'), id: '#services' },
+		{ name: t('Skillsets'), id: '#skills' },
+		{ name: t('Contact'), id: '#contact' },
 	]
 
 	return (
