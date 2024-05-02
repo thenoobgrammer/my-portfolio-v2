@@ -1,10 +1,8 @@
-import { Inter, Victor_Mono } from 'next/font/google'
-
-import type { Metadata } from 'next'
 import NextIntlClientProvider from 'src/context/NextIntlClientProvider'
+import NotFound from '../pages/not-found'
 import { Providers } from 'src/context/Providers'
+import { Victor_Mono } from 'next/font/google'
 import clsx from 'clsx'
-import { notFound } from 'next/navigation'
 
 const victor = Victor_Mono({
 	weight: ['400', '700'],
@@ -15,17 +13,19 @@ const victor = Victor_Mono({
 
 const locales = ['en', 'fr']
 
-export const metadata: Metadata = {
-	title: 'Antoine Hakim',
-	description:
-		"I'm a full stack engineer with a passion for frontend development. I have 5 years of experience with multiple frameworks under my belt and I wish to bring my creativity and expertise to build something innovative and uniq that solves issues for individuals.",
-	robots: 'index, follow, max-snippet:20',
-	authors: { name: 'Antoine Hakim', url: 'https://antoinehakim.ca' },
-	creator: 'Antoine Hakim',
-}
-
 export function generateStaticParams() {
 	return [{ locale: 'en' }]
+}
+
+export async function generateMetadata() {
+	return {
+		title: 'Antoine Hakim',
+		description:
+			"I'm a full stack engineer with a variety of background. I have 5 years of experience with multiple stacks of technologies under my belt. I wish to bring my creativity and expertise to build something innovative and uniq that solves issues for individuals.",
+		robots: 'index, follow, max-snippet:20',
+		authors: { name: 'Antoine Hakim', url: 'https://antoinehakim.ca' },
+		creator: 'Antoine Hakim',
+	}
 }
 
 export default async function RootLayout({ children, params: { locale } }) {
@@ -33,11 +33,11 @@ export default async function RootLayout({ children, params: { locale } }) {
 	try {
 		messages = (await import(`src/messages/${locale}.json`)).default
 	} catch (error) {
-		notFound()
+		return <NotFound />
 	}
 
 	if (!locales.includes(locale as any)) {
-		notFound()
+		return <NotFound />
 	}
 
 	return (

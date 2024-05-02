@@ -1,5 +1,3 @@
-'use client'
-
 import { cn } from 'src/utils/common'
 
 export default function Footer({ className }) {

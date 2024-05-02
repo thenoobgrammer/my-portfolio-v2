@@ -1,5 +1,3 @@
-'use client'
-
 import { FR, US } from 'country-flag-icons/react/3x2'
 
 import { BiGlobe } from 'react-icons/bi'

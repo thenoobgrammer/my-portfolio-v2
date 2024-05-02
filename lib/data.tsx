@@ -1,5 +1,7 @@
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import { FaCloud, FaCode, FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
+import { GiSkills } from 'react-icons/gi'
+import { IoIosInfinite } from 'react-icons/io'
 import { uniq } from 'lodash'
 
 export const GITHUB_PROFILE_URL = 'https://github.com/thenoobgrammer'
@@ -237,7 +239,32 @@ export const WorkExperiences = [
 		technologies: extract(['polymer', 'typescript', 'html', 'css', 'jira', 'docker']),
 	},
 ]
-
+export const Skillsets = [
+	{
+		title: 'Soft.title',
+		icon: <GiSkills size={20} className="text-accent" />,
+		metaData: ['adaptability', 'communication', 'learning', 'problemSolving', 'resilience', 'teamwork'].map(
+			(s) => `Soft.${s}`,
+		),
+	},
+	{
+		title: 'Cloud.title',
+		icon: <FaCloud size={20} className="text-accent" />,
+		metaData: ['tools', 'aws', 'google', 'experience', 'challenges'].map((s) => `Cloud.${s}`),
+	},
+	{
+		title: 'Dev.title',
+		icon: <FaCode size={20} className="text-accent" />,
+		metaData: ['stack', 'docker', 'versionning'].map((s) => `Dev.${s}`),
+	},
+	{
+		title: 'Devops.title',
+		icon: <IoIosInfinite size={20} className="text-accent" />,
+		metaData: ['integration', 'microservices', 'automation', 'security', 'commits', 'scripts', 'containerize'].map(
+			(s) => `Devops.${s}`,
+		),
+	},
+]
 export const PersonalProjects = [
 	{
 		name: 'Pickside',
@@ -300,28 +327,6 @@ export const PersonalProjects = [
 		],
 		technologies: extract(['next', 'react', 'tailwind', 'route53', 'acm', 's3']),
 	},
-	// {
-	// 	name: 'Discord',
-	// 	type: 'Service',
-	// 	tag: 'discord',
-	// 	imgSrc: '',
-	// 	summary: 'Discord.summary',
-	// 	gitUrl: DISCORD_GIT_REPO,
-	// 	descriptions: ['Discord.a', 'Discord.b'],
-	// 	descriptionsHighlighted: ['DiscordHighlighted.a', 'DiscordHighlighted.b'],
-	// 	technologies: extract(['node', 'git', 'typescript', 'ec2']),
-	// },
-	// {
-	// 	name: 'Sadbois',
-	// 	tag: 'sadbois',
-	// 	imgSrc: '',
-	// 	type: 'E commerce website',
-	// 	summary: 'Sadbois.summary',
-	// 	gitUrl: SADBOIS_GIT_REPO,
-	// 	descriptions: ['Sadbois.a', 'Sadbois.b', 'Sadbois.c'],
-	// 	descriptionsHighlighted: ['SadboisHighlighted.a', 'SadboisHighlighted.b', 'SadboisHighlighted.c'],
-	// 	technologies: extract(['react', 'github', 'rest', 'typescript']),
-	// },
 ]
 
 export function extract(tags: string[]) {

@@ -16,7 +16,7 @@ export default function SocialMediaLinks() {
 					opacity: 1,
 				}}
 				transition={{ ease: 'easeInOut', duration: 1 }}
-				className="text-dark-gray flex items-center gap-y-2"
+				className="flex items-center gap-y-2 text-dark-gray"
 			>
 				<li key="github" className="relative active:bg-slate-100">
 					<IconButton>

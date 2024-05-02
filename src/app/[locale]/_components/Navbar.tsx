@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'src/components/Link'
 import { MdDownload } from 'react-icons/md'
 import { PDFDownloadLink } from '@react-pdf/renderer'

@@ -1,5 +1,3 @@
-'use client'
-
 import { MdArrowForwardIos } from 'react-icons/md'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
