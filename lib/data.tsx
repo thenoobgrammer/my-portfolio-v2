@@ -23,7 +23,7 @@ export const Website = { url: 'https://thenoobgrammer.com', text: 'My Website' }
 
 const PICKSIDE_URL = 'https://pickside.net'
 const PICKSIDE_GIT_REPO = 'https://github.com/PickSide'
-const PORTFOLIO_V1_URL = 'https://thenoobgrammer.com'
+const PORTFOLIO_V1_URL = 'https://v1.antoinehakim.ca'
 const PORTFOLIO_V1_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio'
 const PORTFOLIO_V2_URL = 'https://antoinehakim.ca'
 const PORTFOLIO_V2_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio-v2'
@@ -92,6 +92,7 @@ export const BE_Frameworks = [
 	{ name: 'Node.js', tag: 'node', url: 'https://nodejs.org/en/' },
 	{ name: 'Python', tag: 'python', url: 'https://www.python.org/' },
 	{ name: 'Spring', tag: 'java', url: 'https://spring.io/projects/spring-boot' },
+	{ name: 'Go', tag: 'go', url: 'https://go.dev/doc/effective_go#introduction' },
 ]
 
 export const DB_Frameworks = [
@@ -111,12 +112,17 @@ export const DeploymentTools = [
 	{ name: 'Github Actions', tag: 'git-actions', url: 'https://www.terraform.io/' },
 	{ name: 'Jenkins', tag: 'jenkins', url: 'https://www.jenkins.io/' },
 	{ name: 'S3', tag: 's3', url: 'https://aws.amazon.com/s3/' },
-	{ name: 'Certificate Manager', tag: 'acm', url: 'https://aws.amazon.com/certificate-manager/' },
-	{ name: 'Route 53', tag: 'route53', url: 'https://aws.amazon.com/route53/' },
 	{ name: 'Terraform', tag: 'terraform', url: 'https://www.terraform.io/' },
 	{ name: 'SonarQube', tag: 'sonar', url: 'https://www.sonarsource.com/products/sonarqube/' },
 	{ name: 'CloudFoundry', tag: 'cf', url: 'https://www.cloudfoundry.org/' },
 	{ name: 'Vercel', tag: 'vercel', url: 'https://vercel.com/' },
+]
+
+export const DomainsManager = [
+	{ name: 'Cloudflare', tag: 'concourse', url: 'https://www.cloudflare.com/en-ca/' },
+	{ name: 'Certificate Manager', tag: 'acm', url: 'https://aws.amazon.com/certificate-manager/' },
+	{ name: 'Godaddy', tag: 'godaddy', url: 'https://www.godaddy.com/en-ca' },
+	{ name: 'Route 53', tag: 'route53', url: 'https://aws.amazon.com/route53/' },
 ]
 
 export const ExternalSaas = [
@@ -127,6 +133,7 @@ export const ExternalSaas = [
 export const ExternalPlanningTools = [
 	{ name: 'Jira', tag: 'jira', url: 'https://www.atlassian.com/software/jira' },
 	{ name: 'Confluence', tag: 'confluence', url: 'https://www.atlassian.com/software/confluence' },
+	{ name: 'Sphinx Documentation', tag: 'sphinx', url: 'https://www.sphinx-doc.org/en/master/' },
 ]
 
 export const VersionningTools = [
@@ -142,6 +149,7 @@ export const CLIs = [
 export const Concepts = [
 	{ name: 'REST API', tag: 'rest', url: 'https://www.redhat.com/en/topics/api/what-is-a-rest-api' },
 	{ name: 'React HOC', tag: 'hoc', url: 'https://legacy.reactjs.org/docs/higher-order-components.html' },
+	{ name: 'S.O.L.I.D', tag: 'solid', url: 'https://www.freecodecamp.org/news/solid-design-principles-in-software-development/' },
 	{ name: 'Custom hooks', tag: 'hooks', url: 'https://react.dev/learn/reusing-logic-with-custom-hooks' },
 	{ name: 'Microservice architecture', tag: 'microservice', url: 'https://microservices.io/' },
 	{ name: 'TDD', tag: 'tdd', url: 'https://www.browserstack.com/guide/what-is-test-driven-development' },
@@ -176,6 +184,7 @@ export const WorkExperiences = [
 			'bitbucket',
 			'rest',
 			'sonar',
+			'solid',
 		]),
 	},
 	{
@@ -287,7 +296,7 @@ export const PersonalProjects = [
 			'Pickside.j',
 			'Pickside.k',
 		],
-		technologies: extract(['react', 'vite', 'node', 'redux', 'typescript', 'tailwind', 'mongodb']),
+		technologies: extract(['react', 'vite', 'redux', 'typescript', 'tailwind', 'go', 'mysql']),
 	},
 	{
 		name: 'Portfolio V1',

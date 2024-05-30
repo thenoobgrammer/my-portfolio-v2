@@ -125,7 +125,7 @@ export default function PDFResume({ t }) {
 						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
 							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Programming languages')}</Text>
 							<Text>
-								{extract(['java', 'js', 'typescript', 'html', 'css', 'sql'])
+								{extract(['java', 'go', 'node'])
 									.map((e: any) => e.name)
 									.join(', ')}
 							</Text>
@@ -142,6 +142,7 @@ export default function PDFResume({ t }) {
 									'stencil',
 									'jest',
 									'vite',
+									'typescript',
 									'react-query',
 									'mui5',
 								])
@@ -152,7 +153,7 @@ export default function PDFResume({ t }) {
 						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
 							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Tools and platforms')}</Text>
 							<Text>
-								{extract(['git', 'ec2', 's3', 'vercel', 'docker', 'mongodb', 'bash'])
+								{extract(['git', 'ec2', 'jenkins', 's3', 'vercel', 'docker', 'bash', 'mysql'])
 									.map((e: any) => e.name)
 									.join(', ')}
 							</Text>

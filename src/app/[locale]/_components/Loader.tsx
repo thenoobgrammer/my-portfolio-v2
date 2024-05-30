@@ -6,11 +6,13 @@ import anime from 'animejs'
 import { cn } from 'src/utils/common'
 
 const Loader = ({ finishLoading }) => {
-	const mounted = useRef<any>(null)
+	const mounted = useRef<boolean>(false)
 
 	const animate = useCallback(() => {
 		const loader = anime.timeline({
-			complete: () => finishLoading(),
+			complete: () => {
+				finishLoading()
+			},
 		})
 
 		loader
@@ -63,7 +65,7 @@ const Loader = ({ finishLoading }) => {
 		if (mounted.current) {
 			animate()
 		}
-	}, [animate, mounted])
+	}, [animate])
 
 	return (
 		<div className={cn('wrapper flex h-16 w-16 items-center text-accent opacity-0')}>
