@@ -132,14 +132,14 @@
 		"Selected projects": "Selected projects",
 		"GoTo": {
 			"summary": "I contribute to the development of a top-notch SaaS business communication tool, focusing on customer-facing features. My work ensures the platform remains high quality and robust, delivering a seamless experience for users.",
-			"a": "Developed and modified 10+ core features, helping 85% of the existing clients move away from the legacy platform of a $4B company",
-			"b": "Developed 20+ reusable components",
-			"c": "Took initiative to add a refactoring sprint to gradually shorten the code debt gap",
-			"d": "Constantly collaborating with UI/UX team to establish specifications and system designs",
+			"a": "Developed 30+ core features, helping at least 85% of the existing clients move away from the legacy platform of a $4B company",
+			"b": "Developed 40+ reusable components fully tested",
+			"c": "Took initiative to add a refactoring sprints to gradually shorten the code debt gap",
+			"d": "Constantly collaborating with UI/UX and other teams to establish specifications and system designs",
 			"e": "Oversaw the review and coding standard of new features",
 			"f": "Documented design workflow and technical aspects of new features, as well as tracking their progress",
-			"g": "Presented and conveyed ideas and designs approach with 3+ UX partners and 2+ Manager engineers",
-			"h": "Built small automated scripts to assist my feature deployment process, increasing my productivity by 10%"
+			"g": "Presented and conveyed ideas and designs approach with UX partners and Manager engineers",
+			"h": "Built small automated scripts to assist my feature deployment process, increasing my productivity by at least 10%"
 		},
 		"Desjardins": {
 			"summary": "Contributed to the development of a secured messaging platform for internal use with outside customer, where both parties can share documents, send and receive messages alongside other features. Working there also gave me hands-on experience with security management since it was a bank, and information is extremely sensitive. The backend worked as a microservice approach and I was responsible for one of them, therefore I learned to develop a REST backend with SpringBoot and a lot of experience with pipeline deployment.",
