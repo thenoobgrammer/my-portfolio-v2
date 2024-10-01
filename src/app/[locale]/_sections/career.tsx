@@ -61,15 +61,17 @@ export default function Career() {
 					))}
 				</Tabs>
 				<PDFDownloadLink document={<PDFResume t={t} />} fileName={t('Resume')}>
-					{({ loading }) =>
-						loading ? (
-							<Spinner />
-						) : (
-							<span className="link mt-12 inline-flex items-center font-semibold text-light underline">
-								{t('View resume')}
-							</span>
-						)
-					}
+					<>
+						{({ loading }) =>
+							loading ? (
+								<Spinner />
+							) : (
+								<span className="link mt-12 inline-flex items-center font-semibold text-light underline">
+									{t('View resume')}
+								</span>
+							)
+						}
+					</>
 				</PDFDownloadLink>
 			</div>
 		</>

@@ -38,8 +38,8 @@ export default function Services({ packages }) {
 			<SEO title={t_resume('Services')} description={t_resume('ServicesDescription')} imageUrl={Logo} url={baseUrl} />
 			<div className="mx-auto max-w-screen-lg text-start">
 				{packages.map(({ title, imgSrc, description }, idx) => (
-					<div key={idx} className="grid-rows-8 mb-16 grid grid-flow-row grid-cols-1 text-accent-50">
-						<div className="grid-rows-8 grid gap-8 md:grid-cols-8">
+					<div key={idx} className="mb-16 grid grid-flow-row grid-cols-1 grid-rows-8 text-accent-50">
+						<div className="grid grid-rows-8 gap-8 md:grid-cols-8">
 							<Image
 								width={300}
 								height={220}

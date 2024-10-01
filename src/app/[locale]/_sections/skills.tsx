@@ -17,6 +17,7 @@ export default function Skills() {
 					{Skillsets.map((s, idx) => (
 						<ul key={idx} className="block">
 							<Dropdown
+								expandedDefault={s.expandedDefault}
 								header={
 									<div className="flex items-center gap-x-4">
 										<p className="text-lg font-semibold">{t(s.title)}</p>
