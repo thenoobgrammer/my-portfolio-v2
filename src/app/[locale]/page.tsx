@@ -12,14 +12,16 @@ import Projects from './_sections/projects'
 import Section from 'src/components/Section'
 import Skills from './_sections/skills'
 import SocialMediaLinks from './_components/SocialMediaLinks'
+import useDevice from 'src/hooks/useDevice'
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function Index() {
-	const [isLoading, setIsLoading] = useState<boolean>(true)
 	const t = useTranslations('Index')
+	const [device] = useDevice()
+	const [isLoading, setIsLoading] = useState<boolean>(true)
 
-	return isLoading ? (
+	return device == 'desktop' && isLoading ? (
 		<Section id="loader" className="flex h-screen w-screen items-center justify-center overflow-hidden bg-dark">
 			<Loader finishLoading={() => setIsLoading(false)} />
 		</Section>

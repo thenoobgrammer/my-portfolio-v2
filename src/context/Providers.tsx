@@ -2,11 +2,14 @@
 
 import { DialogProvider } from 'src/context/DialogContext'
 import { ThemeProvider } from './ThemeContext'
+import { WindowProvider } from './WindowContext'
 
 export function Providers({ children }) {
 	return (
 		<ThemeProvider>
-			<DialogProvider>{children}</DialogProvider>
+			<WindowProvider>
+				<DialogProvider>{children}</DialogProvider>
+			</WindowProvider>
 		</ThemeProvider>
 	)
 }

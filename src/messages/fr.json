@@ -1,9 +1,7 @@
 {
 	"About": {
 		"title": "Un peu sur moi",
-		"p1": "Salut ! Je suis un ingénieur logiciel avec une bonne connaissance générale. J'aime résoudre les problèmes réels par des solutions logicielles. J'ai actuellement 30 ans et je vis à Montréal.",
-		"p2": "Il y a quelques années, j'ai décidé de consacrer une partie de ma vie au football (football européen) et d'essayer de m'y épanouir. Il s'avère que j'aime plus le codage que les voyages pour jouer. Ne vous méprenez pas, j'aime toujours jouer, mais je préfère l'argent. Cependant, cette mentalité de compétition dure est toujours présente et je suis reconnaissant de l'avoir.",
-		"p3": "J'ai commencé comme développeur web et maintenant je suis ingénieur full stack. Ma routine quotidienne consiste en 8 heures de travail et 5 heures de développement de hobbies. Actuellement, je suis développeur de logiciels chez {company}, où je relève de nouveaux défis chaque semaine. Après le travail, je m'attaque essentiellement à mes propres projets."
+		"p1": "Je suis un ingénieur logiciel basé à Montréal, passionné par la résolution de problèmes réels grâce au code. Après avoir brièvement poursuivi une carrière dans le soccer, j'ai réalisé que le développement était ma véritable vocation. Aujourd'hui, en tant qu'ingénieur full stack chez GoTo, je relève quotidiennement de nouveaux défis et je continue à travailler sur des projets personnels pendant mon temps libre. Mon esprit compétitif, forgé par le sport, alimente ma rigueur et ma passion pour le développement."
 	},
 	"Introduction": {
 		"Web developer, based in Montreal": "Ingénieur logiciel, basé à Montréal",
@@ -47,9 +45,10 @@
 		},
 		"Dev": {
 			"title": "Stack logicielle",
-			"stack": "Très Compétent avec React, Typescript, Tailwind, Go et SQL",
-			"docker": "Compétent avec Docker et la configuration/création de conteneurs",
-			"versionning": "J'utilise Github comme outil quotidien pour le versionnage"
+			"authentication": "J'ai créé mon propre serveur d'authentification pour mon projet d'application Pickside. Une excellente façon d'apprendre comment cela fonctionne.",
+			"stack": "J'utilise Go et React/Tailwind/CSS tous les jours. J'apprends aussi le C pendant mon temps libre.",
+			"docker": "J'utilise Docker tous les jours pour le développement local et comme outil de déploiement.",
+			"versionning": "J'utilise Git tous les jours et Github pour la gestion de version de mes projets."
 		},
 		"Devops": {
 			"title": "Connaissances en Devops",
@@ -174,6 +173,7 @@
 		},
 		"Pickside": {
 			"summary": "Pickside est une application encore en développement. Elle vise à être une plateforme où les gens peuvent planifier des événements sportifs sur des terrains extérieurs/intérieurs, trouver des équipes et des groupes pour jouer ensemble.",
+			"summarywithstack": "Pickside : Application de planification d'événements – Go, MySQL, AWS, React",
 			"a": "Développé une application web de gestion d'événements sportifs qui permet aux utilisateurs de planifier des activités de plein air liées aux sports en utilisant ReactJS, Redux-Thunk, TailwindCSS et HTML",
 			"b": "Créé un backend de service RESTful en utilisant NodeJS/ExpressJS et Mongoose, qui se connecte à un serveur MongoDB pour le stockage des données",
 			"c": "Implémenté un système d'authentification à l'aide de la bibliothèque JWT, permettant aux utilisateurs de se connecter au backend avec un accessToken (actuellement valable 1 minute) et un refreshToken",
@@ -190,6 +190,7 @@
 		},
 		"PortfolioV1": {
 			"summary": "La première version de mon portfolio développée en React.",
+			"summarywithstack": "Portfolio V1  - AWS, React, Vercel",
 			"a": "Développé un site web de portfolio/profil sans backend en utilisant React 18 et TailwindCSS",
 			"b": "Conçu et implémenté des composants sur mesure tels que des Dialogues, des Boutons, des Sélecteurs de Langue et des Indicateurs de Chargement (Spinners)",
 			"c": "Mis en place un petit formulaire permettant aux visiteurs de me contacter par e-mail en utilisant la bibliothèque EmailJS",
@@ -201,6 +202,7 @@
 		},
 		"PortfolioV2": {
 			"summary": "Une deuxième version de mon portfolio développée avec NextJS & Typescript.",
+			"summarywithstack": "Portfolio V2  - AWS, Next.js, Vercel",
 			"a": "Developed a portfolio/profile website with no backend, utilizing React 18 and TailwindCSS",
 			"b": "Designed and implemented custom-made components such as Dialogs, Buttons, LanguageSwitchers, and Spinners",
 			"c": "Implemented a small contact form that allows visitors to reach out via Email using the EmailJS library",

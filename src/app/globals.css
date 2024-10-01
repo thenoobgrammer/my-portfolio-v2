@@ -20,18 +20,23 @@
 	h1 {
 		@apply text-[4.75rem];
 	}
+
 	h2 {
 		@apply text-[3.813rem];
 	}
+
 	h3 {
 		@apply text-[3.063rem];
 	}
+
 	h4 {
 		@apply text-[2.438rem];
 	}
+
 	h5 {
 		@apply text-[1.938rem];
 	}
+
 	h6 {
 		@apply text-[1.563rem];
 	}

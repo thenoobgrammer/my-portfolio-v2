@@ -2,8 +2,8 @@ import { MdArrowForwardIos } from 'react-icons/md'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
-export default function Dropdown({ header, content }) {
-	const [open, setOpen] = useState(false)
+export default function Dropdown({ header, content, expandedDefault = false }) {
+	const [open, setOpen] = useState(expandedDefault)
 
 	const handleOpen = () => {
 		setOpen((prev) => !prev)

@@ -1,9 +1,7 @@
 {
 	"About": {
 		"title": "Little about me",
-		"p1": "Hi there! I'm a software engineer with a good background of everything. I enjoy tackling real life issues with software solutions. I'm currently 30 years old and live in Montreal.",
-		"p2": "Couple years ago I decided to dedicated a portion of my life to football (European football) and try to strive in it. Turns out I enjoy coding more than traveling to play. Don't get me wrong, I still love playing but I prefer money. However, that hard rock competitivness and mentality is still present and I am grateful to have it.",
-		"p3": "I started as a web developer and now I'm a full stack engineer. My daily routine consist of 8 hours of work and 5 hours of hobby development. Currently, I'm a software developer for {company}, where I face new challenges every week. After work, I basically tackle my own projects."
+		"p1": "I'm a software engineer based in Montreal with a passion for solving real-life problems through coding. After briefly pursuing a career in soccer, I realized coding was my true calling. Now, as a full stack engineer at GoTo, I face new challenges daily, and continue working on personal projects in my free time. My competitive mindset, honed from sports, drives my work ethic and passion for development."
 	},
 	"Introduction": {
 		"Web developer, based in Montreal": "Software Engineer, based in Montreal",
@@ -38,7 +36,7 @@
 		},
 		"Cloud": {
 			"title": "Infrastructure stack",
-			"tools": "Proficiency with Terraform and Ansible",
+			"tools": "Used Terraform and Ansible in some projects I run (mostly pickside)",
 			"aws": "AWS -> Knows a lot about EC2, ECS, ECR and many more...",
 			"google": "GC -> GCC & GCR",
 			"experience": "Always trying different tools, and compare cost & services between them",
@@ -46,9 +44,10 @@
 		},
 		"Dev": {
 			"title": "Software stack",
-			"stack": "Good with React, Typescript, Tailwind, Go and SQL",
-			"docker": "Very good with Docker and configuring/building containers",
-			"versionning": "Uses Github as my everyday tool for versionning"
+			"authentication": "Built my own authentication server for my pickside app project. Great way to learn how it's done.",
+			"stack": "I use Go and React/Tailwind/CSS everyday. Also learning C in my free time.",
+			"docker": "I use Docker every day for local development + as a deployment tool.",
+			"versionning": "I use Git everyday and Github for versionning my projects."
 		},
 		"Devops": {
 			"title": "Devops knowledge",
@@ -174,6 +173,7 @@
 		},
 		"Pickside": {
 			"summary": "Pickside is an app that is still in development. It aims to be a platform where people can plan sporting events on outdoor/indoor fields, find teams and groups to play with.",
+			"summarywithstack": "Pickside: Event planning app – Go, MySQL, MySQL, AWS, React",
 			"a": "Developed a sporting event manager web app that allows users to plan outdoor activities related to sports using ReactJS, Redux-Thunk, TailwindCSS, and HTML",
 			"b": "Created a RESTful service backend using NodeJS/ExpressJS and Mongoose, which connects to a MongoDB server for data storage",
 			"c": "Implemented my own authentication process as a way to learn the process, also supporting Google authentication",
@@ -188,6 +188,7 @@
 		},
 		"PortfolioV1": {
 			"summary": "First portfolio I ever developed with React.",
+			"summarywithstack": "Portfolio V1  - AWS, React, Vercel",
 			"a": "Developed a static page with the help of React and TailwindCSS",
 			"b": "Developed over 10+  custom components",
 			"c": "Integrated EmailJS library with a form to contact me",
@@ -199,6 +200,7 @@
 		},
 		"PortfolioV2": {
 			"summary": "This is a second version of my portfolio developed with NextJS & typescript.",
+			"summarywithstack": "Portfolio V2  - AWS, Next.js, Vercel",
 			"a": "Developed a portfolio/profile website with no backend, utilizing React 18 and TailwindCSS",
 			"b": "Designed and implemented custom-made components such as Dialogs, Buttons, LanguageSwitchers, and Spinners",
 			"c": "Implemented a small contact form that allows visitors to reach out via Email using the EmailJS library",

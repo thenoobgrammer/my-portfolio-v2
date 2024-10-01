@@ -17,7 +17,7 @@ export const EMAIL_TEMPLATE_ID = 'template_k1dy7ba'
 
 export const Address = 'Montreal, QC'
 export const Phone = '+1514-966-8481'
-export const Email = 'ant.hakim.stud@gmail.com'
+export const Email = 'antonyyhakim@gmail.com'
 export const SpokenLanguages = ['English', 'French']
 export const Website = { url: 'https://thenoobgrammer.com', text: 'My Website' }
 
@@ -112,6 +112,7 @@ export const DeploymentTools = [
 	{ name: 'Github Actions', tag: 'git-actions', url: 'https://www.terraform.io/' },
 	{ name: 'Jenkins', tag: 'jenkins', url: 'https://www.jenkins.io/' },
 	{ name: 'S3', tag: 's3', url: 'https://aws.amazon.com/s3/' },
+	{ name: 'AWS', tag: 'aws', url: 'https://aws.amazon.com/' },
 	{ name: 'Terraform', tag: 'terraform', url: 'https://www.terraform.io/' },
 	{ name: 'SonarQube', tag: 'sonar', url: 'https://www.sonarsource.com/products/sonarqube/' },
 	{ name: 'CloudFoundry', tag: 'cf', url: 'https://www.cloudfoundry.org/' },
@@ -149,7 +150,11 @@ export const CLIs = [
 export const Concepts = [
 	{ name: 'REST API', tag: 'rest', url: 'https://www.redhat.com/en/topics/api/what-is-a-rest-api' },
 	{ name: 'React HOC', tag: 'hoc', url: 'https://legacy.reactjs.org/docs/higher-order-components.html' },
-	{ name: 'S.O.L.I.D', tag: 'solid', url: 'https://www.freecodecamp.org/news/solid-design-principles-in-software-development/' },
+	{
+		name: 'S.O.L.I.D',
+		tag: 'solid',
+		url: 'https://www.freecodecamp.org/news/solid-design-principles-in-software-development/',
+	},
 	{ name: 'Custom hooks', tag: 'hooks', url: 'https://react.dev/learn/reusing-logic-with-custom-hooks' },
 	{ name: 'Microservice architecture', tag: 'microservice', url: 'https://microservices.io/' },
 	{ name: 'TDD', tag: 'tdd', url: 'https://www.browserstack.com/guide/what-is-test-driven-development' },
@@ -180,8 +185,6 @@ export const WorkExperiences = [
 			'jest-test',
 			'jenkins',
 			'git',
-			'confluence',
-			'bitbucket',
 			'rest',
 			'sonar',
 			'solid',
@@ -197,20 +200,7 @@ export const WorkExperiences = [
 		title: 'Fullstack engineer',
 		summary: 'Desjardins.summary',
 		descriptions: ['Desjardins.a', 'Desjardins.b', 'Desjardins.c', 'Desjardins.d', 'Desjardins.e'],
-		technologies: extract([
-			'java',
-			'stencil',
-			'html',
-			'css',
-			'cf',
-			'concourse',
-			'jira',
-			'confluence',
-			'bitbucket',
-			'rest',
-			'liferay',
-			'sonar',
-		]),
+		technologies: extract(['java', 'stencil', 'html', 'css', 'cf', 'concourse', 'rest', 'liferay', 'sonar']),
 	},
 	{
 		id: 'bell',
@@ -222,18 +212,7 @@ export const WorkExperiences = [
 		title: 'Fullstack engineer',
 		descriptions: ['Bell.a', 'Bell.b', 'Bell.c', 'Bell.d', 'Bell.e'],
 		summary: 'Bell.summary',
-		technologies: extract([
-			'csharp',
-			'ember',
-			'mysql',
-			'html',
-			'css',
-			'jira',
-			'confluence',
-			'bitbucket',
-			'docker',
-			'rest',
-		]),
+		technologies: extract(['csharp', 'mysql', 'docker', 'ember', 'html', 'css', 'rest']),
 	},
 	{
 		id: 'ubisoft',
@@ -245,26 +224,29 @@ export const WorkExperiences = [
 		title: 'Intern frontend engineer',
 		descriptions: ['Ubisoft.a', 'Ubisoft.b', 'Ubisoft.c', 'Ubisoft.d', 'Ubisoft.e'],
 		summary: 'Ubisoft.summary',
-		technologies: extract(['polymer', 'typescript', 'html', 'css', 'jira', 'docker']),
+		technologies: extract(['docker', 'polymer', 'typescript', 'html', 'css', 'jira']),
 	},
 ]
 export const Skillsets = [
+	{
+		title: 'Dev.title',
+		icon: <FaCode size={20} className="text-accent" />,
+		metaData: ['stack', 'authentication', 'docker', 'versionning'].map((s) => `Dev.${s}`),
+		expandedDefault: true,
+	},
 	{
 		title: 'Soft.title',
 		icon: <GiSkills size={20} className="text-accent" />,
 		metaData: ['adaptability', 'communication', 'learning', 'problemSolving', 'resilience', 'teamwork'].map(
 			(s) => `Soft.${s}`,
 		),
+		expandedDefault: false,
 	},
 	{
 		title: 'Cloud.title',
 		icon: <FaCloud size={20} className="text-accent" />,
 		metaData: ['tools', 'aws', 'google', 'experience', 'challenges'].map((s) => `Cloud.${s}`),
-	},
-	{
-		title: 'Dev.title',
-		icon: <FaCode size={20} className="text-accent" />,
-		metaData: ['stack', 'docker', 'versionning'].map((s) => `Dev.${s}`),
+		expandedDefault: false,
 	},
 	{
 		title: 'Devops.title',
@@ -272,6 +254,7 @@ export const Skillsets = [
 		metaData: ['integration', 'microservices', 'automation', 'security', 'commits', 'scripts', 'containerize'].map(
 			(s) => `Devops.${s}`,
 		),
+		expandedDefault: false,
 	},
 ]
 export const PersonalProjects = [
@@ -283,6 +266,7 @@ export const PersonalProjects = [
 		url: PICKSIDE_URL,
 		imgSrc: '/pickside.png',
 		summary: 'Pickside.summary',
+		summaryWithStack: 'Pickside.summarywithstack',
 		descriptions: [
 			'Pickside.a',
 			'Pickside.b',
@@ -296,7 +280,7 @@ export const PersonalProjects = [
 			'Pickside.j',
 			'Pickside.k',
 		],
-		technologies: extract(['react', 'vite', 'redux', 'typescript', 'tailwind', 'go', 'mysql']),
+		technologies: extract(['go', 'mysql', 'aws', 'react', 'redux', 'typescript', 'tailwind']),
 	},
 	{
 		name: 'Portfolio V1',
@@ -306,6 +290,7 @@ export const PersonalProjects = [
 		url: PORTFOLIO_V1_URL,
 		imgSrc: '/portfolio_v1.png',
 		summary: 'PortfolioV1.summary',
+		summaryWithStack: 'PortfolioV1.summarywithstack',
 		descriptions: [
 			'PortfolioV1.a',
 			'PortfolioV1.b',
@@ -315,7 +300,7 @@ export const PersonalProjects = [
 			'PortfolioV1.f',
 			'PortfolioV1.g',
 		],
-		technologies: extract(['react', 'tailwind', 'route53', 'acm', 's3']),
+		technologies: extract(['aws', 'react', 'tailwind']),
 	},
 	{
 		name: 'Portfolio V2',
@@ -325,6 +310,7 @@ export const PersonalProjects = [
 		url: PORTFOLIO_V2_URL,
 		gitUrl: PORTFOLIO_V2_GIT_REPO,
 		summary: 'PortfolioV2.summary',
+		summaryWithStack: 'PortfolioV2.summarywithstack',
 		descriptions: [
 			'PortfolioV2.a',
 			'PortfolioV2.b',
@@ -334,7 +320,7 @@ export const PersonalProjects = [
 			'PortfolioV2.f',
 			'PortfolioV2.g',
 		],
-		technologies: extract(['next', 'react', 'tailwind', 'route53', 'acm', 's3']),
+		technologies: extract(['aws', 'next', 'tailwind']),
 	},
 ]
 
@@ -343,15 +329,15 @@ export function extract(tags: string[]) {
 		[],
 		[
 			uniq(BE_Frameworks.filter((el) => tags.includes(el.tag))),
-			uniq(Concepts.filter((el) => tags.includes(el.tag))),
 			uniq(DB_Frameworks.filter((el) => tags.includes(el.tag))),
 			uniq(DeploymentTools.filter((el) => tags.includes(el.tag))),
-			uniq(ExternalPlanningTools.filter((el) => tags.includes(el.tag))),
 			uniq(ExternalSaas.filter((el) => tags.includes(el.tag))),
+			uniq(Concepts.filter((el) => tags.includes(el.tag))),
 			uniq(FE_Frameworks.filter((el) => tags.includes(el.tag))),
 			uniq(FE_Libs.filter((el) => tags.includes(el.tag))),
 			uniq(VersionningTools.filter((el) => tags.includes(el.tag))),
 			uniq(CLIs.filter((el) => tags.includes(el.tag))),
+			uniq(ExternalPlanningTools.filter((el) => tags.includes(el.tag))),
 		],
 	)
 }

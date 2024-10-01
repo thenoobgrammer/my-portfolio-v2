@@ -1,5 +1,6 @@
+// @ts-nocheck
 import { Address, Education, Email, LINKEDIN_URL, PersonalProjects, Phone, WorkExperiences, extract } from 'lib/data'
-import { Document, Font, Link, Page, StyleSheet, Text, View } from '@react-pdf/renderer/lib/react-pdf.browser.es'
+import { Document, Font, Link, Page, StyleSheet, Text, View } from '@react-pdf/renderer'
 
 Font.clear()
 Font.register({
@@ -7,27 +8,27 @@ Font.register({
 	fonts: [
 		{
 			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-bold-webfont.ttf',
-			fontWeight: 'bold',
+			fontWeight: 700,
 		},
 		{
 			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-black-webfont.ttf',
-			fontWeight: 'semibold',
+			fontWeight: 900,
 		},
 		{
 			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-medium-webfont.ttf',
-			fontWeight: 'medium',
+			fontWeight: 500,
 		},
 		{
 			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-regular-webfont.ttf',
-			fontWeight: 'regular',
+			fontWeight: 400,
 		},
 		{
 			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-light-webfont.ttf',
-			fontWeight: 'light',
+			fontWeight: 300,
 		},
 		{
 			src: 'https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-thin-webfont.ttf',
-			fontWeight: 'thin',
+			fontWeight: 100,
 		},
 	],
 })
@@ -125,27 +126,16 @@ export default function PDFResume({ t }) {
 						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
 							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Programming languages')}</Text>
 							<Text>
-								{extract(['java', 'go', 'node'])
+								{extract(['go', 'java', 'node'])
 									.map((e: any) => e.name)
+									.reverse()
 									.join(', ')}
 							</Text>
 						</View>
 						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
 							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Libraries & Frameworks')}</Text>
 							<Text>
-								{extract([
-									'react',
-									'next',
-									'tailwind',
-									'redux',
-									'ember',
-									'stencil',
-									'jest',
-									'vite',
-									'typescript',
-									'react-query',
-									'mui5',
-								])
+								{extract(['react', 'next', 'tailwind', 'redux', 'jest', 'vite', 'typescript', 'react-query', 'mui5'])
 									.map((e: any) => e.name)
 									.join(', ')}
 							</Text>
@@ -153,7 +143,7 @@ export default function PDFResume({ t }) {
 						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
 							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Tools and platforms')}</Text>
 							<Text>
-								{extract(['git', 'ec2', 'jenkins', 's3', 'vercel', 'docker', 'bash', 'mysql'])
+								{extract(['aws', 'docker', 'bash', 'mysql', 'git', 'git-actions', 'jenkins', 'vercel'])
 									.map((e: any) => e.name)
 									.join(', ')}
 							</Text>
@@ -163,7 +153,7 @@ export default function PDFResume({ t }) {
 					<View style={{ ...styles.column, marginVertical: 6 }}>
 						<Text style={{ ...styles.sectionTitle, marginVertical: 5 }}>{t('Selected projects')}</Text>
 						{PersonalProjects.filter((p) => ['pickside', 'pv1', 'pv2'].includes(p.tag)).map(
-							({ name, summary, url }, idx) => (
+							({ name, summaryWithStack, url }, idx) => (
 								<View key={idx} style={{ ...styles.column, marginBottom: 5, color: '#5f5f5f' }}>
 									<Link
 										src={url}
@@ -171,7 +161,7 @@ export default function PDFResume({ t }) {
 									>
 										{name}
 									</Link>
-									<Text>{t(summary)}</Text>
+									<Text>{t(summaryWithStack)}</Text>
 								</View>
 							),
 						)}

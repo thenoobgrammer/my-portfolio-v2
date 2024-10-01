@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+import { BREAKPOINTS } from './src/utils/constants'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -65,11 +66,7 @@ const config: Config = {
 			},
 		},
 		screens: {
-			xs: '430px',
-			sm: '640px',
-			md: '768px',
-			lg: '960px',
-			xl: '1200px',
+			...BREAKPOINTS,
 		},
 	},
 	plugins: [require('./plugins/animationDelay'), require('./plugins/textShadow')],
