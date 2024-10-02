@@ -67,9 +67,6 @@ export default function Index() {
 					<Section id="contact" title={t('Contact')}>
 						<Contact />
 					</Section>
-					{/* <Section id="services" title={t('Services')}>
-						<Services />
-					</Section> */}
 					<Footer className="z-50" />
 				</main>
 			</div>

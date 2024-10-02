@@ -1,4 +1,4 @@
-import { FC, createContext, useCallback, useEffect, useMemo, useState } from 'react'
+import { FC, createContext, useEffect, useMemo, useState } from 'react'
 
 import { BREAKPOINTS } from 'src/utils/constants'
 
@@ -20,44 +20,43 @@ const WindowContext = createContext<WindowContextProps>({
 })
 
 export const WindowProvider: FC<any> = ({ children }) => {
-	const getVh = () => Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-	const getVw = () => Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+	const [clientHeight, setVh] = useState<number>(0)
+	const [clientWidth, setVw] = useState<number>(0)
 
-	const [clientHeight, setVh] = useState<number>(getVh())
-	const [clientWidth, setVw] = useState<number>(getVw())
+	const getVh = () =>
+		typeof window !== 'undefined' ? Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) : 0
+	const getVw = () =>
+		typeof window !== 'undefined' ? Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) : 0
+
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			setVh(getVh())
+			setVw(getVw())
+
+			const handleResize = () => {
+				setVh(getVh())
+				setVw(getVw())
+			}
+
+			window.addEventListener('resize', handleResize)
+			return () => window.removeEventListener('resize', handleResize)
+		}
+	}, [])
 
 	const device = useMemo<DeviceType>(() => {
 		const sm = Number(BREAKPOINTS.sm.replace('px', ''))
 		const md = Number(BREAKPOINTS.md.replace('px', ''))
 		const lg = Number(BREAKPOINTS.lg.replace('px', ''))
-		if (clientWidth <= sm) {
-			return 'small-mobile'
-		} else if (clientWidth <= md) {
-			return 'std-mobile'
-		} else if (clientWidth > md && clientWidth < lg) {
-			return 'tablet'
-		} else {
-			return 'desktop'
-		}
+		if (clientWidth <= sm) return 'small-mobile'
+		if (clientWidth <= md) return 'std-mobile'
+		if (clientWidth > md && clientWidth < lg) return 'tablet'
+		return 'desktop'
 	}, [clientWidth])
 
-	const orientation = useMemo<OrientationType>(() => {
-		if (clientWidth > clientHeight) {
-			return 'landscape'
-		}
-		return 'portrait'
-	}, [clientHeight, clientWidth])
-
-	useEffect(() => {
-		const handleResize = () => {
-			setVh(getVh())
-			setVw(getVw())
-		}
-
-		window.addEventListener('resize', handleResize)
-
-		return () => window.removeEventListener('resize', handleResize)
-	}, [getVh, getVw])
+	const orientation = useMemo<OrientationType>(
+		() => (clientWidth > clientHeight ? 'landscape' : 'portrait'),
+		[clientHeight, clientWidth],
+	)
 
 	return (
 		<WindowContext.Provider value={{ clientHeight, clientWidth, device, orientation }}>

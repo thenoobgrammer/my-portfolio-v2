@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { Address, Education, Email, LINKEDIN_URL, PersonalProjects, Phone, WorkExperiences, extract } from 'lib/data'
 import { Document, Font, Link, Page, StyleSheet, Text, View } from '@react-pdf/renderer'
 
@@ -76,11 +75,7 @@ export default function PDFResume({ t }) {
 								<View key={idx} style={{ marginVertical: 6 }}>
 									<View style={{ ...styles.row, alignItems: 'center', gap: 4, marginVertical: 6 }}>
 										<Text>{t(title)},</Text>
-										<Link
-											src={url}
-											target="_blank"
-											style={{ fontWeight: 'bold', textDecoration: 'none', color: '#000' }}
-										>
+										<Link src={url} style={{ fontWeight: 'bold', textDecoration: 'none', color: '#000' }}>
 											{company}
 										</Link>
 										<Text style={{ fontSize: 7, color: '#939393' }}>

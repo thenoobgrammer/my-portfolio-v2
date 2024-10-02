@@ -1,20 +1,34 @@
+'use client'
+
 import { Tab, TabPanel, Tabs } from 'src/context/TabContext'
+import { useEffect, useState } from 'react'
 
 import { BiLinkExternal } from 'react-icons/bi'
 import Chip from 'src/components/Chip'
 import IconButton from 'src/components/IconButton'
 import Link from 'next/link'
 import Logo from 'src/components/svgs/Logo'
-import { PDFDownloadLink } from '@react-pdf/renderer'
 import PDFResume from '../_components/PDFResume'
 import SEO from '../_components/SEO'
 import Spinner from 'src/components/Spinner'
 import { WorkExperiences } from 'lib/data'
 import { baseUrl } from 'src/utils/constants'
+import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
+
+const PDFDownloadLink = dynamic(() => import('@react-pdf/renderer').then((mod) => mod.PDFDownloadLink), {
+	ssr: false,
+	loading: () => <p>Loading...</p>,
+})
 
 export default function Career() {
 	const t = useTranslations('Resume')
+
+	const [isMounted, setIsMounted] = useState(false)
+
+	useEffect(() => {
+		setIsMounted(true)
+	}, [])
 
 	return (
 		<>
@@ -60,8 +74,9 @@ export default function Career() {
 						</TabPanel>
 					))}
 				</Tabs>
-				<PDFDownloadLink document={<PDFResume t={t} />} fileName={t('Resume')}>
-					<>
+				{isMounted && (
+					<PDFDownloadLink document={<PDFResume t={t} />} fileName={t('Resume')}>
+						{/* @ts-ignore */}
 						{({ loading }) =>
 							loading ? (
 								<Spinner />
@@ -71,8 +86,8 @@ export default function Career() {
 								</span>
 							)
 						}
-					</>
-				</PDFDownloadLink>
+					</PDFDownloadLink>
+				)}
 			</div>
 		</>
 	)
