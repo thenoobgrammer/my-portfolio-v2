@@ -47,6 +47,7 @@ export const Languages = [
 	'React',
 	'NodeJS',
 	'Javascript/HTML/CSS',
+	'Javascript',
 	'AWS',
 	'StencilJS',
 	'SpringBoot',
@@ -175,7 +176,7 @@ export const WorkExperiences = [
 		end: 'Present',
 		company: 'GoTo',
 		title: 'Senior frontend engineer',
-		descriptions: ['GoTo.a', 'GoTo.b', 'GoTo.c', 'GoTo.d', 'GoTo.e', 'GoTo.f', 'GoTo.g', 'GoTo.h'],
+		descriptions: ['GoTo.a', 'GoTo.b', 'GoTo.c', 'GoTo.d', 'GoTo.e'],
 		summary: 'GoTo.summary',
 		technologies: extract([
 			'react',
@@ -199,7 +200,7 @@ export const WorkExperiences = [
 		company: 'Desjardins',
 		title: 'Fullstack engineer',
 		summary: 'Desjardins.summary',
-		descriptions: ['Desjardins.a', 'Desjardins.b', 'Desjardins.c', 'Desjardins.d', 'Desjardins.e'],
+		descriptions: ['Desjardins.a', 'Desjardins.b', 'Desjardins.c', 'Desjardins.d'],
 		technologies: extract(['java', 'stencil', 'html', 'css', 'cf', 'concourse', 'rest', 'liferay', 'sonar']),
 	},
 	{
@@ -210,7 +211,7 @@ export const WorkExperiences = [
 		url: 'https://bell.ca',
 		company: 'Bell',
 		title: 'Fullstack engineer',
-		descriptions: ['Bell.a', 'Bell.b', 'Bell.c', 'Bell.d', 'Bell.e'],
+		descriptions: ['Bell.a', 'Bell.b', 'Bell.c'],
 		summary: 'Bell.summary',
 		technologies: extract(['csharp', 'mysql', 'docker', 'ember', 'html', 'css', 'rest']),
 	},
@@ -257,6 +258,32 @@ export const Skillsets = [
 		expandedDefault: false,
 	},
 ]
+export const TechStack = [
+	{
+		title: 'Dev.title',
+		icon: <FaCode size={20} className="text-accent" />,
+		metaData: ['stack', 'authentication', 'docker', 'versionning'].map((s) => `Dev.${s}`),
+	},
+	{
+		title: 'Soft.title',
+		icon: <GiSkills size={20} className="text-accent" />,
+		metaData: ['adaptability', 'communication', 'learning', 'problemSolving', 'resilience', 'teamwork'].map(
+			(s) => `Soft.${s}`,
+		),
+	},
+	{
+		title: 'Cloud.title',
+		icon: <FaCloud size={20} className="text-accent" />,
+		metaData: ['tools', 'aws', 'google', 'experience', 'challenges'].map((s) => `Cloud.${s}`),
+	},
+	{
+		title: 'Devops.title',
+		icon: <IoIosInfinite size={20} className="text-accent" />,
+		metaData: ['integration', 'microservices', 'automation', 'security', 'commits', 'scripts', 'containerize'].map(
+			(s) => `Devops.${s}`,
+		),
+	},
+]
 export const PersonalProjects = [
 	{
 		name: 'Pickside',
@@ -267,19 +294,7 @@ export const PersonalProjects = [
 		imgSrc: '/pickside.png',
 		summary: 'Pickside.summary',
 		summaryWithStack: 'Pickside.summarywithstack',
-		descriptions: [
-			'Pickside.a',
-			'Pickside.b',
-			'Pickside.c',
-			'Pickside.d',
-			'Pickside.e',
-			'Pickside.f',
-			'Pickside.g',
-			'Pickside.h',
-			'Pickside.i',
-			'Pickside.j',
-			'Pickside.k',
-		],
+		descriptions: ['Pickside.a', 'Pickside.b', 'Pickside.c'],
 		technologies: extract(['go', 'mysql', 'aws', 'react', 'redux', 'typescript', 'tailwind']),
 	},
 	{
@@ -291,15 +306,7 @@ export const PersonalProjects = [
 		imgSrc: '/portfolio_v1.png',
 		summary: 'PortfolioV1.summary',
 		summaryWithStack: 'PortfolioV1.summarywithstack',
-		descriptions: [
-			'PortfolioV1.a',
-			'PortfolioV1.b',
-			'PortfolioV1.c',
-			'PortfolioV1.d',
-			'PortfolioV1.e',
-			'PortfolioV1.f',
-			'PortfolioV1.g',
-		],
+		descriptions: ['PortfolioV1.a'],
 		technologies: extract(['aws', 'react', 'tailwind']),
 	},
 	{
@@ -311,15 +318,21 @@ export const PersonalProjects = [
 		gitUrl: PORTFOLIO_V2_GIT_REPO,
 		summary: 'PortfolioV2.summary',
 		summaryWithStack: 'PortfolioV2.summarywithstack',
-		descriptions: [
-			'PortfolioV2.a',
-			'PortfolioV2.b',
-			'PortfolioV2.c',
-			'PortfolioV2.d',
-			'PortfolioV2.e',
-			'PortfolioV2.f',
-			'PortfolioV2.g',
-		],
+		descriptions: ['PortfolioV2.a'],
+		technologies: extract(['aws', 'next', 'tailwind']),
+	},
+	// This is a sepcific one
+	{
+		name: 'Portfolio (V1 & V2)',
+		type: 'Portfolio',
+		tag: 'pv12',
+		imgSrc: '/portfolio_v2.png',
+		url1: PORTFOLIO_V1_URL,
+		url2: PORTFOLIO_V2_URL,
+		gitUrl: PORTFOLIO_V2_GIT_REPO,
+		summary: '',
+		summaryWithStack: '',
+		descriptions: ['PortfolioV1.a', 'PortfolioV2.a'],
 		technologies: extract(['aws', 'next', 'tailwind']),
 	},
 ]

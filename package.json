@@ -1,6 +1,6 @@
 {
 	"name": "nextjs-my-portfolio",
-	"version": "1.0.1",
+	"version": "4.1.1",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
@@ -9,7 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@react-pdf/renderer": "^4.0.0",
+		"@react-pdf/renderer": "^4.1.6",
 		"animejs": "^3.2.1",
 		"clsx": "^2.0.0",
 		"country-flag-icons": "^1.5.9",

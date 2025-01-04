@@ -15,7 +15,7 @@ export default function SocialMediaLinks() {
 				animate={{
 					opacity: 1,
 				}}
-				transition={{ ease: 'easeInOut', duration: 1 }}
+				transition={{ ease: 'easeInOut', duration: 0.3 }}
 				className="flex items-center gap-y-2 text-dark-gray"
 			>
 				<li key="github" className="relative active:bg-slate-100">

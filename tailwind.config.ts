@@ -7,9 +7,6 @@ const config: Config = {
 	darkMode: 'class',
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
-		animation: {
-			'drop-in': 'drop-in 700ms ease-in-out',
-		},
 		fontFamily: {
 			sans: ['var(--font-inter)'],
 			mono: ['var(--font-roboto-mono)'],
