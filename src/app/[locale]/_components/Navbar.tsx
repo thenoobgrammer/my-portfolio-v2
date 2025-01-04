@@ -52,7 +52,7 @@ export default function Navbar() {
 						</li>
 					))}
 
-					<PDFDownloadLink t={t}>
+					<PDFDownloadLink t={t_resume}>
 						<li className="link mb-6 flex items-center gap-x-4 pt-6">
 							<span>{t('Download resume')}</span>
 							<MdDownload />

@@ -1,6 +1,5 @@
 'use client'
 
-import PDFResume, { PDFDownloadLink } from '../_components/PDFResume'
 import { Tab, TabPanel, Tabs } from 'src/context/TabContext'
 import { useEffect, useState } from 'react'
 
@@ -9,11 +8,10 @@ import Chip from 'src/components/Chip'
 import IconButton from 'src/components/IconButton'
 import Link from 'next/link'
 import Logo from 'src/components/svgs/Logo'
+import { PDFDownloadLink } from '../_components/PDFResume'
 import SEO from '../_components/SEO'
-import Spinner from 'src/components/Spinner'
 import { WorkExperiences } from 'lib/data'
 import { baseUrl } from 'src/utils/constants'
-import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
 
 export default function Career() {
