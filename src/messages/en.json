@@ -123,6 +123,8 @@
 		"Interests": "Interests",
 		"Job History": "Job History",
 		"Work experience": "Work experience",
+		"Software engineer": "Software engineer",
+		"Software engineer (Intern)": "Software engineer (Intern)",
 		"Senior frontend engineer": "Senior frontend engineer",
 		"Fullstack engineer": "Fullstack engineer",
 		"Intern frontend engineer": "Intern frontend engineer",
@@ -133,6 +135,7 @@
 		"Climbing": "Climbing",
 		"Web development": "Web development",
 		"Axe throwing": "Axe throwing",
+		"Senior software engineer": "Senior software engineer",
 		"Selected projects": "Selected projects",
 		"Summary": "Senior Software Engineer with expertise in building customer-focused SaaS platforms, full-stack development, and cross-team collaboration. Skilled in delivering high-quality solutions under pressure with a strong understanding of the SaaS business landscape.",
 		"GoTo": {
