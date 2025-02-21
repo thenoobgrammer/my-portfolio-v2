@@ -168,7 +168,7 @@ export default function PDFResume({ t }) {
 						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
 							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Frontend')}</Text>
 							<Text>
-								{extract(['react', 'next', 'tailwind', 'redux', 'jest', 'vite', 'typescript'])
+								{extract(['react', 'tailwind', 'redux', 'jest', 'vite', 'typescript'])
 									.map((e: any) => e.name)
 									.join(', ')}
 							</Text>
@@ -176,7 +176,7 @@ export default function PDFResume({ t }) {
 						<View style={{ ...styles.column, marginVertical: 5, color: '#5f5f5f' }}>
 							<Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{t('Backend')}</Text>
 							<Text>
-								{extract(['go', 'java', 'js', 'python', 'mysql'])
+								{extract(['go', 'java', 'node', 'python', 'mysql'])
 									.map((e: any) => e.name)
 									.reverse()
 									.join(', ')}
