@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
 	right: { width: '30%' },
 	row: { display: 'flex', flexDirection: 'row' },
 	column: { display: 'flex', flexDirection: 'column' },
+	personalInfo: { fontWeight: 'bold', textDecoration: 'none', color: '#000', marginVertical: 2 },
 })
 
 export default function PDFResume({ t }) {
@@ -150,15 +151,15 @@ export default function PDFResume({ t }) {
 				</View>
 				<View style={styles.right}>
 					{/* Personal Info */}
-					<View style={{ ...styles.column, color: '#9c9c9c' }}>
+					<View style={{ ...styles.column, color: '#000' }}>
 						<Text>{Address}</Text>
-						<Link src="tel:+15149668481" style={{ textDecoration: 'none', color: '#9c9c9c', marginVertical: 2 }}>
+						<Link src="tel:+15149668481" style={styles.personalInfo}>
 							{Phone}
 						</Link>
-						<Link src={`mailto:${Email}`} style={{ textDecoration: 'none', color: '#9c9c9c', marginVertical: 2 }}>
+						<Link src={`mailto:${Email}`} style={styles.personalInfo}>
 							{Email}
 						</Link>
-						<Link src={LINKEDIN_URL} style={{ textDecoration: 'none', color: '#9c9c9c', marginVertical: 2 }}>
+						<Link src={LINKEDIN_URL} style={styles.personalInfo}>
 							LinkedIn
 						</Link>
 					</View>
