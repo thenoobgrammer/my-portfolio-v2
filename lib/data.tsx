@@ -176,7 +176,7 @@ export const WorkExperiences = [
 		end: 'Present',
 		company: 'GoTo',
 		title: 'Senior software engineer',
-		descriptions: ['GoTo.a', 'GoTo.b', 'GoTo.c', 'GoTo.d', 'GoTo.e'],
+		descriptions: ['GoTo.a', 'GoTo.b', 'GoTo.c', 'GoTo.d', 'GoTo.e', 'GoTo.f'],
 		summary: 'GoTo.summary',
 		technologies: extract([
 			'react',
@@ -200,7 +200,7 @@ export const WorkExperiences = [
 		company: 'Desjardins',
 		title: 'Software engineer',
 		summary: 'Desjardins.summary',
-		descriptions: ['Desjardins.a', 'Desjardins.b', 'Desjardins.c', 'Desjardins.d'],
+		descriptions: ['Desjardins.a', 'Desjardins.b', 'Desjardins.c', 'Desjardins.d', 'Desjardins.e'],
 		technologies: extract(['java', 'stencil', 'html', 'css', 'cf', 'concourse', 'rest', 'liferay', 'sonar']),
 	},
 	{
@@ -211,7 +211,7 @@ export const WorkExperiences = [
 		url: 'https://bell.ca',
 		company: 'Bell',
 		title: 'Software engineer',
-		descriptions: ['Bell.a', 'Bell.b', 'Bell.c'],
+		descriptions: ['Bell.a', 'Bell.b', 'Bell.c', 'Bell.d'],
 		summary: 'Bell.summary',
 		technologies: extract(['csharp', 'mysql', 'docker', 'ember', 'html', 'css', 'rest']),
 	},
@@ -223,7 +223,7 @@ export const WorkExperiences = [
 		url: 'https://www.ubisoft.com/en-ca/',
 		company: 'Ubisoft',
 		title: 'Software engineer (Intern)',
-		descriptions: ['Ubisoft.a', 'Ubisoft.b', 'Ubisoft.c', 'Ubisoft.d', 'Ubisoft.e'],
+		descriptions: ['Ubisoft.a', 'Ubisoft.b'],
 		summary: 'Ubisoft.summary',
 		technologies: extract(['docker', 'polymer', 'typescript', 'html', 'css', 'jira']),
 	},
@@ -286,7 +286,7 @@ export const TechStack = [
 ]
 export const PersonalProjects = [
 	{
-		name: 'Pickside',
+		name: 'Pickside (Founder)',
 		tag: 'pickside',
 		type: 'Custom website',
 		gitUrl: PICKSIDE_GIT_REPO,
@@ -294,7 +294,7 @@ export const PersonalProjects = [
 		imgSrc: '/pickside.png',
 		summary: 'Pickside.summary',
 		summaryWithStack: 'Pickside.summarywithstack',
-		descriptions: ['Pickside.a', 'Pickside.b', 'Pickside.c'],
+		descriptions: ['Pickside.a', 'Pickside.b', 'Pickside.c', 'Pickside.d', 'Pickside.e'],
 		technologies: extract(['go', 'mysql', 'aws', 'react', 'redux', 'typescript', 'tailwind']),
 	},
 	{

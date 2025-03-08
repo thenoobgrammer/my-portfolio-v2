@@ -137,70 +137,72 @@
 		"Axe throwing": "Axe throwing",
 		"Senior software engineer": "Senior software engineer",
 		"Selected projects": "Selected projects",
-		"Summary": "Senior Software Engineer with expertise in building customer-focused SaaS platforms, full-stack development, and cross-team collaboration. Skilled in delivering high-quality solutions under pressure with a strong understanding of the SaaS business landscape.",
+		"Summary": "Software Engineer with 5+ years of end-to-end platform development experience, delivering high-impact solutions across fintech, enterprise software, telecom, and gaming. Skilled at modernizing legacy systems, building secure and scalable platforms, and ensuring clear, future-proof documentation to support long-term growth.",
 		"GoTo": {
 			"summary": "I focus on building and enhancing a SaaS business platform, ensuring it’s reliable, user-friendly, and equipped with features that add real value.",
-			"a": "Spearheaded the User Sync tool implementation, automating bulk updates with custom rules, enabling 94% migration of legacy users to the new platform.",
-			"b": "Designed advanced configuration options in collaboration with cross-functional teams, reducing user onboarding time by 30%.",
-			"c": "Re-architected privilege systems to resolve critical access issues, boosting platform reliability and trust.",
-			"d": "Built support for billing administrators, enabling 100% user migration from a legacy platform.",
-			"e": "Refactored admin features for modularity, improving development speed and maintainability."
+			"a": "Owned the user management sections on the admin dashboard, enabled 95% of legacy clients to transition smoothly to the new platform",
+			"b": "Collaborated with product and UX teams to design flexible, role-based user flows, reducing onboarding-related support requests by 30% across all newly onboarded accounts",
+			"c": "Re-architected the privilege system, transitioning to an RBAC model, improving access reliability, and reducing privilege-related support incidents by 40%",
+			"d": "Developed billing administrator features, enabling client transitions and eliminating manual reconciliation work",
+			"e": "Refactored product settings into reusable, modular components, reducing code duplication across 20+ files, accelerating new feature delivery by 25%",
+			"f": "Mentored 2 junior devs, accelerating their onboarding by 50%."
 		},
 		"Desjardins": {
 			"summary": "Worked on a secure messaging platform where users could share sensitive documents and messages. Learned a ton about security and building microservices, especially how to make solid REST APIs and pipelines.",
-			"a": "Led frontend development with TypeScript and StencilJS, establishing robust coding standards and reusable patterns.",
-			"b": "Developed a REST API for secure authentication using Spring Boot and PKCE, supporting microservices architecture.",
-			"c": "Delivered 20+ reusable micro-frontend components, enhancing consistency and development efficiency.",
-			"d": "Implemented CI/CD pipelines with 80%+ test coverage, streamlining reliable deployments."
+			"a": "Built a secure file-sharing platform from scratch for financial advisors to request and receive confidential documents from clients, supporting advisors across 40+ branches",
+			"b": "Owned a security-focused microservice, implementing PKCE-based authentication and XSS defenses, enabling secure document submissions for 100+ advisors and clients weekly in a highly regulated environment",
+			"c": "Led the emergency response to Log4j vulnerability, updating the version within 48 hours to avoid potential security breaches",
+			"d": "Built and published a reusable component library, cutting boilerplate across 20+ teams and accelerating frontend development",
+			"e": "Implemented CI/CD pipelines with 80%+ test coverage, reducing deployment-related incidents by 50%"
 		},
 		"Bell": {
 			"summary": "Helped build an internal dashboard (think JIRA-lite) that made team stand-ups way easier and saved them a ton of time. I also got to work on both the frontend and backend, which was a great learning experience.",
-			"a": "Designed a dashboard integrating with an SAP database, reducing team workload by 5 hours per week and boosting productivity by 70%.",
-			"b": "Mentored teammates in EmberJS, improving team productivity and technical expertise.",
-			"c": "Optimized relational database queries, enhancing performance by 2% in high-load scenarios."
+			"a": "Built and owned the frontend for an internal swimlane board, replacing manual whiteboard planning for 50+ teams and reducing daily scheduling time by 15 minutes per team",
+			"b": "Built full-stack task management features, integrating frontend interactions (drag-and-drop, color-tagging, search) with backend CRUD endpoints for seamless task management",
+			"c": "Mentored teammates in EmberJS, improving team productivity and technical expertise",
+			"d": "Created an interactive onboarding guide, accelerating new user adoption and reducing onboarding time by half"
 		},
 		"Ubisoft": {
 			"summary": "This was my first job as an intern, where I fell in love with frontend dev. I built widgets with PolymerJS (a Google library) and learned the ropes of component-based design.",
-			"a": "Developed iFrame widgets using PolymerJS and TypeScript, enhancing dashboard communication and user metric tracking.",
-			"b": "Contributed to agile development with unit-tested, scalable widgets.",
-			"c": "Got hands-on with agile development, which was a great intro to how real teams work.",
-			"d": "Wrote unit tests to make sure my widgets were solid and ready to go.",
-			"e": "Sat through 100+ meetings and learned a lot about teamwork and communication in a big company."
+			"a": "Built and deployed event-based communication channel for drag-and-drop iFrame widgets, enabling seamless cross-widget data exchange within the dashboard using PolymerJS and TypeScript",
+			"b": "Designed and implemented unit tests for iFrame widgets, focusing on event-handling edge cases, and collaborated with QA to design cross-widget integration tests ensuring reliable communication across all dashboard components"
 		},
 		"Discord": {
 			"summary": "Built a Discord bot with music queue functionality to make things more fun for my friends and me.",
-			"a": "Developed a bot using Python and NodeJS, featuring a custom queue system with controls for play, pause, next, and previous.",
-			"b": "Set up hosting on an EC2 instance with pm2 to ensure the bot runs 24/7 without interruptions.",
-			"c": "Automated the EC2 setup with Ansible and Terraform, saving time and streamlining deployments.",
+			"a": "Developed a bot using Python and NodeJS, featuring a custom queue system with controls for play, pause, next, and previous",
+			"b": "Set up hosting on an EC2 instance with pm2 to ensure the bot runs 24/7 without interruptions",
+			"c": "Automated the EC2 setup with Ansible and Terraform, saving time and streamlining deployments",
 			"repo": "https://github.com/thenoobgrammer/bramble"
 		},
 		"Pickside": {
 			"summary": "Pickside is a platform in development for planning sports events, finding teams, and managing venues.",
-			"summarywithstack": "Pickside: Event planning app – Built with React, Golang, Docker, AWS, and a home server for hosting and CI/CD.",
-			"a": "Developed a scalable event planning app with authentication, role-based functionality, and CRUD operations using React, Golang, and AWS.",
-			"b": "Integrated background tasks to support notification dispatch using goroutines, with plans to transition to a real-time notification system.",
-			"c": "Designed the platform to support 10,000+ users, ensuring robustness and scalability for future growth.",
+			"summarywithstack": "Pickside: Event planning app – Built with React, Golang, Docker, AWS, and a home server for hosting and CI/CD",
+			"a": "Founded and built a scalable event planning platform, driving product vision, architecture, and full-stack development",
+			"b": "Developed core features including authentication, role-based access, event creation, and multi-user CRUD operations, applying real-world SaaS design principles",
+			"c": "Built a background notification system using Goroutines, with a future roadmap to evolve into real-time event streaming",
+			"d": "Architected the platform with scalability in mind, leveraging Docker-based deployment and CI/CD automation, with plans for future horizontal scaling as user demand grows",
+			"e": "Managed the end-to-end product lifecycle, from feature ideation and technical design to deployment, with early-stage integration of Grafana-based logging on a home server to prototype future observability",
 			"repo": "https://github.com/PickSide",
 			"website": "https://pickside.net"
 		},
 		"PortfolioV1": {
 			"summary": "My first portfolio project, built with React to showcase my skills and work.",
-			"summarywithstack": "Portfolio V1 - Built with React and TailwindCSS, hosted on AWS via S3.",
-			"a": "Built and iterated on a personal portfolio with React and Next.js, adding features like bilingual support, PDF resume downloads, and dynamic functionality.",
+			"summarywithstack": "Portfolio V1 - Built with React and TailwindCSS, hosted on AWS via S3",
+			"a": "Built and continuously evolved personal portfolio sites, integrating features like bilingual support, PDF resume generation, and dynamic content rendering",
 			"repo": "https://github.com/thenoobgrammer/my-portfolio"
 		},
 		"PortfolioV2": {
 			"summary": "A more polished version of my portfolio, using Next.js and TypeScript for a modern look and feel.",
-			"summarywithstack": "Portfolio V2 - Built with Next.js, TypeScript, and TailwindCSS, hosted on Vercel.",
-			"a": "Deployed on AWS S3 and Vercel for performance and scalability.",
+			"summarywithstack": "Portfolio V2 - Built with Next.js, TypeScript, and TailwindCSS, hosted on Vercel",
+			"a": "Focused on performance and modern deployment by hosting on AWS S3 (V1) and Vercel (V2), ensuring seamless global access with minimal latency",
 			"repo": "https://github.com/thenoobgrammer/my-portfolio"
 		},
 		"Sadbois": {
 			"summary": "An e-commerce store project for selling homemade t-shirts. It was never completed, but I gained valuable experience.",
-			"a": "Designed a basic e-commerce site using React 16 (pre-hooks) and a C# backend.",
-			"b": "Implemented features like a functional cart, user login, and partial PayPal integration.",
-			"c": "Used a home-hosted MySQL server to manage backend data.",
-			"d": "Learned about database migrations to streamline development and setup processes.",
+			"a": "Designed a basic e-commerce site using React 16 (pre-hooks) and a C# backend",
+			"b": "Implemented features like a functional cart, user login, and partial PayPal integration",
+			"c": "Used a home-hosted MySQL server to manage backend data",
+			"d": "Learned about database migrations to streamline development and setup processes",
 			"repo": "https://github.com/Sadboiss"
 		}
 	}
