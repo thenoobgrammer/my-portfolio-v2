@@ -11,18 +11,16 @@ import Link from 'src/components/Link'
 import { MdDownload } from 'react-icons/md'
 import Spinner from 'src/components/Spinner'
 import { cn } from 'src/utils/common'
-import dynamic from 'next/dynamic'
 import { useTranslations } from 'next-intl'
 
 export default function Navbar() {
 	const t = useTranslations('Navbar')
 	const t_resume = useTranslations('Resume')
 	const Links = [
-		// { name: t('About'), id: 'about', href: '#about' },
 		{ name: t('Career'), id: 'jobs', href: '#jobs' },
 		{ name: t('Projects'), id: 'projects', href: '#projects' },
-		// { name: t('Skillsets'), id: 'skills', href: '#skills' },
 		{ name: t('Contact'), id: 'contact', href: '#contact' },
+		{ name: t('Blog'), id: 'blog', href: '/blog' },
 	]
 
 	const [active, setActive] = useState('about')

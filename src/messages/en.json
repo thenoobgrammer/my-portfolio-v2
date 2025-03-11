@@ -21,7 +21,20 @@
 		"Projects": "Projects",
 		"Skillsets": "Skillsets",
 		"Contact": "Contact",
-		"Download resume": "Download resume"
+		"Download resume": "Download resume",
+		"Blog": "Blog"
+	},
+	"Blog": {
+		"Blog": "Blog",
+		"Latest Posts": "Latest Posts",
+		"explore": "Explore my thoughts, tutorials, and insights",
+		"searchPlaceholder": "Search blogs",
+		"All Categories": "All Categories",
+		"All Tags": "All Tags",
+		"noResults": "No blogs found matching your criteria",
+		"Blog post not found": "Blog post not found",
+		"Return to blog": "Return to blog",
+		"Back to blog": "Back to blog"
 	},
 	"Skills": {
 		"title": "Skillsets",
@@ -139,7 +152,7 @@
 		"Selected projects": "Selected projects",
 		"Summary": "Software Engineer with 5+ years of end-to-end platform development experience, delivering high-impact solutions across fintech, enterprise software, telecom, and gaming. Skilled at modernizing legacy systems, building secure and scalable platforms, and ensuring clear, future-proof documentation to support long-term growth.",
 		"GoTo": {
-			"summary": "I focus on building and enhancing a SaaS business platform, ensuring it’s reliable, user-friendly, and equipped with features that add real value.",
+			"summary": "I focus on building and enhancing a SaaS business platform, ensuring it's reliable, user-friendly, and equipped with features that add real value.",
 			"a": "Owned the user management sections on the admin dashboard, enabled 95% of legacy clients to transition smoothly to the new platform",
 			"b": "Collaborated with product and UX teams to design flexible, role-based user flows, reducing onboarding-related support requests by 30% across all newly onboarded accounts",
 			"c": "Re-architected the privilege system, transitioning to an RBAC model, improving access reliability, and reducing privilege-related support incidents by 40%",

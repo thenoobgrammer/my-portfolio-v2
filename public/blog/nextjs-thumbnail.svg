@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#232a2f"/>
+  
+  <!-- Next.js Logo -->
+  <g transform="translate(350,150) scale(2)">
+    <path d="M20 40h20v-8.5l-9.8-14.7L20 31.5V40zM40 20L30.2 5.3 20 20h20z" fill="#BA8EF7"/>
+    <path d="M20 0h20v8.5L30.2 23.2 20 8.5V0zM0 20l9.8 14.7L20 20H0z" fill="#EEEEEE"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="400" y="300" font-family="Arial" font-size="24" fill="#EEEEEE" text-anchor="middle">
+    Getting Started with Next.js
+  </text>
+</svg>

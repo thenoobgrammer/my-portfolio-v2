@@ -1,5 +1,5 @@
 import NextIntlClientProvider from 'src/context/NextIntlClientProvider'
-import NotFound from '../pages/not-found'
+import NotFound from './not-found/page'
 import { Providers } from 'src/context/Providers'
 import { Victor_Mono } from 'next/font/google'
 import clsx from 'clsx'

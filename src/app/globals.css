@@ -79,3 +79,6 @@
 		@apply shadow-lg drop-shadow-md transition-all;
 	}
 }
+
+@utilities {
+}

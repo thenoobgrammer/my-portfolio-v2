@@ -19,7 +19,7 @@ export default function Contact() {
 				<p>{t('Description')}</p>&nbsp;
 				<button className="flex w-fit items-center gap-x-2 rounded-md border-2 border-highlight px-3 py-2 transition-all hover:border-highlight/80 hover:bg-highlight/40">
 					<MdOutlineEmail />
-					<a href="mailto:antoine.hakim33@gmail.com">{t(`Send me an email`)}</a>
+					<a href="mailto:antonyyhakim@gmail.com">{t(`Send me an email`)}</a>
 				</button>
 			</div>
 		</>

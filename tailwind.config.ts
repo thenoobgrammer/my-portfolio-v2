@@ -66,6 +66,6 @@ const config: Config = {
 			...BREAKPOINTS,
 		},
 	},
-	plugins: [require('./plugins/animationDelay'), require('./plugins/textShadow')],
+	plugins: [require('./plugins/animationDelay'), require('./plugins/textShadow'), require('@tailwindcss/typography')],
 }
 export default config
