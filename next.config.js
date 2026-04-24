@@ -1,5 +1,3 @@
-const withNextIntl = require('next-intl/plugin')('./src/i18n/request.ts')
-
 const nextConfig = {
 	experimental: {
 		esmExternals: 'loose', // Enable ESM support for external modules
@@ -19,4 +17,4 @@ const nextConfig = {
 	},
 }
 
-module.exports = withNextIntl(nextConfig)
+module.exports = nextConfig

@@ -82,17 +82,6 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 }
 
 export default async function RootLayout({ children, params: { locale } }) {
-	let messages
-	try {
-		messages = (await import(`src/messages/${locale}.json`)).default
-	} catch (error) {
-		return <NotFound />
-	}
-
-	if (!locales.includes(locale as any)) {
-		return <NotFound />
-	}
-
 	const jsonLd = {
 		'@context': 'https://schema.org',
 		'@type': 'Person',
@@ -114,7 +103,7 @@ export default async function RootLayout({ children, params: { locale } }) {
 		<html lang={locale}>
 			<body className={clsx(victor.className)}>
 				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-				<NextIntlClientProvider locale={locale} messages={messages} timeZone="America/Toronto" now={new Date()}>
+				<NextIntlClientProvider locale={locale} timeZone="America/Toronto" now={new Date()}>
 					<Providers>{children}</Providers>
 				</NextIntlClientProvider>
 			</body>
