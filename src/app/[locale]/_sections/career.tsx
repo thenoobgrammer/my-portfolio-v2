@@ -8,15 +8,13 @@ import Chip from 'src/components/Chip'
 import IconButton from 'src/components/IconButton'
 import Link from 'next/link'
 import Logo from 'src/components/svgs/Logo'
+import { NAVBAR } from 'lib/content'
 import { PDFDownloadLink } from '../_components/PDFResume'
 import SEO from '../_components/SEO'
 import { WorkExperiences } from 'lib/data'
 import { baseUrl } from 'src/utils/constants'
-import { useTranslations } from 'next-intl'
 
 export default function Career() {
-	const t = useTranslations('Resume')
-
 	const [isMounted, setIsMounted] = useState(false)
 
 	useEffect(() => {
@@ -53,7 +51,7 @@ export default function Career() {
 									</IconButton>
 								</div>
 								<p className="text-md font-semibold text-light">{props.title}</p>
-								<p className="text-md font-medium text-light/70">{t(props.summary)}</p>
+								<p className="text-md font-medium text-light/70">{props.summary}</p>
 								<div className="my-2 flex flex-wrap">
 									{props.technologies.map(({ name, url, tag }) => (
 										<Chip className="group/chip" key={tag}>
@@ -69,9 +67,9 @@ export default function Career() {
 				</Tabs>
 				{isMounted && (
 					<div className="lg:hidden">
-						<PDFDownloadLink t={t}>
+						<PDFDownloadLink>
 							<span className="link mt-12 inline-flex items-center font-semibold text-light underline">
-								{t('Download resume')}
+								{NAVBAR.downloadResume}
 							</span>
 						</PDFDownloadLink>
 					</div>

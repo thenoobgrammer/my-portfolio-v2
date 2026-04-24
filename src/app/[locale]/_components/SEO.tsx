@@ -1,9 +1,6 @@
 import Head from 'next/head'
-import { useTranslations } from 'next-intl'
 
 const SEO = ({ title, description, imageUrl, url }) => {
-	const t = useTranslations()
-
 	return (
 		<Head>
 			<title>{title}</title>

@@ -2,6 +2,7 @@ import { FaCloud, FaCode, FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 import { GiSkills } from 'react-icons/gi'
 import { IoIosInfinite } from 'react-icons/io'
+import { CAREER, PROJECTS } from './content'
 import { uniq } from 'lodash'
 
 export const GITHUB_PROFILE_URL = 'https://github.com/thenoobgrammer'
@@ -21,12 +22,10 @@ export const Email = 'antonyyhakim@gmail.com'
 export const SpokenLanguages = ['English', 'French']
 export const Website = { url: 'https://thenoobgrammer.com', text: 'My Website' }
 
-const PICKSIDE_URL = 'https://pickside.net'
-const PICKSIDE_GIT_REPO = 'https://github.com/PickSide'
-const PORTFOLIO_V1_URL = 'https://v1.antoinehakim.ca'
-const PORTFOLIO_V1_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio'
-const PORTFOLIO_V2_URL = 'https://antoinehakim.ca'
-const PORTFOLIO_V2_GIT_REPO = 'https://github.com/thenoobgrammer/my-portfolio-v2'
+const ACTIVIE_URL = 'https://pickside.net'
+const ACTIVIE_GIT_REPO = 'https://github.com/thenoobgrammer/activie-main-service'
+const GAME_ENGINE_GIT_REPO = 'https://github.com/thenoobgrammer/2dgamengine'
+const ONEBRC_GIT_REPO = 'https://github.com/thenoobgrammer/1brc'
 
 export const LinkedIn = {
 	icon: FaLinkedinIn,
@@ -92,8 +91,10 @@ export const BE_Frameworks = [
 	{ name: 'C#', tag: 'csharp', url: 'https://learn.microsoft.com/en-us/dotnet/csharp/' },
 	{ name: 'Node.js', tag: 'node', url: 'https://nodejs.org/en/' },
 	{ name: 'Python', tag: 'python', url: 'https://www.python.org/' },
-	{ name: 'Spring', tag: 'java', url: 'https://spring.io/projects/spring-boot' },
+	{ name: 'Java', tag: 'java', url: 'https://www.java.com/' },
+	{ name: 'Spring', tag: 'spring', url: 'https://spring.io/projects/spring-boot' },
 	{ name: 'Go', tag: 'go', url: 'https://go.dev/doc/effective_go#introduction' },
+	{ name: 'C++', tag: 'cpp', url: 'https://cplusplus.com/' },
 ]
 
 export const DB_Frameworks = [
@@ -159,6 +160,8 @@ export const Concepts = [
 	{ name: 'Custom hooks', tag: 'hooks', url: 'https://react.dev/learn/reusing-logic-with-custom-hooks' },
 	{ name: 'Microservice architecture', tag: 'microservice', url: 'https://microservices.io/' },
 	{ name: 'TDD', tag: 'tdd', url: 'https://www.browserstack.com/guide/what-is-test-driven-development' },
+	{ name: 'Concurrency', tag: 'crc', url: 'https://en.wikipedia.org/wiki/Concurrency_(computer_science)' },
+	{ name: 'ECS', tag: 'ecs', url: 'https://en.wikipedia.org/wiki/Entity_component_system' },
 ]
 
 export const Education = [
@@ -176,19 +179,19 @@ export const WorkExperiences = [
 		end: 'Present',
 		company: 'GoTo',
 		title: 'Senior software engineer',
-		descriptions: ['GoTo.a', 'GoTo.b', 'GoTo.c', 'GoTo.d', 'GoTo.e', 'GoTo.f'],
-		summary: 'GoTo.summary',
+		summary: CAREER.goto.summary,
+		descriptions: CAREER.goto.descriptions,
 		technologies: extract([
 			'react',
-			'redux',
 			'typescript',
-			'react-test',
-			'jest-test',
+			'java',
+			'aws',
 			'jenkins',
-			'git',
-			'rest',
 			'sonar',
-			'solid',
+			'jest-test',
+			'react-test',
+			'tdd',
+			'microservice',
 		]),
 	},
 	{
@@ -199,9 +202,9 @@ export const WorkExperiences = [
 		url: 'https://desjardins.com',
 		company: 'Desjardins',
 		title: 'Software engineer',
-		summary: 'Desjardins.summary',
-		descriptions: ['Desjardins.a', 'Desjardins.b', 'Desjardins.c', 'Desjardins.d', 'Desjardins.e'],
-		technologies: extract(['java', 'stencil', 'html', 'css', 'cf', 'concourse', 'rest', 'liferay', 'sonar']),
+		summary: CAREER.desjardins.summary,
+		descriptions: CAREER.desjardins.descriptions,
+		technologies: extract(['java', 'react', 'stencil', 'typescript', 'concourse', 'cf', 'sonar', 'tdd', 'rest', 'liferay']),
 	},
 	{
 		id: 'bell',
@@ -211,9 +214,9 @@ export const WorkExperiences = [
 		url: 'https://bell.ca',
 		company: 'Bell',
 		title: 'Software engineer',
-		descriptions: ['Bell.a', 'Bell.b', 'Bell.c', 'Bell.d'],
-		summary: 'Bell.summary',
-		technologies: extract(['csharp', 'mysql', 'docker', 'ember', 'html', 'css', 'rest']),
+		summary: CAREER.bell.summary,
+		descriptions: CAREER.bell.descriptions,
+		technologies: extract(['csharp', 'rest', 'ember', 'mysql', 'docker', 'html', 'css']),
 	},
 	{
 		id: 'ubisoft',
@@ -223,9 +226,9 @@ export const WorkExperiences = [
 		url: 'https://www.ubisoft.com/en-ca/',
 		company: 'Ubisoft',
 		title: 'Software engineer (Intern)',
-		descriptions: ['Ubisoft.a', 'Ubisoft.b'],
-		summary: 'Ubisoft.summary',
-		technologies: extract(['docker', 'polymer', 'typescript', 'html', 'css', 'jira']),
+		summary: CAREER.ubisoft.summary,
+		descriptions: CAREER.ubisoft.descriptions,
+		technologies: extract(['typescript', 'polymer', 'html', 'css', 'jira']),
 	},
 ]
 export const Skillsets = [
@@ -286,55 +289,33 @@ export const TechStack = [
 ]
 export const PersonalProjects = [
 	{
-		name: 'Pickside (Founder)',
+		name: 'Activie (Founder)',
 		tag: 'pickside',
-		type: 'Custom website',
-		gitUrl: PICKSIDE_GIT_REPO,
-		url: PICKSIDE_URL,
+		type: 'SaaS',
+		gitUrl: ACTIVIE_GIT_REPO,
 		imgSrc: '/pickside.png',
-		summary: 'Pickside.summary',
-		summaryWithStack: 'Pickside.summarywithstack',
-		descriptions: ['Pickside.a', 'Pickside.b', 'Pickside.c', 'Pickside.d', 'Pickside.e'],
+		summary: PROJECTS.activie.summary,
+		descriptions: PROJECTS.activie.descriptions,
 		technologies: extract(['go', 'mysql', 'aws', 'react', 'redux', 'typescript', 'tailwind']),
 	},
 	{
-		name: 'Portfolio V1',
-		type: 'Portfolio',
-		tag: 'pv1',
-		gitUrl: PORTFOLIO_V1_GIT_REPO,
-		url: PORTFOLIO_V1_URL,
-		imgSrc: '/portfolio_v1.png',
-		summary: 'PortfolioV1.summary',
-		summaryWithStack: 'PortfolioV1.summarywithstack',
-		descriptions: ['PortfolioV1.a'],
-		technologies: extract(['aws', 'react', 'tailwind']),
-	},
-	{
-		name: 'Portfolio V2',
-		type: 'Portfolio',
-		tag: 'pv2',
-		imgSrc: '/portfolio_v2.png',
-		url: PORTFOLIO_V2_URL,
-		gitUrl: PORTFOLIO_V2_GIT_REPO,
-		summary: 'PortfolioV2.summary',
-		summaryWithStack: 'PortfolioV2.summarywithstack',
-		descriptions: ['PortfolioV2.a'],
-		technologies: extract(['aws', 'next', 'tailwind']),
-	},
-	// This is a sepcific one
-	{
-		name: 'Portfolio (V1 & V2)',
-		type: 'Portfolio',
-		tag: 'pv12',
-		imgSrc: '/portfolio_v2.png',
-		url1: PORTFOLIO_V1_URL,
-		url2: PORTFOLIO_V2_URL,
-		gitUrl: PORTFOLIO_V2_GIT_REPO,
-		summary: '',
-		summaryWithStack: '',
-		descriptions: ['PortfolioV1.a', 'PortfolioV2.a'],
-		technologies: extract(['aws', 'next', 'tailwind']),
-	},
+		name: 'Rogue-like Game engine',
+		type: 'Software',
+		tag: 'ge',
+		gitUrl: GAME_ENGINE_GIT_REPO,
+		summary: PROJECTS.gameEngine.summary,
+		descriptions: PROJECTS.gameEngine.descriptions,
+		technologies: extract(['cpp', 'ecs']),
+  },
+  {
+		name: '1brc',
+		type: 'Software',
+		tag: 'ge',
+		gitUrl: ONEBRC_GIT_REPO,
+		summary: PROJECTS.onebrc.summary,
+		descriptions: PROJECTS.onebrc.descriptions,
+		technologies: extract(['go', 'crc']),
+   },
 ]
 
 export function extract(tags: string[]) {
