@@ -39,7 +39,7 @@ export default function Projects() {
 											</Link>
 										</IconButton>
 									</div>
-									{project.url && (
+									{/*{project.url && (
 										<a href={project.url} target="_blank" rel="noreferrer" className="text-md">
 											{project.summary}
 											<span className="absolute -inset-3 -z-10 md:-inset-4 lg:block" />
@@ -47,7 +47,7 @@ export default function Projects() {
 									)}
 									{!project.url && project.summary && (
 										<p className="text-md text-light/70">{project.summary}</p>
-									)}
+									)}*/}
 									<div className="flex flex-wrap">
 										{project.technologies.map(({ name, url, tag }) => (
 											<Chip className="group-hover/chip:bg-highlight group-hover/chip:text-accent-200" key={tag}>
